@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+.dark {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-chalk text-ink font-body antialiased;
+}
+.dark body {
+  @apply bg-night text-chalk;
+}
+
+/* 사진판독선(photo-finish line) — 히어로의 시그니처 요소 */
+.finish-line {
+  background: repeating-linear-gradient(
+    to bottom,
+    currentColor 0,
+    currentColor 10px,
+    transparent 10px,
+    transparent 18px
+  );
+}
+
+/* 유리 질감 내비게이션 */
+.glass {
+  @apply bg-chalk/70 backdrop-blur-md border-b border-ink/10;
+}
+.dark .glass {
+  @apply bg-night/70 border-chalk/10;
+}
+
+::selection {
+  @apply bg-turf text-chalk;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-ticker,
+  .animate-pulseDot {
+    animation: none !important;
+  }
+}
