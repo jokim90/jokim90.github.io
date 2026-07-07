@@ -153,6 +153,9 @@ export const sections: Section[] = [
         tags: ["조율", "글로벌 미디어"],
       },
     ],
+    videos: [
+      { title: "로컬라이제이션 샘플", youtubeId: "gA01EU1JX1Q" },
+    ],
   },
   {
     slug: "strategy",

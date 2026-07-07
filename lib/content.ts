@@ -184,6 +184,9 @@ export const sections: Section[] = [
         tags: ["Coordination", "Global media"],
       },
     ],
+    videos: [
+      { title: "Localization sample", youtubeId: "gA01EU1JX1Q" },
+    ],
   },
   {
     slug: "strategy",
