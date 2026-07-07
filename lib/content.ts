@@ -102,10 +102,10 @@ export const sections: Section[] = [
       },
     ],
     videos: [
-      // { title: "Broadcast sample", youtubeId: "ABC123" }, // ← YouTube ID로 교체
+      { title: "Live broadcast sample", youtubeId: "RmTNens-v7A" },
     ],
     images: [
-      // { title: "On set, Korea Cup broadcast", src: "/images/work/broadcast/1.jpg" },
+      { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
     ],
   },
   {
