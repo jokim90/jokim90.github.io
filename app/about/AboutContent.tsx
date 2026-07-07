@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import Timeline from "@/components/Timeline";
+import Education from "@/components/Education";
 import { useLanguage } from "@/lib/i18n";
 
 export default function AboutContent() {
@@ -92,6 +93,7 @@ export default function AboutContent() {
       </section>
 
       <Timeline />
+      <Education />
     </>
   );
 }

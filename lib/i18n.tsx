@@ -33,6 +33,7 @@ export const ui = {
     },
     skills: { formGuide: "FORM GUIDE", title: "Skills" },
     timeline: { runningLine: "RUNNING LINE", title: "Career" },
+    education: { pedigree: "PEDIGREE", title: "Education" },
     footer: { offAir: "OFF AIR", github: "GITHUB", email: "EMAIL" },
     about: {
       eyebrow: "ABOUT",
@@ -73,6 +74,7 @@ export const ui = {
     },
     skills: { formGuide: "폼 가이드", title: "스킬" },
     timeline: { runningLine: "경력 발자취", title: "커리어" },
+    education: { pedigree: "혈통", title: "학력" },
     footer: { offAir: "방송 종료", github: "GITHUB", email: "이메일" },
     about: {
       eyebrow: "소개",

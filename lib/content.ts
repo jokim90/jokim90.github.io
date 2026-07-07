@@ -339,12 +339,39 @@ export const timeline = [
     detail:
       "Led collaborations with France Galop, World Horse Racing, Racing & Sports Australia, and Arirang TV.",
   },
+];
+
+/** 학력 (경마 은어로 "혈통"에 해당) */
+export const education = [
   {
-    period: "2024 —",
-    title: "AI Graduate Program",
-    detail:
-      "Graduate study in AI focused on machine-generated sports commentary — bringing " +
-      "emerging technology literacy into media production.",
+    period: "2024.03 — 2026.12 (Expected)",
+    school: "Yonsei University",
+    degree: "Master's Degree, Artificial Intelligence",
+    detail: "Focus on large language model operations (LLMOps) and applied AI.",
+  },
+  {
+    period: "2010 — 2015",
+    school: "Sungkyunkwan University (SKKU)",
+    degree: "Bachelor's Degree, French Language and Literature",
+    detail: "Coursework in French language and creative writing.",
+  },
+  {
+    period: "2013.09 — 2014.01",
+    school: "Université Grenoble Alpes",
+    degree: "Exchange Semester, French Literature",
+    detail: "Exchange student; media planning and creative writing activities.",
+  },
+  {
+    period: "2005 — 2009",
+    school: "Oregon Episcopal School",
+    degree: "High School",
+    detail: "",
+  },
+  {
+    period: "2003 — 2005",
+    school: "Bishop's College School",
+    degree: "Middle School",
+    detail: "",
   },
 ];
 

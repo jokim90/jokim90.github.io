@@ -300,12 +300,39 @@ export const timeline = [
       "프랑스 갈롭, 월드 호스 레이싱, 레이싱 앤 스포츠 오스트레일리아, 아리랑TV와의 " +
       "협업을 주도했습니다.",
   },
+];
+
+/** 학력 (경마 은어로 "혈통"에 해당) */
+export const education = [
   {
-    period: "2024 —",
-    title: "AI 대학원 과정",
-    detail:
-      "머신러닝 기반 스포츠 중계 생성에 초점을 맞춘 AI 대학원 과정을 이수 중이며, " +
-      "신기술 이해를 미디어 제작에 접목하고 있습니다.",
+    period: "2024.03 — 2026.12 (졸업예정)",
+    school: "연세대학교",
+    degree: "인공지능학 석사",
+    detail: "대규모 언어 모델 운영(LLMOps) 및 응용 AI에 중점.",
+  },
+  {
+    period: "2010 — 2015",
+    school: "성균관대학교 (SKKU)",
+    degree: "불어불문학 학사",
+    detail: "프랑스어 및 문예창작 관련 과정 수료.",
+  },
+  {
+    period: "2013.09 — 2014.01",
+    school: "그르노블 알프스 대학교 (Université Grenoble Alpes)",
+    degree: "교환학기, 프랑스 문학",
+    detail: "교환학생; 미디어 기획 및 문예창작 활동 참여.",
+  },
+  {
+    period: "2005 — 2009",
+    school: "Oregon Episcopal School",
+    degree: "고등학교",
+    detail: "",
+  },
+  {
+    period: "2003 — 2005",
+    school: "Bishop's College School",
+    degree: "중학교",
+    detail: "",
   },
 ];
 
