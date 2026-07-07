@@ -114,6 +114,9 @@ export const sections: Section[] = [
         tags: ["용어 관리", "팩트체크", "에디토리얼 QA"],
       },
     ],
+    videos: [
+      { title: "실전 작업: 한영 이중언어 자막 제작 워크플로우", youtubeId: "U02dflzVhtU" },
+    ],
   },
   {
     slug: "localization",
@@ -195,6 +198,12 @@ export const sections: Section[] = [
         description:
           "인게이지먼트 캠페인을 설계하고 콘텐츠 성과를 측정해 그 결과를 기획에 다시 반영했습니다.",
         tags: ["오디언스", "캠페인", "성과 측정"],
+      },
+    ],
+    images: [
+      {
+        title: "버추얼 국제 스튜디오 — 코리아컵 & 코리아스프린트 국제 저널리스트 라운드테이블",
+        src: "/images/work/strategy/virtual-studio.jpg",
       },
     ],
   },

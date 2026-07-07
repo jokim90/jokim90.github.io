@@ -144,6 +144,9 @@ export const sections: Section[] = [
         tags: ["Terminology", "Fact-checking", "Editorial QA"],
       },
     ],
+    videos: [
+      { title: "Hands-on: dual-language subtitle generation workflow", youtubeId: "U02dflzVhtU" },
+    ],
   },
   {
     slug: "localization",
@@ -230,6 +233,12 @@ export const sections: Section[] = [
         description:
           "Designed engagement campaigns and measured content performance to feed results back into planning.",
         tags: ["Audience", "Campaigns", "Measurement"],
+      },
+    ],
+    images: [
+      {
+        title: "Virtual international studio — Korea Cup & Korea Sprint roundtable with international journalists",
+        src: "/images/work/strategy/virtual-studio.jpg",
       },
     ],
   },
