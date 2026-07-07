@@ -238,6 +238,9 @@ export const sections: Section[] = [
         tags: ["Audience", "Campaigns", "Measurement"],
       },
     ],
+    videos: [
+      { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
+    ],
     images: [
       {
         title: "Virtual international studio — Korea Cup & Korea Sprint roundtable with international journalists",

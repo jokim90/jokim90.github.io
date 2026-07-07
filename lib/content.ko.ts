@@ -203,6 +203,9 @@ export const sections: Section[] = [
         tags: ["오디언스", "캠페인", "성과 측정"],
       },
     ],
+    videos: [
+      { title: "코리아컵 국제 프로모션", youtubeId: "44hkp7DSYv4" },
+    ],
     images: [
       {
         title: "버추얼 국제 스튜디오 — 코리아컵 & 코리아스프린트 국제 저널리스트 라운드테이블",
