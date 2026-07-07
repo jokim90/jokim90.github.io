@@ -287,6 +287,16 @@ export const sections: Section[] = [
 
 export const timeline = [
   {
+    period: "2014.09 — 2014.11",
+    title: "기자, TBS (프리랜서)",
+    detail: "English Live Broadcast Reporter.",
+  },
+  {
+    period: "2015.01 — 2015.03",
+    title: "기자, 연합뉴스 (인턴)",
+    detail: "연합뉴스TV 옴부즈맨 대학생 방송 기자.",
+  },
+  {
     period: "2016 —",
     title: "방송인 & 프로듀서, 한국마사회 (KRBC)",
     detail:
