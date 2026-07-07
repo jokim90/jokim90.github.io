@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import { sections } from "@/lib/content";
+import { useLanguage } from "@/lib/i18n";
 
 /**
  * 홈의 포트폴리오 그리드.
@@ -8,14 +10,17 @@ import { sections } from "@/lib/content";
  * 게이트 번호 칩은 실제 새들클로스 표준색을 따릅니다.
  */
 export default function RaceCard() {
+  const { t, u } = useLanguage();
+  const { sections } = t;
+
   return (
     <section id="work" className="mx-auto max-w-rail scroll-mt-20 px-4 py-20 sm:px-6 sm:py-28">
       <Reveal>
         <p className="font-mono text-xs tracking-widest text-turf dark:text-amber">
-          TODAY&apos;S CARD — {sections.length} RUNNERS
+          {u.race.cardLabel(sections.length)}
         </p>
         <h2 className="mt-3 font-display text-3xl font-black tracking-tight sm:text-5xl">
-          Portfolio
+          {u.race.portfolio}
         </h2>
       </Reveal>
 

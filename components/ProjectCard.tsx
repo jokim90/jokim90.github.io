@@ -1,4 +1,8 @@
+"use client";
+
+import Image from "next/image";
 import type { Highlight } from "@/lib/content";
+import { useLanguage } from "@/lib/i18n";
 
 export default function ProjectCard({ item }: { item: Highlight }) {
   const Wrapper = item.link ? "a" : "div";
@@ -55,7 +59,29 @@ export function YouTubeEmbed({
   );
 }
 
+export function GalleryImage({ title, src }: { title: string; src: string }) {
+  return (
+    <a href={src} target="_blank" rel="noreferrer" className="group block">
+      <figure>
+        <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-ink/10 dark:border-chalk/10">
+          <Image
+            src={src}
+            alt={title}
+            width={800}
+            height={600}
+            className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+          />
+        </div>
+        <figcaption className="mt-2 font-mono text-xs text-ink/50 dark:text-chalk/50">
+          🖼 {title}
+        </figcaption>
+      </figure>
+    </a>
+  );
+}
+
 export function PdfLink({ title, href }: { title: string; href: string }) {
+  const { u } = useLanguage();
   return (
     <a
       href={href}
@@ -66,7 +92,7 @@ export function PdfLink({ title, href }: { title: string; href: string }) {
                  dark:border-chalk/15 dark:hover:border-amber dark:hover:text-amber"
     >
       <span>📄 {title}</span>
-      <span>PDF ↗</span>
+      <span>{u.pdf.label}</span>
     </a>
   );
 }

@@ -1,8 +1,11 @@
-import { stats } from "@/lib/content";
+"use client";
+
+import { useLanguage } from "@/lib/i18n";
 
 /** 배당판(tote board) 느낌의 스탯 티커. reduced-motion 시 정지 상태로 표시됩니다. */
 export default function Ticker() {
-  const row = [...stats, ...stats]; // 무한 루프용 복제
+  const { t } = useLanguage();
+  const row = [...t.stats, ...t.stats]; // 무한 루프용 복제
 
   return (
     <div className="overflow-hidden border-y border-ink/10 bg-ink py-3 text-chalk dark:border-chalk/10 dark:bg-night-card">

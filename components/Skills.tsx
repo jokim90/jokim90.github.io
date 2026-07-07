@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from "framer-motion";
 import Reveal from "@/components/Reveal";
-import { skills } from "@/lib/content";
+import { useLanguage } from "@/lib/i18n";
 
 function Bar({ level }: { level: number }) {
   const reduce = useReducedMotion();
@@ -20,15 +20,18 @@ function Bar({ level }: { level: number }) {
 }
 
 export default function Skills() {
+  const { t, u } = useLanguage();
+  const { skills } = t;
+
   return (
     <section className="border-y border-ink/10 bg-turf-soft/40 dark:border-chalk/10 dark:bg-night-card/50">
       <div className="mx-auto max-w-rail px-4 py-20 sm:px-6 sm:py-28">
         <Reveal>
           <p className="font-mono text-xs tracking-widest text-turf dark:text-amber">
-            FORM GUIDE
+            {u.skills.formGuide}
           </p>
           <h2 className="mt-3 font-display text-3xl font-black tracking-tight sm:text-5xl">
-            Skills
+            {u.skills.title}
           </h2>
         </Reveal>
 

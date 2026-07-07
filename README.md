@@ -29,6 +29,14 @@ npm run dev
 `sections`의 해당 섹션에서 `videos` 배열의 주석을 해제하고 YouTube 영상 ID를 넣으세요.
 (예: `https://youtube.com/watch?v=ABC123` → ID는 `ABC123`)
 
+### 사진 갤러리 넣기
+
+1. 사진 파일을 `public/images/work/섹션이름/` 폴더에 넣기 (예: `public/images/work/broadcast/1.jpg`)
+2. 해당 섹션의 `images` 배열에 `{ title: "제목", src: "/images/work/broadcast/1.jpg" }` 추가
+3. 클릭하면 원본 사진이 새 탭에서 열립니다.
+
+`lib/content.ts`(영어)와 `lib/content.ko.ts`(한국어) 양쪽에 같은 `images`/`videos` 항목을 넣어야 두 언어 모두에서 보입니다.
+
 ### PDF 넣기
 
 1. PDF 파일을 `public/docs/` 폴더에 넣기 (폴더가 없으면 생성)

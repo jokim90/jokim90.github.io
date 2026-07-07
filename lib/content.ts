@@ -9,7 +9,7 @@ export const site = {
   name: "Jungrun Kim",
   handle: "jokim90",
   github: "https://github.com/jokim90",
-  email: "hello@example.com", // TODO: 실제 이메일로 교체
+  email: "jokim90@gmail.com", // TODO: 실제 이메일로 교체
   location: "Seoul, Korea",
   role: "International Media Producer · Language Expert · Global Content Operations",
   tagline:
@@ -18,6 +18,23 @@ export const site = {
     "International media professional with 10+ years of experience producing multilingual " +
     "broadcast content, leading global partnerships, managing localization and editorial " +
     "quality, and delivering international media projects from concept through distribution.",
+  heroHeadline: ["Live from Seoul.", "Produced for the world."] as [string, string],
+};
+
+/** About 페이지 전용 텍스트 (헤드라인 2줄 + 본문 문단) */
+export const about = {
+  headline: ["From concept", "through distribution."] as [string, string],
+  paragraphs: [
+    "For over a decade at the Korea Racing Authority, I've produced " +
+      "international broadcasts end to end — live production, audio and " +
+      "video post-production, and broadcast delivery — while owning " +
+      "editorial quality and language QA across everything we published " +
+      "in Korean and English.",
+    "Beyond the studio, I've led global partnerships with France " +
+      "Galop, World Horse Racing, Racing & Sports Australia, and " +
+      "Arirang TV, and managed the full production procurement cycle: " +
+      "scope of work, vendor selection, budgets, contracts, and delivery.",
+  ] as [string, string],
 };
 
 export type Highlight = {
@@ -37,6 +54,7 @@ export type Section = {
   description: string;
   highlights: Highlight[];
   videos?: { title: string; youtubeId: string }[]; // YouTube 영상 ID만 입력
+  images?: { title: string; src: string }[];       // public/ 폴더의 이미지 경로 (예: /images/work/broadcast/1.jpg)
   pdfs?: { title: string; href: string }[];        // public/ 폴더의 PDF 경로
 };
 
@@ -59,32 +77,35 @@ export const sections: Section[] = [
       "Photoshop, Illustrator.",
     highlights: [
       {
-        title: "Korea Cup",
+        title: "Daily Live: Audio Broadcast Production",
         description:
           "International broadcast production for Korea's flagship race day, produced for a global audience.",
-        tags: ["Live production", "International", "Flagship event"],
+        tags: ["Live production","live broadcasting","interviews", "International", "Flagship event"],
       },
       {
-        title: "KRBC International",
+        title: "Bilingual Journalist: Korean government broadcast delivery",
         description:
-          "English-language broadcast production and delivery for KRBC's international programming.",
-        tags: ["Broadcast delivery", "English", "KRBC"],
+          "English-language broadcast production and delivery for  international audiences, representing Korean government--the Korea Racing Authority(Channel:KRBC).",
+        tags: ["Broadcast delivery", "English", "Korean", "Journalism","bilingual"],
       },
       {
-        title: "YTN Cup",
+        title: "On camera, with camera: Live interviews & reporting",
         description:
-          "Production planning and broadcast execution for the YTN Cup race-day coverage.",
-        tags: ["Production planning", "Event"],
+          "conducting interviews and broadcast execution for all race-day coverage.",
+        tags: ["Production planning","scripting", "Scheduling", "editing", "interviews", "reporting"],
       },
       {
-        title: "Weekly International Racing Broadcast",
+        title: "Full-stack media producer",
         description:
-          "Recurring weekly production cycle: scripting, recording, editing, QA, and on-time delivery.",
-        tags: ["Weekly cycle", "Post-production", "Editorial QA"],
+          "End-to-end media production:planning, scripting, recording, editing, QA, and on-time delivery.",
+        tags: ["Weekly cycle", "timely delivery", "full-stack production"],
       },
     ],
     videos: [
       // { title: "Broadcast sample", youtubeId: "ABC123" }, // ← YouTube ID로 교체
+    ],
+    images: [
+      // { title: "On set, Korea Cup broadcast", src: "/images/work/broadcast/1.jpg" },
     ],
   },
   {
