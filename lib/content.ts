@@ -102,9 +102,9 @@ export const sections: Section[] = [
       },
     ],
     videos: [
-      { title: "Live broadcast sample", youtubeId: "RmTNens-v7A" },
-      { title: "Broadcast production sample", youtubeId: "5EJWg__j-_8" },  
       { title: "2026.09 Production with Arirang TV media", youtubeId: "k7eJ7oRJAZM" },
+      { title: "Live broadcast sample", youtubeId: "RmTNens-v7A" },
+      { title: "Broadcast production sample", youtubeId: "5EJWg__j-_8" },
     ],
     images: [
       { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
