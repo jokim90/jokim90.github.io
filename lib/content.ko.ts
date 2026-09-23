@@ -74,8 +74,8 @@ export const sections: Section[] = [
     ],
     videos: [
       { title: "2026.09 Production with Arirang TV media", youtubeId: "k7eJ7oRJAZM" },
-      { title: "라이브 방송 샘플", youtubeId: "RmTNens-v7A" },
-      { title: "방송 제작 샘플", youtubeId: "5EJWg__j-_8" },
+      { title: "End to end production work sample", youtubeId: "RmTNens-v7A" },
+      { title: "Interview as a broadcast announcer(2023)", youtubeId: "5EJWg__j-_8" },
     ],
     images: [
       { title: "엔드투엔드 프로덕션 현장 — 홍콩 국제경주", src: "/images/work/broadcast/end-to-end.jpg" },
