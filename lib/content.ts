@@ -18,8 +18,8 @@ export const site = {
   intro:
     "International sports media producer with 11 years building Korea's racing content " +
     "into a global export business — now spanning 29 countries and KRW 150 billion+ " +
-    "(approx. USD 100M+) in annual revenue. One of three English-language voices of " +
-    "Korean racing worldwide, with 100+ live events on air.",
+    "(approx. USD 100M+) in annual revenue. The only Korean English-language racing " +
+    "broadcaster in the world, with 100+ live events on air.",
   heroHeadline: ["Live from Seoul.", "Produced for the world."] as [string, string],
 };
 
@@ -39,8 +39,8 @@ export const about = {
       "the timing of an official announcement — and I can move a project through those " +
       "procedures without losing momentum. For an international organization operating " +
       "in Korea, that knowledge is the difference between a plan and an approved plan.",
-    "Along the way I became one of only three English-language voices of Korean racing " +
-      "worldwide, with live coverage of more than 100 events. Today I work as an " +
+    "Along the way I became the only Korean English-language racing broadcaster in the " +
+      "world, with live coverage of more than 100 events. Today I work as an " +
       "end-to-end media producer with local broadcast vendors, and since 2024 my role has " +
       "expanded beyond planning, production and presenting into contract engagement for " +
       "the international business — so I now sit on both sides of the deal, the creative " +
@@ -88,8 +88,8 @@ export const sections: Section[] = [
       "English-language racing content for international markets, produced end to end — " +
       "the flagship Korea Cup, a recurring weekly international program, and race-day " +
       "coverage. I own the full lifecycle from concept and scripting through production, " +
-      "editing, QA and on-time delivery, and I'm one of three English-language voices of " +
-      "Korean racing worldwide, with 100+ live events delivered on air.",
+      "editing, QA and on-time delivery, and I'm the only Korean English-language racing " +
+      "broadcaster in the world, with 100+ live events delivered on air.",
     highlights: [
       {
         title: "Korea Cup international broadcast",
@@ -106,7 +106,7 @@ export const sections: Section[] = [
       {
         title: "Live presenting & commentary, 100+ events",
         description:
-          "One of three English-language voices of Korean racing; live race calls, interviews and reporting in real-time, high-exposure conditions.",
+          "The only Korean English-language racing broadcaster in the world; live race calls, interviews and reporting in real-time, high-exposure conditions.",
         tags: ["Live", "On-air", "Commentary", "Interviews"],
       },
       {
