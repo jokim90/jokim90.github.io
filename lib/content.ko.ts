@@ -121,7 +121,7 @@ export const sections: Section[] = [
         tags: ["계약", "협상", "배급"],
       },
       {
-        title: "France Gallop · World Horse Racing · Racing and Sports",
+        title: "France Galop · World Horse Racing · Racing and Sports",
         description:
           "해외 공식 스포츠 기관 및 정상급 스포츠 미디어와의 콘텐츠·배급 파트너십을 조율부터 납품까지 담당.",
         tags: ["파트너십", "프랑스", "글로벌 미디어", "호주"],
@@ -202,7 +202,7 @@ export const sections: Section[] = [
       "2026 코리아컵 기자회견 총괄(CD)을 맡았고, 2026 코리아컵 성공 개최에 기여했습니다.",
     highlights: [
       {
-        title: "2026 코리아컵 기자회견 총괄(Cheif Director)",
+        title: "2026 코리아컵 기자회견 총괄(Chief Director)",
         description:
           "국내외 언론 대상 기자회견의 기획·연출·제작 총괄.",
         tags: ["총괄", "기자회견", "2026"],
@@ -248,7 +248,7 @@ export const sections: Section[] = [
       "계약 관리, 산출물 관리, 성과 평가까지 여러 프로젝트를 동시에 운영합니다.",
     highlights: [
       {
-        title: "아리랑TV미딩어 프로덕션 조달",
+        title: "아리랑TV 미디어 프로덕션 조달",
         description:
           "공동제작 프로그램의 과업 범위 작성, 제안 평가, 예산 편성, 계약 관리.",
         tags: ["조달", "SOW", "계약"],
@@ -348,7 +348,7 @@ export const timeline = [
     title: "국제 방송 아나운서 & 프로듀서, 한국마사회 (KRBC)",
     detail:
       "공채를 통해 수출 콘텐츠 전담자로 입사. 경주일 프로그램, 영어 콘텐츠, " +
-      "29개국 국제 배급, 100회 이상 라이브 이벤트 진행.",
+      "29개국 국제 배급, 1,000회 이상 라이브 경주 중계방송 진행.",
   },
   {
     period: "2015.01 — 2015.03",
