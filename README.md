@@ -17,7 +17,7 @@ npm run dev
 **모든 텍스트와 데이터는 `lib/content.ts` 한 파일에서 수정합니다.**
 
 - `site` — 이름, 이메일, GitHub, 소개문
-- `sections` — 6개 포트폴리오 섹션 (Broadcast / Editorial / Localization / Strategy / Vendor / Innovation)
+- `sections` — 6개 포트폴리오 섹션 (Broadcast / Business / PR / Events / Vendor / Editorial)
 - `timeline` — 커리어 연혁
 - `skills` — 스킬 차트
 - `stats` — 상단 티커에 흐르는 스탯
@@ -77,7 +77,7 @@ portfolio/
 ├── app/
 │   ├── page.tsx            # 홈 (Hero + 티커 + 포트폴리오 그리드 + 스킬 + 타임라인)
 │   ├── about/page.tsx      # About
-│   └── work/[slug]/        # 6개 섹션 페이지 (자동 생성)
+│   └── work/[slug]/        # 6개 섹션 페이지 (broadcast · business · pr · events · vendor · editorial)
 ├── components/             # Hero, Navbar, RaceCard, Timeline, Skills 등
 ├── lib/content.ts          # ★ 모든 내용은 여기서 수정
 └── .github/workflows/      # GitHub Pages 자동 배포
