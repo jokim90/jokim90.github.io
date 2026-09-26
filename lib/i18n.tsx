@@ -47,10 +47,12 @@ export const ui = {
       footage: "FOOTAGE",
       gallery: "GALLERY",
       documents: "DOCUMENTS",
+      press: "IN THE NEWS",
       prev: (gate: number, title: string) => `← GATE ${gate} · ${title.toUpperCase()}`,
       next: (gate: number, title: string) => `GATE ${gate} · ${title.toUpperCase()} →`,
     },
     pdf: { label: "PDF ↗" },
+    press: { eyebrow: "IN THE NEWS", title: "Press", inKorean: "in Korean" },
   },
   ko: {
     nav: { work: "업무", about: "소개", github: "GITHUB" },
@@ -88,10 +90,12 @@ export const ui = {
       footage: "영상",
       gallery: "갤러리",
       documents: "문서",
+      press: "언론 보도",
       prev: (gate: number, title: string) => `← 게이트 ${gate} · ${title}`,
       next: (gate: number, title: string) => `게이트 ${gate} · ${title} →`,
     },
     pdf: { label: "PDF ↗" },
+    press: { eyebrow: "언론 보도", title: "보도자료", inKorean: "국문" },
   },
 } as const;
 
