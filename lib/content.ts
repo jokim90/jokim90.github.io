@@ -11,27 +11,28 @@ export const site = {
   github: "https://github.com/jokim90",
   email: "jokim90@gmail.com",
   location: "Seoul, Korea",
-  role: "International Media Producer · Sports Marketing & PR · Global Business Development",
+  role: "International Broadcast Specialist · Sports Marketing & PR · Global Business",
   tagline:
     "International broadcast production, sports marketing and PR, event direction, " +
     "and global partnership and contract management.",
   intro:
-    "International sports media producer with 11 years building Korea's racing content " +
-    "into a global export business — now spanning 29 countries and KRW 150 billion+ " +
-    "(approx. USD 100M+) in annual revenue. The only Korean English-language racing " +
-    "broadcaster in the world, with 100+ live events on air.",
-  heroHeadline: ["Live from Seoul.", "Produced for the world."] as [string, string],
+    "International sports media specialist with 11 years building Korea's racing content " +
+    "into a global export business — now reaching 29 countries on five continents, with " +
+    "KRW 150 billion+ (approx. USD 100M+) in annual revenue. The only Korean " +
+    "English-language racing broadcaster in the world, contributing to the international " +
+    "business not only on air but across planning, production and event direction.",
+  heroHeadline: ["Korea, live.", "To the world."] as [string, string],
 };
 
 /** About 페이지 전용 텍스트 (헤드라인 2줄 + 본문 문단) */
 export const about = {
-  headline: ["From concept", "through contract."] as [string, string],
+  headline: ["Exporting Korea to the world,", "bringing the world to Korea."] as [string, string],
   paragraphs: [
-    "I build the bridge between Korean sport and international audiences.",
-    "I joined Korea Racing Authority in 2015 as the dedicated content lead for its " +
-      "international export business, launched the year before. Over the next decade I " +
-      "grew that business from a standing start to KRW 150 billion+ in annual revenue " +
-      "across 29 countries, and turned Korean racing from a domestic product into a " +
+    "I brand and export Korean sports content overseas, and plan Korea's international events.",
+    "I joined Korea Racing Authority in 2015 as the dedicated content lead — its " +
+      "international announcer — for the export business it had just launched. Over the " +
+      "next decade I grew that business to 29 countries and, as of 2026, KRW 150 billion+ " +
+      "in annual revenue, and turned Korean racing from a domestic product into a " +
       "recognized international sports brand.",
     "Working inside a government-affiliated public corporation also made me a capable " +
       "PR administrator. I know how public-sector communication actually gets done in " +
@@ -40,14 +41,17 @@ export const about = {
       "procedures without losing momentum. For an international organization operating " +
       "in Korea, that knowledge is the difference between a plan and an approved plan.",
     "Along the way I became the only Korean English-language racing broadcaster in the " +
-      "world, with live coverage of more than 100 events. Today I work as an " +
-      "end-to-end media producer with local broadcast vendors, and since 2024 my role has " +
-      "expanded beyond planning, production and presenting into contract engagement for " +
-      "the international business — so I now sit on both sides of the deal, the creative " +
-      "and the commercial.",
-    "I am completing an M.S. in Artificial Intelligence at Yonsei University, where my " +
-      "research is on AI-generated live sports commentary. That work is not a side " +
-      "interest. It is how I keep production fast, multilingual and current.",
+      "world, with more than 1,000 live race broadcasts. Today I work as a broadcast " +
+      "specialist responsible for everything from planning to delivery QA alongside local " +
+      "production companies, and since 2024 my role has expanded beyond planning, " +
+      "production and presenting into hands-on contract work for the international " +
+      "business — so I now sit on both sides of the deal, the creative and the commercial.",
+    "In 2026, within the International Business Division, I led the successful staging " +
+      "of the Korea Cup, Korea's flagship international race, and served as Chief " +
+      "Director of its international media conference — building a track record in " +
+      "hosting international events at home.",
+    "I am completing an M.S. in Artificial Intelligence at Yonsei University in 2026, " +
+      "with research on AI-generated live sports commentary.",
   ] as string[],
 };
 
@@ -85,11 +89,11 @@ export const sections: Section[] = [
     title: "Global Broadcast Production",
     tagline: "End-to-end English-language production and live on-air delivery",
     description:
-      "English-language racing content for international markets, produced end to end — " +
-      "the flagship Korea Cup, a recurring weekly international program, and race-day " +
-      "coverage. I own the full lifecycle from concept and scripting through production, " +
-      "editing, QA and on-time delivery, and I'm the only Korean English-language racing " +
-      "broadcaster in the world, with 100+ live events delivered on air.",
+      "English-language racing content for international markets — planned, directed, " +
+      "produced and delivery-checked. A recurring weekly international program and " +
+      "race-day coverage are the mainstays. I own the full lifecycle from concept and " +
+      "scripting through production, editing, QA and scheduling, and I'm the only Korean " +
+      "English-language racing broadcaster in the world, calling live races on air.",
     highlights: [
       {
         title: "Korea Cup international broadcast",
@@ -100,25 +104,25 @@ export const sections: Section[] = [
       {
         title: "Weekly international racing program",
         description:
-          "A recurring English-language program on a fixed weekly cycle: planning, scripting, recording, editing, QA and delivery.",
-        tags: ["Weekly cycle", "Full-stack production", "On-time delivery"],
+          "A recurring English-language program on a fixed weekly cycle: planning, scripting, recording, editing, QA and scheduling.",
+        tags: ["Weekly cycle", "Full-stack production", "Scheduling"],
       },
       {
-        title: "Live presenting & commentary, 100+ events",
+        title: "Live presenting & commentary, 1,000+ broadcasts",
         description:
-          "The only Korean English-language racing broadcaster in the world; live race calls, interviews and reporting in real-time, high-exposure conditions.",
-        tags: ["Live", "On-air", "Commentary", "Interviews"],
+          "The only Korean English-language racing broadcaster in the world; live race broadcasts plus interview planning and production in a real-time environment.",
+        tags: ["Live", "On-air", "English commentary", "Interviews"],
       },
       {
-        title: "Race-day production on site",
+        title: "On-site broadcast production",
         description:
-          "On-location production including international meetings such as the Hong Kong International Races.",
+          "Broadcast production at overseas race days, including the Hong Kong International Races.",
         tags: ["On-site", "Live production", "International"],
       },
       {
         title: "Co-produced programming with Arirang TV (2026)",
         description:
-          "Joint program production with Korea's international broadcaster, taking Korean racing to an English-language TV audience.",
+          "Joint program production with Arirang TV, Korea's public international broadcaster, taking Korean racing to an English-language TV audience.",
         tags: ["Co-production", "Arirang TV", "2026"],
       },
     ],
@@ -158,9 +162,9 @@ export const sections: Section[] = [
         tags: ["Contracts", "Negotiation", "Distribution"],
       },
       {
-        title: "France Galop · World Horse Racing · Racing & Sports Australia",
+        title: "France Galop · World Horse Racing · Racing and Sports",
         description:
-          "Content and distribution partnerships with international racing bodies and media, from coordination through delivery.",
+          "Content and distribution partnerships with official overseas sports bodies and top-tier sports media, from coordination through delivery.",
         tags: ["Partnership", "France", "Global media", "Australia"],
       },
       {
@@ -282,8 +286,8 @@ export const sections: Section[] = [
     gate: 5,
     silkBg: "#E8C31E",
     silkFg: "#131A16",
-    title: "Vendor & Production Management",
-    tagline: "Procurement, vendor operations and multi-project delivery",
+    title: "Subcontractor Contracts & Management",
+    tagline: "Procurement, production-company operations and multi-project delivery QA",
     description:
       "End-to-end media producer working with local broadcast vendors — from Scope of Work " +
       "and vendor selection through negotiation, budgets, contract administration, " +
@@ -291,7 +295,7 @@ export const sections: Section[] = [
       "productions.",
     highlights: [
       {
-        title: "Arirang TV production procurement",
+        title: "Arirang TV media production procurement",
         description:
           "SOW, proposal evaluation, budget planning and contract administration for the co-produced program.",
         tags: ["Procurement", "SOW", "Contracts"],
@@ -315,9 +319,9 @@ export const sections: Section[] = [
         tags: ["Evaluation", "Quality"],
       },
       {
-        title: "Workflow & documentation standards",
+        title: "Public-sector workflow & documentation standards",
         description:
-          "Streamlined recurring production workflows and documentation so operational knowledge outlives individuals.",
+          "A core public-institution competency: built the workflow system and documentation standards for recurring production work so operational know-how stays with the organization.",
         tags: ["Workflow", "Documentation", "Playbooks"],
       },
     ],
@@ -332,8 +336,8 @@ export const sections: Section[] = [
     description:
       "Editorial ownership of everything published in Korean and English — from first " +
       "draft to publication approval — and the localization that makes content work " +
-      "across languages and cultures. The result is consistent messaging and brand voice " +
-      "across 29 markets.",
+      "across languages and cultures. The result: consistent messaging and a unified " +
+      "corporate brand across 29 markets.",
     highlights: [
       {
         title: "Scripts, press releases & features",
@@ -391,11 +395,11 @@ export const timeline = [
   },
   {
     period: "2015 —",
-    title: "Broadcaster & Producer, Korea Racing Authority (KRBC)",
+    title: "International Broadcast Announcer & Producer, Korea Racing Authority (KRBC)",
     detail:
       "Joined as the dedicated export content lead through KRA's competitive public-sector " +
       "recruitment. Race-day programming, English-language content, international " +
-      "distribution to 29 countries, and 100+ live events on air.",
+      "distribution to 29 countries, and 1,000+ live race broadcasts.",
   },
   {
     period: "2015.01 — 2015.03",
@@ -406,11 +410,6 @@ export const timeline = [
     period: "2014.09 — 2014.11",
     title: "Reporter, TBS (Freelance)",
     detail: "English live broadcast reporter.",
-  },
-  {
-    period: "2014",
-    title: "KRA launches its international race export business",
-    detail: "The venture I would join a year later as its dedicated content lead.",
   },
 ];
 
@@ -427,13 +426,13 @@ export const education = [
     period: "2010 — 2015",
     school: "Sungkyunkwan University (SKKU)",
     degree: "Bachelor's Degree, French Language and Literature",
-    detail: "Coursework in French language and creative writing.",
+    detail: "Coursework in French language and literature.",
   },
   {
     period: "2013.09 — 2014.01",
     school: "Université Grenoble Alpes",
     degree: "Exchange Semester, French Literature",
-    detail: "Exchange student; media planning and creative writing activities.",
+    detail: "",
   },
   {
     period: "2005 — 2009",
@@ -456,7 +455,7 @@ export const skills = [
       { name: "Live & broadcast production", level: 95 },
       { name: "On-air presenting & commentary", level: 92 },
       { name: "Premiere Pro / Audition / EDIUS", level: 88 },
-      { name: "Photoshop / Illustrator", level: 75 },
+      { name: "Photoshop / Illustrator", level: 60 },
     ],
   },
   {
@@ -481,7 +480,6 @@ export const skills = [
     group: "Marketing & Events",
     items: [
       { name: "Event direction & execution", level: 90 },
-      { name: "Press conferences", level: 90 },
       { name: "Brand positioning", level: 82 },
       { name: "Audience & fan development", level: 80 },
     ],
@@ -491,7 +489,7 @@ export const skills = [
     items: [
       { name: "LLMOps & applied AI", level: 80 },
       { name: "AI-assisted content workflows", level: 85 },
-      { name: "Generative image / video tools", level: 78 },
+      { name: "Generative image / video tools", level: 90 },
       { name: "Next.js / React", level: 70 },
     ],
   },
@@ -499,8 +497,8 @@ export const skills = [
     group: "Languages",
     items: [
       { name: "Korean (native)", level: 100 },
-      { name: "English (native-level · professional broadcaster)", level: 98 },
-      { name: "French (working)", level: 60 },
+      { name: "English (native-level · professional broadcaster)", level: 100 },
+      { name: "French (working)", level: 70 },
     ],
   },
 ];
@@ -508,8 +506,8 @@ export const skills = [
 export const stats = [
   "11 years in international sports media",
   "29 countries · KRW 150B+ annual export revenue",
-  "100+ live events on air",
-  "Chief Director, Korea Cup Press Conference 2026",
-  "Arirang TV · YTN · KBS N · France Galop · World Horse Racing",
+  "1,000+ live broadcasts and international event hosting",
+  "Chief Director, 2026 Korea Cup international press conference",
+  "Media partners at home and abroad: Arirang TV · YTN · KBS N · France Galop · World Horse Racing",
   "KO / EN bilingual · FR working",
 ];
