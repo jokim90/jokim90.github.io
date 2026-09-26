@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
 
@@ -8,6 +9,21 @@ export default function Hero() {
   const { t, u } = useLanguage();
   const { site } = t;
   const reduce = useReducedMotion();
+  const [open, setOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!open) return;
+    const onDown = (e: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("mousedown", onDown);
+    document.addEventListener("keydown", onKey);
+    return () => {
+      document.removeEventListener("mousedown", onDown);
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
   const anim = (delay: number) =>
     reduce
       ? {}
@@ -73,6 +89,38 @@ export default function Hero() {
             >
               {u.hero.github}
             </a>
+            {/* 이력서 다운로드 (EN / KO PDF) */}
+            <div ref={menuRef} className="relative">
+              <button
+                type="button"
+                onClick={() => setOpen((o) => !o)}
+                aria-haspopup="menu"
+                aria-expanded={open}
+                className="rounded-full border border-ink/25 px-6 py-3 font-mono text-sm transition-colors hover:border-turf hover:text-turf dark:border-chalk/25 dark:hover:border-amber dark:hover:text-amber"
+              >
+                {u.hero.resume}
+              </button>
+              {open && (
+                <div
+                  role="menu"
+                  className="absolute left-0 top-full z-20 mt-2 min-w-[220px] overflow-hidden rounded-2xl border border-ink/15 bg-chalk shadow-lg dark:border-chalk/15 dark:bg-night-card"
+                >
+                  {u.hero.resumeFiles.map((f) => (
+                    <a
+                      key={f.href}
+                      role="menuitem"
+                      href={f.href}
+                      download
+                      onClick={() => setOpen(false)}
+                      className="flex items-center justify-between gap-4 px-5 py-3 font-mono text-sm transition-colors hover:bg-turf-soft/60 hover:text-turf dark:hover:bg-night dark:hover:text-amber"
+                    >
+                      <span>{f.label}</span>
+                      <span className="text-xs text-ink/40 dark:text-chalk/40">PDF ↓</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
           </motion.div>
         </div>
 
