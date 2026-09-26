@@ -26,6 +26,11 @@ export const ui = {
       github: "GITHUB ↗",
       rec: "REC",
       onSet: "ON SET — INTERNATIONAL BROADCAST",
+      resume: "RESUME ↓",
+      resumeFiles: [
+        { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
+        { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
+      ],
     },
     race: {
       cardLabel: (n: number) => `TODAY'S CARD — ${n} RUNNERS`,
@@ -69,6 +74,11 @@ export const ui = {
       github: "GITHUB ↗",
       rec: "REC",
       onSet: "촬영 현장 — 국제 방송",
+      resume: "이력서 ↓",
+      resumeFiles: [
+        { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
+        { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
+      ],
     },
     race: {
       cardLabel: (n: number) => `오늘의 출마표 — ${n}개 부문`,
