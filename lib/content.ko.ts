@@ -110,8 +110,8 @@ export const sections: Section[] = [
   {
     slug: "business",
     gate: 2,
-    silkBg: "#131A16",
-    silkFg: "#FFFFFF",
+    silkBg: "#E8C31E",
+    silkFg: "#131A16",
     title: "해외사업 & 계약",
     tagline: "수출 성장, 파트너십, 계약 조건",
     description:
@@ -237,7 +237,7 @@ export const sections: Section[] = [
   {
     slug: "events",
     gate: 4,
-    silkBg: "#0F3FA8",
+    silkBg: "#131A16",
     silkFg: "#FFFFFF",
     title: "행사 마케팅 & 총괄",
     tagline: "기획부터 현장 총괄, 결과 보고까지",
@@ -305,8 +305,8 @@ export const sections: Section[] = [
   {
     slug: "vendor",
     gate: 5,
-    silkBg: "#E8C31E",
-    silkFg: "#131A16",
+    silkBg: "#0F3FA8",
+    silkFg: "#FFFFFF",
     title: "하청 업체 계약 및 관리",
     tagline: "조달, 제작사 운영, 다중 프로젝트 납품내용 검수",
     description:
