@@ -89,7 +89,7 @@ export type Section = {
 
 /**
  * 6개 포트폴리오 섹션.
- * 게이트 칩 색: 새들클로스 표준 (1=흰, 2=검, 3=빨, 4=파, 5=노, 6=초록)
+ * 게이트 칩 색: 한국마사회 새들클로스 표준 (1=흰, 2=노, 3=빨, 4=검, 5=파, 6=초록)
  */
 export const sections: Section[] = [
   {
@@ -160,8 +160,8 @@ export const sections: Section[] = [
   {
     slug: "business",
     gate: 2,
-    silkBg: "#131A16",
-    silkFg: "#FFFFFF",
+    silkBg: "#E8C31E",
+    silkFg: "#131A16",
     title: "International Business & Contracts",
     tagline: "Export growth, partnerships and deal terms",
     description:
@@ -292,7 +292,7 @@ export const sections: Section[] = [
   {
     slug: "events",
     gate: 4,
-    silkBg: "#0F3FA8",
+    silkBg: "#131A16",
     silkFg: "#FFFFFF",
     title: "Event Marketing & Direction",
     tagline: "From ideation to on-site direction and reporting",
@@ -361,8 +361,8 @@ export const sections: Section[] = [
   {
     slug: "vendor",
     gate: 5,
-    silkBg: "#E8C31E",
-    silkFg: "#131A16",
+    silkBg: "#0F3FA8",
+    silkFg: "#FFFFFF",
     title: "Subcontractor Contracts & Management",
     tagline: "Procurement, production-company operations and multi-project delivery QA",
     description:
