@@ -73,6 +73,7 @@ export const sections: Section[] = [
         description:
           "세계에서 유일한 한국인 경마 영어 방송전문가. 실시간 중계 환경에서 경주중계방송, 인터뷰기획 및 제작.",
         tags: ["라이브", "온에어", "영어해설", "인터뷰"],
+        link: "https://blog.naver.com/jobarajob/220814900553",
       },
       {
         title: "현장 방송 제작",
@@ -95,6 +96,16 @@ export const sections: Section[] = [
     images: [
       { title: "제작 현장 — 홍콩 국제경주", src: "/images/work/broadcast/end-to-end.jpg" },
     ],
+    press: [
+      {
+        title: "한국마사회 국제아나운서 데뷔 (2015)",
+        outlet: "네이버 블로그",
+        date: "2015",
+        href: "https://blog.naver.com/jobarajob/220814900553",
+        excerpt: "한국 경마 해외 중계의 영어 목소리, 한국마사회 국제아나운서 김정륜의 데뷔를 소개한 글.",
+        lang: "ko",
+      },
+    ],
   },
   {
     slug: "business",
@@ -113,6 +124,7 @@ export const sections: Section[] = [
         description:
           "출범 1년 차 사업을 11년 만에 29개 시장, 연 매출 1,500억 원 이상으로.",
         tags: ["29개국", "1,500억+", "시장 확대"],
+        link: "https://www.joongang.co.kr/article/25152927",
       },
       {
         title: "계약 업무 (2024년~)",
@@ -133,6 +145,26 @@ export const sections: Section[] = [
         tags: ["미디어 관계", "글로벌"],
       },
     ],
+    press: [
+      {
+        title: "전 세계와 함께 즐기는 K-경마, 세계 경마 주도하는 '한국마사회'",
+        outlet: "경기일보",
+        date: "2025.02.24",
+        href: "https://www.kyeonggi.com/article/20250224580128",
+        excerpt: "2024년 6대륙 24개국에 경마 콘텐츠를 수출해 역대 최고 1,258억 원 매출 달성. 김정륜 해외중계 아나운서 사진 게재.",
+        image: "https://ypzxxdrj8709.edge.naverncp.com/data2/content/image/2025/02/24/.cache/512/20250224580132.jpg",
+        lang: "ko",
+      },
+      {
+        title: "[국민의 기업] '경주실황 수출' 10년간 총 5000억 돌파…K-경마 성장 질주",
+        outlet: "중앙일보",
+        date: "2023.04.06",
+        href: "https://www.joongang.co.kr/article/25152927",
+        excerpt: "2013년 싱가포르 시범송출로 시작한 경주실황 수출사업이 10년 만에 누적 해외 매출 5,000억 원 돌파, 23개국 진출. KRBC 미들턴·김정륜 해외중계아나운서 사진 게재.",
+        image: "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202304/06/d9ab71ae-82b5-449f-a842-38428d12581e.jpg",
+        lang: "ko",
+      },
+    ],
   },
   {
     slug: "pr",
@@ -151,6 +183,7 @@ export const sections: Section[] = [
         description:
           "한국 경마를 해외 시청자에게 소개하는 프로그램 공동제작.",
         tags: ["공동제작", "아리랑TV"],
+        link: "https://m.ekn.kr/view.php?key=20260911021503596",
       },
       {
         title: "YTN · KBS N 외 홍보매체",
@@ -189,6 +222,17 @@ export const sections: Section[] = [
         src: "/images/work/strategy/virtual-studio.jpg",
       },
     ],
+    press: [
+      {
+        title: "한국마사회-국제방송교류재단 'K-경마' 글로벌 확산 도모한다",
+        outlet: "에너지경제",
+        date: "2026.09.11",
+        href: "https://m.ekn.kr/view.php?key=20260911021503596",
+        excerpt: "한국마사회와 국제방송교류재단(아리랑TV)이 국제 스포츠 콘텐츠 공동 기획·제작과 해외 방송망을 통한 한국 문화·관광·스포츠 확산을 위한 업무협약 체결.",
+        image: "https://www.ekn.kr/mnt/file/202609/news-p.v1.20260911.56a246e6c36e46a2a7b62a692e49f05a_R.jpg",
+        lang: "ko",
+      },
+    ],
   },
   {
     slug: "events",
@@ -206,12 +250,14 @@ export const sections: Section[] = [
         description:
           "국내외 언론 대상 기자회견의 기획·연출·제작 총괄.",
         tags: ["총괄", "기자회견", "2026"],
+        link: "https://www.ekn.kr/web/view.php?key=20260906027241038",
       },
       {
         title: "2026 코리아컵 개최",
         description:
           "플래그십 국제경주의 국제 방송과 행사 운영 전반에서 성공 개최에 기여.",
         tags: ["코리아컵", "행사 운영", "국제"],
+        link: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
       },
       {
         title: "코리아컵 VIP 초청 전략",
@@ -234,6 +280,26 @@ export const sections: Section[] = [
     ],
     videos: [
       { title: "코리아컵 해외 프로모션", youtubeId: "44hkp7DSYv4" },
+    ],
+    press: [
+      {
+        title: "'건전경마 생활 속 레저 정착'으로 경마 선진국 도약",
+        outlet: "에너지경제",
+        date: "2026.09.06",
+        href: "https://www.ekn.kr/web/view.php?key=20260906027241038",
+        excerpt: "한국마사회, 제9회 코리아컵·코리아스프린트 사상 첫 기자회견을 JW 메리어트 서울에서 개최. 국내외 조교사들이 총상금 16억 원 국제경주를 앞두고 출사표.",
+        image: "https://www.ekn.kr/mnt/file/202609/news-p.v1.20260906.114eac3826fb4344b3172d21e342e486_R.png",
+        lang: "ko",
+      },
+      {
+        title: "2만7000명 지켜본 '코리아컵'…한국경마, 세계와 달린다",
+        outlet: "스포츠동아",
+        date: "2026.09.10",
+        href: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
+        excerpt: "국내 경마 사상 첫 인터내셔널 G2 등급 코리아컵, 렛츠런파크 서울에 2만7천 관중. 승마 체험, 글로벌 푸드페스타, 응원 퍼포먼스 등 부대행사도 성황.",
+        image: "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/09/10/134642440.1.jpg",
+        lang: "ko",
+      },
     ],
   },
   {
