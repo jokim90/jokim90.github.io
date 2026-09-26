@@ -21,7 +21,7 @@ export const site = {
     "KRW 150 billion+ (approx. USD 100M+) in annual revenue. The only Korean " +
     "English-language racing broadcaster in the world, contributing to the international " +
     "business not only on air but across planning, production and event direction.",
-  heroHeadline: ["Korea, live.", "To the world."] as [string, string],
+  heroHeadline: ["From Korea,", "LIVE to the world."] as [string, string],
 };
 
 /** About 페이지 전용 텍스트 (헤드라인 2줄 + 본문 문단) */
