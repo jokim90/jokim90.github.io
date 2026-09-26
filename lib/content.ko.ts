@@ -8,7 +8,7 @@ import type { Section } from "./content";
 
 export const site = {
   name: "김정륜",
-  handle: "jokim90",
+  handle: "Jungrun Kim",
   github: "https://github.com/jokim90",
   email: "jokim90@gmail.com",
   location: "대한민국 서울",
