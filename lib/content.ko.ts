@@ -95,6 +95,7 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "제작 현장 — 홍콩 국제경주", src: "/images/work/broadcast/end-to-end.jpg" },
+      { title: "버추얼 국제 스튜디오 — 코리아컵 & 코리아스프린트 해외 기자 라운드테이블", src: "/images/work/strategy/virtual-studio.jpg" },
     ],
     press: [
       {
@@ -216,11 +217,8 @@ export const sections: Section[] = [
         tags: ["해외 언론", "라운드테이블", "코리아컵"],
       },
     ],
-    images: [
-      {
-        title: "버추얼 국제 스튜디오 — 코리아컵 & 코리아스프린트 해외 기자 라운드테이블",
-        src: "/images/work/strategy/virtual-studio.jpg",
-      },
+    videos: [
+      { title: "코리아컵 해외 프로모션", youtubeId: "44hkp7DSYv4" },
     ],
     press: [
       {
@@ -277,9 +275,6 @@ export const sections: Section[] = [
           "행사 연출이 목표에 맞도록 크리에이티브·이벤트 에이전시에 브리핑하고 방향 제시.",
         tags: ["에이전시", "크리에이티브", "목표"],
       },
-    ],
-    videos: [
-      { title: "코리아컵 해외 프로모션", youtubeId: "44hkp7DSYv4" },
     ],
     press: [
       {
