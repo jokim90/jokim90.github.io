@@ -145,6 +145,7 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
+      { title: "Virtual international studio — Korea Cup & Korea Sprint roundtable with international journalists", src: "/images/work/strategy/virtual-studio.jpg" },
     ],
     press: [
       {
@@ -271,11 +272,8 @@ export const sections: Section[] = [
         tags: ["International press", "Roundtable", "Korea Cup"],
       },
     ],
-    images: [
-      {
-        title: "Virtual international studio — Korea Cup & Korea Sprint roundtable with international journalists",
-        src: "/images/work/strategy/virtual-studio.jpg",
-      },
+    videos: [
+      { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
     ],
     press: [
       {
@@ -333,9 +331,6 @@ export const sections: Section[] = [
           "Briefing and steering creative and event agencies so that event expressions match market objectives.",
         tags: ["Agencies", "Creative", "Objectives"],
       },
-    ],
-    videos: [
-      { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
     ],
     press: [
       {
