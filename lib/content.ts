@@ -7,7 +7,7 @@
 
 export const site = {
   name: "Jungrun Kim",
-  handle: "jokim90",
+  handle: "JO Kim",
   github: "https://github.com/jokim90",
   email: "jokim90@gmail.com",
   location: "Seoul, Korea",
