@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Reveal from "@/components/Reveal";
 import ProjectCard, { YouTubeEmbed, GalleryImage, PdfLink } from "@/components/ProjectCard";
+import { PressRow } from "@/components/PressList";
 import { useLanguage } from "@/lib/i18n";
 
 export default function WorkDetail({ slug }: { slug: string }) {
@@ -107,6 +108,24 @@ export default function WorkDetail({ slug }: { slug: string }) {
             {section.pdfs.map((p, i) => (
               <Reveal key={p.href} delay={i * 0.06}>
                 <PdfLink title={p.title} href={p.href} />
+              </Reveal>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 언론 보도 */}
+      {section.press && section.press.length > 0 && (
+        <section className="mx-auto max-w-rail px-4 pb-16 sm:px-6">
+          <Reveal>
+            <h2 className="mb-2 font-mono text-xs tracking-widest text-ink/50 dark:text-chalk/50">
+              {u.work.press}
+            </h2>
+          </Reveal>
+          <div className="max-w-3xl">
+            {section.press.map((p, i) => (
+              <Reveal key={p.href} delay={i * 0.06}>
+                <PressRow item={p} />
               </Reveal>
             ))}
           </div>
