@@ -62,6 +62,16 @@ export type Highlight = {
   link?: string; // 외부 링크 (선택)
 };
 
+export type PressItem = {
+  title: string;
+  outlet: string;
+  date: string;      // YYYY.MM.DD (정렬용, 표시용 겸용)
+  href: string;
+  excerpt?: string;
+  image?: string;    // 기사 대표 이미지 URL (og:image)
+  lang?: "ko" | "en";
+};
+
 export type Section = {
   slug: string;
   gate: number;          // 게이트 번호 (경마 새들클로스 표준색)
@@ -74,6 +84,7 @@ export type Section = {
   videos?: { title: string; youtubeId: string }[]; // YouTube 영상 ID만 입력
   images?: { title: string; src: string }[];       // public/ 폴더의 이미지 경로 (예: /images/work/broadcast/1.jpg)
   pdfs?: { title: string; href: string }[];        // public/ 폴더의 PDF 경로
+  press?: PressItem[];                             // 언론 보도 (외부 링크)
 };
 
 /**
@@ -112,6 +123,7 @@ export const sections: Section[] = [
         description:
           "The only Korean English-language racing broadcaster in the world; live race broadcasts plus interview planning and production in a real-time environment.",
         tags: ["Live", "On-air", "English commentary", "Interviews"],
+        link: "https://blog.naver.com/jobarajob/220814900553",
       },
       {
         title: "On-site broadcast production",
@@ -134,6 +146,16 @@ export const sections: Section[] = [
     images: [
       { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
     ],
+    press: [
+      {
+        title: "International announcer debut — Korea Racing Authority (2015)",
+        outlet: "Naver Blog",
+        date: "2015",
+        href: "https://blog.naver.com/jobarajob/220814900553",
+        excerpt: "Feature on Jungrun Kim's debut as KRA's international announcer, the English-language voice of Korean racing for overseas broadcasts.",
+        lang: "ko",
+      },
+    ],
   },
   {
     slug: "business",
@@ -154,6 +176,7 @@ export const sections: Section[] = [
         description:
           "From a one-year-old venture to 29 markets and KRW 150 billion+ in annual revenue over 11 years.",
         tags: ["29 countries", "KRW 150B+", "Market expansion"],
+        link: "https://www.joongang.co.kr/article/25152927",
       },
       {
         title: "Contract engagement (since 2024)",
@@ -172,6 +195,26 @@ export const sections: Section[] = [
         description:
           "Ongoing relationships with international racing and sports media outlets.",
         tags: ["Media relations", "Global"],
+      },
+    ],
+    press: [
+      {
+        title: "K-Racing enjoyed worldwide: Korea Racing Authority leads global racing",
+        outlet: "Kyeonggi Ilbo",
+        date: "2025.02.24",
+        href: "https://www.kyeonggi.com/article/20250224580128",
+        excerpt: "KRA exported racing content to 24 countries on six continents in 2024, a record KRW 125.8 billion in revenue. Jungrun Kim is pictured as international broadcast announcer.",
+        image: "https://ypzxxdrj8709.edge.naverncp.com/data2/content/image/2025/02/24/.cache/512/20250224580132.jpg",
+        lang: "ko",
+      },
+      {
+        title: "Race broadcast exports top KRW 500 billion in 10 years — K-Racing surges ahead",
+        outlet: "JoongAng Ilbo",
+        date: "2023.04.06",
+        href: "https://www.joongang.co.kr/article/25152927",
+        excerpt: "Ten years after the first trial feed to Singapore, KRA's export business passes KRW 500 billion in cumulative overseas sales, reaching 23 countries. Pictured: KRBC international announcers Middleton and Jungrun Kim.",
+        image: "https://pds.joongang.co.kr/news/component/htmlphoto_mmdata/202304/06/d9ab71ae-82b5-449f-a842-38428d12581e.jpg",
+        lang: "ko",
       },
     ],
   },
@@ -195,6 +238,7 @@ export const sections: Section[] = [
         description:
           "Program co-production partnership carrying Korean racing to international viewers.",
         tags: ["Co-production", "Arirang TV"],
+        link: "https://m.ekn.kr/view.php?key=20260911021503596",
       },
       {
         title: "YTN · KBS N and other outlets",
@@ -233,6 +277,17 @@ export const sections: Section[] = [
         src: "/images/work/strategy/virtual-studio.jpg",
       },
     ],
+    press: [
+      {
+        title: "KRA and Arirang TV sign MOU to take K-Racing global",
+        outlet: "Energy Economy",
+        date: "2026.09.11",
+        href: "https://m.ekn.kr/view.php?key=20260911021503596",
+        excerpt: "Korea Racing Authority and the Korea International Broadcasting Foundation (Arirang TV) agree to jointly plan and produce international sports content and expand Korean culture, tourism and sport through overseas broadcast networks.",
+        image: "https://www.ekn.kr/mnt/file/202609/news-p.v1.20260911.56a246e6c36e46a2a7b62a692e49f05a_R.jpg",
+        lang: "ko",
+      },
+    ],
   },
   {
     slug: "events",
@@ -251,12 +306,14 @@ export const sections: Section[] = [
         description:
           "Overall direction and production of the press conference for domestic and international media.",
         tags: ["Chief Director", "Press conference", "2026"],
+        link: "https://www.ekn.kr/web/view.php?key=20260906027241038",
       },
       {
         title: "2026 Korea Cup staging",
         description:
           "Contributed to the successful staging of the flagship international race, across its international broadcast and event execution.",
         tags: ["Korea Cup", "Event execution", "International"],
+        link: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
       },
       {
         title: "Korea Cup VIP invitation strategy",
@@ -279,6 +336,26 @@ export const sections: Section[] = [
     ],
     videos: [
       { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
+    ],
+    press: [
+      {
+        title: "Toward an advanced racing nation: making racing an everyday leisure",
+        outlet: "Energy Economy",
+        date: "2026.09.06",
+        href: "https://www.ekn.kr/web/view.php?key=20260906027241038",
+        excerpt: "KRA holds its first-ever press conference for the 9th Korea Cup and Korea Sprint at JW Marriott Seoul, with Korean and overseas trainers ahead of the KRW 1.6 billion international race.",
+        image: "https://www.ekn.kr/mnt/file/202609/news-p.v1.20260906.114eac3826fb4344b3172d21e342e486_R.png",
+        lang: "ko",
+      },
+      {
+        title: "27,000 watch the Korea Cup as Korean racing runs with the world",
+        outlet: "Sports Donga",
+        date: "2026.09.10",
+        href: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
+        excerpt: "27,000 fans fill LetsRun Park Seoul for the 2026 Korea Cup and Korea Sprint — the Korea Cup's first year as an International G2 race — with riding experiences, a global food festa and cheering performances.",
+        image: "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/09/10/134642440.1.jpg",
+        lang: "ko",
+      },
     ],
   },
   {
