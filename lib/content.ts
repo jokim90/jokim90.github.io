@@ -9,32 +9,46 @@ export const site = {
   name: "Jungrun Kim",
   handle: "jokim90",
   github: "https://github.com/jokim90",
-  email: "jokim90@gmail.com", // TODO: 실제 이메일로 교체
+  email: "jokim90@gmail.com",
   location: "Seoul, Korea",
-  role: "International Media Producer · Language Expert · Global Content Operations",
+  role: "International Media Producer · Sports Marketing & PR · Global Business Development",
   tagline:
-    "International broadcast production, localization, editorial excellence, media operations, and global partnership management.",
+    "International broadcast production, sports marketing and PR, event direction, " +
+    "and global partnership and contract management.",
   intro:
-    "International media professional with 10+ years of experience producing multilingual " +
-    "broadcast content, leading global partnerships, managing localization and editorial " +
-    "quality, and delivering international media projects from concept through distribution.",
+    "International sports media producer with 11 years building Korea's racing content " +
+    "into a global export business — now spanning 29 countries and KRW 150 billion+ " +
+    "(approx. USD 100M+) in annual revenue. One of three English-language voices of " +
+    "Korean racing worldwide, with 100+ live events on air.",
   heroHeadline: ["Live from Seoul.", "Produced for the world."] as [string, string],
 };
 
 /** About 페이지 전용 텍스트 (헤드라인 2줄 + 본문 문단) */
 export const about = {
-  headline: ["From concept", "through distribution."] as [string, string],
+  headline: ["From concept", "through contract."] as [string, string],
   paragraphs: [
-    "For over a decade at the Korea Racing Authority, I've produced " +
-      "international broadcasts end to end — live production, audio and " +
-      "video post-production, and broadcast delivery — while owning " +
-      "editorial quality and language QA across everything we published " +
-      "in Korean and English.",
-    "Beyond the studio, I've led global partnerships with France " +
-      "Galop, World Horse Racing, Racing & Sports Australia, and " +
-      "Arirang TV, and managed the full production procurement cycle: " +
-      "scope of work, vendor selection, budgets, contracts, and delivery.",
-  ] as [string, string],
+    "I build the bridge between Korean sport and international audiences.",
+    "I joined Korea Racing Authority in 2015 as the dedicated content lead for its " +
+      "international export business, launched the year before. Over the next decade I " +
+      "grew that business from a standing start to KRW 150 billion+ in annual revenue " +
+      "across 29 countries, and turned Korean racing from a domestic product into a " +
+      "recognized international sports brand.",
+    "Working inside a government-affiliated public corporation also made me a capable " +
+      "PR administrator. I know how public-sector communication actually gets done in " +
+      "Korea — the approval chains, the procurement rules, the ministry-level protocol, " +
+      "the timing of an official announcement — and I can move a project through those " +
+      "procedures without losing momentum. For an international organization operating " +
+      "in Korea, that knowledge is the difference between a plan and an approved plan.",
+    "Along the way I became one of only three English-language voices of Korean racing " +
+      "worldwide, with live coverage of more than 100 events. Today I work as an " +
+      "end-to-end media producer with local broadcast vendors, and since 2024 my role has " +
+      "expanded beyond planning, production and presenting into contract engagement for " +
+      "the international business — so I now sit on both sides of the deal, the creative " +
+      "and the commercial.",
+    "I am completing an M.S. in Artificial Intelligence at Yonsei University, where my " +
+      "research is on AI-generated live sports commentary. That work is not a side " +
+      "interest. It is how I keep production fast, multilingual and current.",
+  ] as string[],
 };
 
 export type Highlight = {
@@ -69,179 +83,145 @@ export const sections: Section[] = [
     silkBg: "#FFFFFF",
     silkFg: "#131A16",
     title: "Global Broadcast Production",
-    tagline: "End-to-end international broadcast production",
+    tagline: "End-to-end English-language production and live on-air delivery",
     description:
-      "End-to-end broadcast production for international audiences — live production, " +
-      "audio recording and post-production, video editing, broadcast delivery, production " +
-      "planning, and editorial & language QA. Tools: Adobe Audition, Premiere Pro, EDIUS, " +
-      "Photoshop, Illustrator.",
+      "English-language racing content for international markets, produced end to end — " +
+      "the flagship Korea Cup, a recurring weekly international program, and race-day " +
+      "coverage. I own the full lifecycle from concept and scripting through production, " +
+      "editing, QA and on-time delivery, and I'm one of three English-language voices of " +
+      "Korean racing worldwide, with 100+ live events delivered on air.",
     highlights: [
       {
-        title: "Daily Live: Audio Broadcast Production",
+        title: "Korea Cup international broadcast",
         description:
-          "International broadcast production for Korea's flagship race day, produced for a global audience.",
-        tags: ["Live production","live broadcasting","interviews", "International", "Flagship event"],
+          "English-language broadcast content for KRA's flagship international race, produced for overseas broadcasters and audiences.",
+        tags: ["Korea Cup", "Flagship", "International"],
       },
       {
-        title: "Bilingual Journalist: Korean government broadcast delivery",
+        title: "Weekly international racing program",
         description:
-          "English-language broadcast production and delivery for  international audiences, representing Korean government--the Korea Racing Authority(Channel:KRBC).",
-        tags: ["Broadcast delivery", "English", "Korean", "Journalism","bilingual"],
+          "A recurring English-language program on a fixed weekly cycle: planning, scripting, recording, editing, QA and delivery.",
+        tags: ["Weekly cycle", "Full-stack production", "On-time delivery"],
       },
       {
-        title: "On camera, with camera: Live interviews & reporting",
+        title: "Live presenting & commentary, 100+ events",
         description:
-          "conducting interviews and broadcast execution for all race-day coverage.",
-        tags: ["Production planning","scripting", "Scheduling", "editing", "interviews", "reporting"],
+          "One of three English-language voices of Korean racing; live race calls, interviews and reporting in real-time, high-exposure conditions.",
+        tags: ["Live", "On-air", "Commentary", "Interviews"],
       },
       {
-        title: "Full-stack media producer",
+        title: "Race-day production on site",
         description:
-          "End-to-end media production:planning, scripting, recording, editing, QA, and on-time delivery.",
-        tags: ["Weekly cycle", "timely delivery", "full-stack production"],
+          "On-location production including international meetings such as the Hong Kong International Races.",
+        tags: ["On-site", "Live production", "International"],
+      },
+      {
+        title: "Co-produced programming with Arirang TV (2026)",
+        description:
+          "Joint program production with Korea's international broadcaster, taking Korean racing to an English-language TV audience.",
+        tags: ["Co-production", "Arirang TV", "2026"],
       },
     ],
     videos: [
       { title: "2026.09 Production with Arirang TV media", youtubeId: "k7eJ7oRJAZM" },
       { title: "End to end production work sample", youtubeId: "RmTNens-v7A" },
-      { title: "Interview as a broadcast announcer(2023)", youtubeId: "5EJWg__j-_8" },
+      { title: "Interview as a broadcast announcer (2023)", youtubeId: "5EJWg__j-_8" },
     ],
     images: [
       { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
     ],
   },
   {
-    slug: "editorial",
+    slug: "business",
     gate: 2,
     silkBg: "#131A16",
     silkFg: "#FFFFFF",
-    title: "Editorial Excellence & Language QA",
-    tagline: "Language quality and editorial expertise",
+    title: "International Business & Contracts",
+    tagline: "Export growth, partnerships and deal terms",
     description:
-      "Editorial ownership across the full written output of an international broadcaster — " +
-      "from first draft to publication approval, in Korean and English.",
+      "The commercial side of Korean racing abroad. I joined in 2015 as the dedicated " +
+      "content lead for an export business launched a year earlier, and helped grow it to " +
+      "29 countries and KRW 150 billion+ in annual revenue. Since 2024 I also handle " +
+      "contract engagement with overseas broadcast and distribution partners, working " +
+      "directly on deal terms.",
     highlights: [
       {
-        title: "Broadcast scripts & feature articles",
+        title: "Export business build-out, 2015–present",
         description:
-          "Wrote and edited broadcast scripts, press releases, feature articles, and newsletters.",
-        tags: ["Scriptwriting", "Press releases", "Features"],
+          "From a one-year-old venture to 29 markets and KRW 150 billion+ in annual revenue over 11 years.",
+        tags: ["29 countries", "KRW 150B+", "Market expansion"],
       },
       {
-        title: "English editorial writing",
+        title: "Contract engagement (since 2024)",
         description:
-          "Original English-language editorial writing for international audiences and partners.",
-        tags: ["English", "Editorial"],
+          "Direct engagement with overseas partners on contract terms, distribution scope and delivery obligations.",
+        tags: ["Contracts", "Negotiation", "Distribution"],
       },
       {
-        title: "Translation review & Language QA",
+        title: "France Galop · World Horse Racing · Racing & Sports Australia",
         description:
-          "Reviewed translations and ran language QA across all outbound multilingual content.",
-        tags: ["Translation review", "Language QA"],
+          "Content and distribution partnerships with international racing bodies and media, from coordination through delivery.",
+        tags: ["Partnership", "France", "Global media", "Australia"],
       },
       {
-        title: "Terminology, fact verification & publication approval",
+        title: "International media relations",
         description:
-          "Managed terminology standards, verified facts, and held final publication approval.",
-        tags: ["Terminology", "Fact-checking", "Editorial QA"],
+          "Ongoing relationships with international racing and sports media outlets.",
+        tags: ["Media relations", "Global"],
       },
-    ],
-    videos: [
-      { title: "Hands-on: dual-language subtitle generation workflow", youtubeId: "U02dflzVhtU" },
     ],
   },
   {
-    slug: "localization",
+    slug: "pr",
     gate: 3,
     silkBg: "#A6192E",
     silkFg: "#FFFFFF",
-    title: "Localization & Global Communication",
-    tagline: "Multilingual & cross-cultural communication",
+    title: "PR & Public Affairs",
+    tagline: "Press, broadcast exposure and Korean public-sector procedure",
     description:
-      "Making content and conversations work across languages and cultures — " +
-      "Korean–English communication, cross-cultural adaptation, and global media coordination.",
+      "A capable PR administrator inside a government-affiliated public corporation, with " +
+      "working knowledge of how Korean government and public-institution procedure " +
+      "actually runs — approval chains, procurement rules, ministry-level protocol and the " +
+      "timing of official announcements. I plan and run press events, prepare official " +
+      "materials, place coverage with major broadcasters, and move projects through those " +
+      "steps without losing momentum.",
     highlights: [
       {
-        title: "Localization case studies",
+        title: "Arirang TV co-production",
         description:
-          "Documented localization projects showing how content was adapted, not just translated.",
-        tags: ["Localization", "Case study"],
+          "Program co-production partnership carrying Korean racing to international viewers.",
+        tags: ["Co-production", "Arirang TV"],
       },
       {
-        title: "Cross-cultural adaptation",
+        title: "YTN · KBS N and other outlets",
         description:
-          "Adapted content and messaging for international audiences with different cultural contexts.",
-        tags: ["Adaptation", "Culture"],
+          "News exposure and race broadcast collaborations with domestic broadcasters to widen coverage and reach.",
+        tags: ["News coverage", "Race broadcast", "YTN", "KBS N"],
       },
       {
-        title: "International stakeholder communication",
+        title: "Press events & press materials",
         description:
-          "English–Korean communication with global partners, including international meeting documentation.",
-        tags: ["Stakeholders", "KO ↔ EN", "Documentation"],
+          "Planning and running press conferences and media events; drafting press releases and official announcements in Korean and English.",
+        tags: ["Press events", "Press releases", "Bilingual"],
       },
       {
-        title: "Global media coordination",
+        title: "Korean government procedure",
         description:
-          "Coordinated content and communication flows across international media partners.",
-        tags: ["Coordination", "Global media"],
-      },
-    ],
-    videos: [
-      { title: "Localization sample", youtubeId: "gA01EU1JX1Q" },
-    ],
-  },
-  {
-    slug: "strategy",
-    gate: 4,
-    silkBg: "#0F3FA8",
-    silkFg: "#FFFFFF",
-    title: "International Content & Media Strategy",
-    tagline: "Global initiatives, partnerships & audience engagement",
-    description:
-      "Global content initiatives and the strategy behind them — international promotion, " +
-      "partnership-driven content, distribution, and performance measurement. Each initiative " +
-      "is documented as a full case study: background, objectives, challenges, my role, " +
-      "execution, deliverables, results, and key learnings.",
-    highlights: [
-      {
-        title: "Korea Cup International Promotion",
-        description:
-          "Planned and executed international promotion for Korea Cup across global racing media.",
-        tags: ["Promotion", "Case study"],
+          "Navigating approvals, procurement rules and reporting lines of a public institution so that plans become approved plans.",
+        tags: ["Public sector", "Approvals", "Procurement"],
       },
       {
-        title: "France Galop Partnership",
+        title: "Protocol, ceremonies & delegations",
         description:
-          "Partnership collaboration with France Galop, from coordination through content delivery.",
-        tags: ["Partnership", "France"],
+          "Official ceremonies and visiting delegations: run-of-show, MC scripts, interpretation and logistics.",
+        tags: ["Protocol", "Ceremonies", "Delegations"],
       },
       {
-        title: "World Horse Racing Collaboration",
+        title: "International press engagement",
         description:
-          "Content collaboration with World Horse Racing to bring Korean racing to global audiences.",
-        tags: ["Collaboration", "Global media"],
+          "Virtual international studio and roundtables with overseas journalists for Korea Cup and Korea Sprint.",
+        tags: ["International press", "Roundtable", "Korea Cup"],
       },
-      {
-        title: "Racing & Sports Australia",
-        description:
-          "International content coordination with Racing & Sports Australia.",
-        tags: ["Partnership", "Australia"],
-      },
-      {
-        title: "International Media Relations",
-        description:
-          "Ongoing relationship management with international racing and sports media outlets.",
-        tags: ["Media relations", "Communication"],
-      },
-      {
-        title: "Audience engagement & performance measurement",
-        description:
-          "Designed engagement campaigns and measured content performance to feed results back into planning.",
-        tags: ["Audience", "Campaigns", "Measurement"],
-      },
-    ],
-    videos: [
-      { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
     ],
     images: [
       {
@@ -251,105 +231,186 @@ export const sections: Section[] = [
     ],
   },
   {
+    slug: "events",
+    gate: 4,
+    silkBg: "#0F3FA8",
+    silkFg: "#FFFFFF",
+    title: "Event Marketing & Direction",
+    tagline: "From ideation to on-site direction and reporting",
+    description:
+      "Leading marketing and media events end to end, with a focus on growing the " +
+      "international profile of Korean racing. Chief Director of the 2026 Korea Cup Press " +
+      "Conference and a contributor to the successful staging of the 2026 Korea Cup.",
+    highlights: [
+      {
+        title: "Chief Director, 2026 Korea Cup Press Conference",
+        description:
+          "Overall direction and production of the press conference for domestic and international media.",
+        tags: ["Chief Director", "Press conference", "2026"],
+      },
+      {
+        title: "2026 Korea Cup staging",
+        description:
+          "Contributed to the successful staging of the flagship international race, across its international broadcast and event execution.",
+        tags: ["Korea Cup", "Event execution", "International"],
+      },
+      {
+        title: "Korea Cup VIP invitation strategy",
+        description:
+          "Developed the invitation strategy targeting equestrian-linked royalty and global racing figures through embassy channels in the UK, France, Japan and Hong Kong.",
+        tags: ["VIP", "Embassies", "Strategy"],
+      },
+      {
+        title: "Korea Cup international promotion",
+        description:
+          "Planned and executed promotion across global racing media ahead of the race.",
+        tags: ["Promotion", "Global media", "Campaign"],
+      },
+      {
+        title: "Creative & event agency coordination",
+        description:
+          "Briefing and steering creative and event agencies so that event expressions match market objectives.",
+        tags: ["Agencies", "Creative", "Objectives"],
+      },
+    ],
+    videos: [
+      { title: "Korea Cup international promotion", youtubeId: "44hkp7DSYv4" },
+    ],
+  },
+  {
     slug: "vendor",
     gate: 5,
     silkBg: "#E8C31E",
     silkFg: "#131A16",
     title: "Vendor & Production Management",
-    tagline: "Procurement, vendor operations & delivery",
+    tagline: "Procurement, vendor operations and multi-project delivery",
     description:
-      "Full-cycle production procurement and vendor management — from Scope of Work and " +
-      "vendor selection through contract administration, deliverable management, and performance evaluation.",
+      "End-to-end media producer working with local broadcast vendors — from Scope of Work " +
+      "and vendor selection through negotiation, budgets, contract administration, " +
+      "deliverable management and performance evaluation, across multiple simultaneous " +
+      "productions.",
     highlights: [
       {
         title: "Arirang TV production procurement",
         description:
-          "Led production procurement with Arirang TV: SOW, proposal evaluation, budget planning, " +
-          "and contract administration.",
+          "SOW, proposal evaluation, budget planning and contract administration for the co-produced program.",
         tags: ["Procurement", "SOW", "Contracts"],
       },
       {
-        title: "Annual vendor management",
+        title: "Annual vendor contracts",
         description:
-          "Managed annual production contracts and outsourcing across broadcast production vendors.",
+          "Managing annual production contracts and outsourcing across broadcast production vendors.",
         tags: ["Vendor ops", "Annual contracts"],
       },
       {
-        title: "Deliverable & performance management",
+        title: "Negotiation, budgets & delivery",
         description:
-          "Managed deliverables, timelines, and vendor performance evaluation across concurrent projects.",
-        tags: ["Deliverables", "Evaluation", "Timelines"],
+          "Negotiating terms, holding budgets and managing deliverables and timelines across concurrent projects.",
+        tags: ["Negotiation", "Budgets", "Timelines"],
       },
       {
-        title: "Creative agency management",
+        title: "Vendor performance evaluation",
         description:
-          "Coordinated creative agencies and production vendors with stakeholder and risk management.",
-        tags: ["Agencies", "Risk management", "Stakeholders"],
+          "Evaluating vendor performance and feeding results into the next cycle of selection.",
+        tags: ["Evaluation", "Quality"],
+      },
+      {
+        title: "Workflow & documentation standards",
+        description:
+          "Streamlined recurring production workflows and documentation so operational knowledge outlives individuals.",
+        tags: ["Workflow", "Documentation", "Playbooks"],
       },
     ],
   },
   {
-    slug: "innovation",
+    slug: "editorial",
     gate: 6,
     silkBg: "#1C5940",
     silkFg: "#FFFFFF",
-    title: "Process Innovation",
-    tagline: "Operational thinking & workflow design",
+    title: "Editorial, Language QA & Localization",
+    tagline: "One brand voice across 29 markets, in Korean and English",
     description:
-      "Operational thinking behind the broadcasts — optimizing how work gets made, " +
-      "documented, and improved across broadcast, editorial, and production workflows.",
+      "Editorial ownership of everything published in Korean and English — from first " +
+      "draft to publication approval — and the localization that makes content work " +
+      "across languages and cultures. The result is consistent messaging and brand voice " +
+      "across 29 markets.",
     highlights: [
       {
-        title: "Broadcast workflow optimization",
+        title: "Scripts, press releases & features",
         description:
-          "Streamlined recurring broadcast production workflows to reduce turnaround and errors.",
-        tags: ["Workflow", "Broadcast"],
+          "Writing and editing broadcast scripts, press releases, feature articles and newsletters.",
+        tags: ["Scriptwriting", "Press releases", "Features"],
       },
       {
-        title: "Editorial & production workflow",
+        title: "Translation review & language QA",
         description:
-          "Designed editorial and production workflows connecting writers, producers, and QA.",
-        tags: ["Editorial", "Production"],
+          "Reviewing translations and running language QA across all outbound multilingual content.",
+        tags: ["Translation", "Language QA"],
       },
       {
-        title: "Documentation standards",
+        title: "Terminology, fact-checking & final approval",
         description:
-          "Established documentation standards so operational knowledge survives beyond individuals.",
-        tags: ["Documentation", "Standards"],
+          "Terminology standards, fact verification and final publication approval.",
+        tags: ["Terminology", "Fact-checking", "Approval"],
       },
       {
-        title: "Operational improvements & lessons learned",
+        title: "Cross-cultural adaptation",
         description:
-          "Captured operational improvements and lessons learned as reusable playbooks.",
-        tags: ["Improvement", "Playbooks"],
+          "Adapting content and messaging for international audiences, not just translating it.",
+        tags: ["Localization", "Adaptation"],
       },
+      {
+        title: "Dual-language subtitle workflow",
+        description:
+          "Hands-on Korean–English subtitle generation workflow for broadcast content.",
+        tags: ["Subtitles", "KO ↔ EN", "Workflow"],
+      },
+    ],
+    videos: [
+      { title: "Hands-on: dual-language subtitle generation workflow", youtubeId: "U02dflzVhtU" },
+      { title: "Localization sample", youtubeId: "gA01EU1JX1Q" },
     ],
   },
 ];
 
 export const timeline = [
   {
+    period: "2026",
+    title: "Chief Director, Korea Cup Press Conference · Arirang TV co-production",
+    detail:
+      "Chief Director of the 2026 Korea Cup Press Conference; contributed to staging the " +
+      "2026 Korea Cup; co-produced programming with Arirang TV and broadcast collaborations " +
+      "with YTN and KBS N. Annual export revenue reaches KRW 150 billion+.",
+  },
+  {
+    period: "2024",
+    title: "Contract engagement, international business",
+    detail:
+      "Role expands beyond planning, production and presenting into contract engagement " +
+      "with overseas broadcast and distribution partners.",
+  },
+  {
+    period: "2015 —",
+    title: "Broadcaster & Producer, Korea Racing Authority (KRBC)",
+    detail:
+      "Joined as the dedicated export content lead through KRA's competitive public-sector " +
+      "recruitment. Race-day programming, English-language content, international " +
+      "distribution to 29 countries, and 100+ live events on air.",
+  },
+  {
+    period: "2015.01 — 2015.03",
+    title: "Reporter, Yonhap News TV (Intern)",
+    detail: "Ombudsman broadcast reporter.",
+  },
+  {
     period: "2014.09 — 2014.11",
     title: "Reporter, TBS (Freelance)",
     detail: "English live broadcast reporter.",
   },
   {
-    period: "2015.01 — 2015.03",
-    title: "Reporter, Yonhap News (Intern)",
-    detail: "Yonhap News TV ombudsman college student broadcast reporter.",
-  },
-  {
-    period: "2016 —",
-    title: "Broadcaster & Producer, Korea Racing Authority (KRBC)",
-    detail:
-      "A decade of live broadcasting and international production: race-day programming, " +
-      "English-language content, and global media partnerships.",
-  },
-  {
-    period: "—",
-    title: "International Partnerships",
-    detail:
-      "Led collaborations with France Galop, World Horse Racing, Racing & Sports Australia, and Arirang TV.",
+    period: "2014",
+    title: "KRA launches its international race export business",
+    detail: "The venture I would join a year later as its dedicated content lead.",
   },
 ];
 
@@ -359,7 +420,8 @@ export const education = [
     period: "2024.03 — 2026.12 (Expected)",
     school: "Yonsei University",
     degree: "Master's Degree, Artificial Intelligence",
-    detail: "Focus on large language model operations (LLMOps) and applied AI.",
+    detail:
+      "LLMOps, vision-language models and applied AI; research on AI-generated live sports commentary.",
   },
   {
     period: "2010 — 2015",
@@ -376,57 +438,78 @@ export const education = [
   {
     period: "2005 — 2009",
     school: "Oregon Episcopal School",
-    degree: "High School",
+    degree: "High School · Portland, Oregon, USA",
     detail: "",
   },
   {
     period: "2003 — 2005",
     school: "Bishop's College School",
-    degree: "Middle School",
+    degree: "Middle School · Quebec, Canada",
     detail: "",
   },
 ];
 
 export const skills = [
   {
-    group: "Production",
+    group: "Production & Broadcast",
     items: [
       { name: "Live & broadcast production", level: 95 },
-      { name: "Audio post-production", level: 90 },
-      { name: "Production planning & delivery", level: 90 },
-    ],
-  },
-  {
-    group: "Media Technology",
-    items: [
-      { name: "Adobe Audition", level: 90 },
-      { name: "Adobe Premiere Pro / EDIUS", level: 85 },
+      { name: "On-air presenting & commentary", level: 92 },
+      { name: "Premiere Pro / Audition / EDIUS", level: 88 },
       { name: "Photoshop / Illustrator", level: 75 },
     ],
   },
   {
-    group: "Language & Editorial",
+    group: "PR & Public Affairs",
     items: [
-      { name: "Korean (native)", level: 100 },
-      { name: "English (professional)", level: 90 },
-      { name: "Editorial & Language QA", level: 92 },
+      { name: "Press events & press materials", level: 90 },
+      { name: "Media relations", level: 88 },
+      { name: "Korean government & public-institution procedure", level: 90 },
+      { name: "Protocol & delegation handling", level: 85 },
     ],
   },
   {
-    group: "Operations",
+    group: "Business & Partnerships",
     items: [
-      { name: "Vendor & procurement management", level: 88 },
-      { name: "Global partnership management", level: 85 },
-      { name: "Workflow & process design", level: 82 },
+      { name: "International market expansion", level: 92 },
+      { name: "Contract engagement & negotiation", level: 85 },
+      { name: "Vendor & agency management", level: 88 },
+      { name: "Budgets & procurement", level: 85 },
+    ],
+  },
+  {
+    group: "Marketing & Events",
+    items: [
+      { name: "Event direction & execution", level: 90 },
+      { name: "Press conferences", level: 90 },
+      { name: "Brand positioning", level: 82 },
+      { name: "Audience & fan development", level: 80 },
+    ],
+  },
+  {
+    group: "AI & Digital",
+    items: [
+      { name: "LLMOps & applied AI", level: 80 },
+      { name: "AI-assisted content workflows", level: 85 },
+      { name: "Generative image / video tools", level: 78 },
+      { name: "Next.js / React", level: 70 },
+    ],
+  },
+  {
+    group: "Languages",
+    items: [
+      { name: "Korean (native)", level: 100 },
+      { name: "English (native-level · professional broadcaster)", level: 98 },
+      { name: "French (working)", level: 60 },
     ],
   },
 ];
 
 export const stats = [
-  "10+ years in international media",
-  "KO / EN bilingual",
-  "Korea Cup · YTN Cup · KRBC International",
-  "France Galop · WHR · Arirang TV",
-  "Editorial & Language QA owner",
-  "Full-cycle vendor management",
+  "11 years in international sports media",
+  "29 countries · KRW 150B+ annual export revenue",
+  "100+ live events on air",
+  "Chief Director, Korea Cup Press Conference 2026",
+  "Arirang TV · YTN · KBS N · France Galop · World Horse Racing",
+  "KO / EN bilingual · FR working",
 ];
