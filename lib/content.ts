@@ -311,7 +311,6 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "Virtual international studio — Korea Cup & Korea Sprint roundtable with international journalists", src: "/images/work/strategy/virtual-studio.jpg" },
-      { title: "On set — live international broadcast interview, Korea Cup week", src: "/images/on-set.jpg" },
     ],
     press: [
       {
@@ -491,6 +490,7 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "End-to-end production, on site — Hong Kong International Races", src: "/images/work/broadcast/end-to-end.jpg" },
+      { title: "On set — live international broadcast interview, Seoul", src: "/images/on-set.jpg" },
     ],
     press: [
       {

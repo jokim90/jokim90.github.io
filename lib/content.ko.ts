@@ -208,7 +208,6 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "버추얼 국제 스튜디오 — 코리아컵 & 코리아스프린트 해외 기자 라운드테이블", src: "/images/work/strategy/virtual-studio.jpg" },
-      { title: "촬영 현장 — 코리아컵 주간 국제 라이브 인터뷰", src: "/images/on-set.jpg" },
     ],
     press: [
       {
@@ -371,6 +370,7 @@ export const sections: Section[] = [
     ],
     images: [
       { title: "제작 현장 — 홍콩 국제경주", src: "/images/work/broadcast/end-to-end.jpg" },
+      { title: "촬영 현장 — 서울 국제 라이브 인터뷰", src: "/images/on-set.jpg" },
     ],
     press: [
       {
