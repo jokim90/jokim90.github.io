@@ -54,7 +54,7 @@ export const about = {
       "the budget and sign off on delivery. I have sat on the buying side of the table as " +
       "much as the creative side.",
     "In 2026 I was Chief Director of the Korea Cup's first-ever press conference and " +
-      "contributed to staging the race in its first year at International G2 status — " +
+      "contributed to staging the race — " +
       "the first initiative of its kind I structured from zero, across international " +
       "media promotion, a VIP invitation strategy run through embassy channels, and " +
       "agency briefing.",
@@ -145,9 +145,9 @@ export const sections: Section[] = [
       "working directly on deal terms.",
     caseStudy: {
       problem:
-        "In 2015 Korean racing was a domestic product with a one-year-old export " +
-        "experiment: a handful of markets, no English-language content pipeline, and no " +
-        "established relationships with overseas broadcasters or racing bodies.",
+        "In 2015 Korean racing was a domestic product and its export business was one " +
+        "year old. The international content, the partner relationships and the " +
+        "distribution footprint still had to be built.",
       strategy:
         "Treat the content as an export product rather than a broadcast. Build a " +
         "consistent English-language program and race-day feed that overseas partners " +
@@ -163,9 +163,8 @@ export const sections: Section[] = [
         "World Horse Racing · Racing and Sports · KRA International Business Division · " +
         "local production vendors.",
       outcome:
-        "Contributed to the business growing to 29 countries and KRW 150 billion+ in " +
-        "annual export revenue (2026); cumulative overseas sales passed KRW 500 billion " +
-        "in 2023; Korean racing established as a recognized international sports brand.",
+        "Contributed to the business growing to 29 countries on five continents and " +
+        "KRW 150 billion+ in annual export revenue (2026).",
       lessons:
         "One reliable product that partners can schedule opens more markets than any " +
         "one-off deal — and the person who understands both the content and the contract " +
@@ -229,16 +228,16 @@ export const sections: Section[] = [
     tagline: "Structuring Korea's flagship international race as a media and fan platform — from zero",
     capabilities: ["0→1 planning", "Cross-functional", "Brand", "International media"],
     description:
-      "Korea's flagship international race in its first year at International G2 status. " +
+      "Korea's only international race meeting, the 9th Korea Cup and Korea Sprint. " +
       "As Chief Director of its first-ever press conference, and across international " +
       "promotion, VIP strategy and agency direction, I helped turn a race day into a " +
       "platform with a story that domestic and overseas stakeholders could all join.",
     caseStudy: {
       problem:
-        "Korea Cup was entering its first year as an International G2 race but had never " +
-        "had a press conference, a structured international media program or a VIP " +
-        "invitation strategy. Trainers, media, embassies and agencies at home and abroad " +
-        "needed to move in the same direction with no existing playbook.",
+        "In nine editions the Korea Cup and Korea Sprint had never held a press " +
+        "conference, and the international media program and VIP invitation strategy had " +
+        "to be built from scratch. Trainers, media, embassies and agencies at home and " +
+        "abroad needed to move in the same direction with no existing playbook.",
       strategy:
         "Position the race not as a single event but as a media platform: give the " +
         "international story a launch moment (the press conference), a channel " +
@@ -246,8 +245,9 @@ export const sections: Section[] = [
         "(embassy-channel VIP invitations), and brief agencies against those objectives " +
         "rather than against a run-of-show.",
       build:
-        "Chief Director of the first-ever Korea Cup press conference (JW Marriott Seoul, " +
-        "Korean and overseas trainers); planned and executed promotion across global " +
+        "Chief Director of the first-ever Korea Cup & Korea Sprint press conference " +
+        "(JW Marriott Seoul, 4 September 2026, with owners, trainers and jockeys from " +
+        "Korea, Japan and Hong Kong); planned and executed promotion across global " +
         "racing media; designed the VIP invitation strategy targeting equestrian-linked " +
         "royalty and global racing figures through UK, France, Japan and Hong Kong " +
         "embassy channels; ran the virtual international studio and journalist " +
@@ -256,10 +256,10 @@ export const sections: Section[] = [
         "KRA International Business Division · overseas trainers and connections · " +
         "international racing media · embassies · Arirang TV · creative and event agencies.",
       outcome:
-        "27,000 spectators at LetsRun Park Seoul; KRW 1.6 billion in prize money across " +
-        "Korea Cup and Korea Sprint; first-year G2 staging delivered with domestic and " +
-        "international coverage. The following week KRA and Arirang TV signed an MOU to " +
-        "take K-Racing to overseas networks.",
+        "The 9th Korea Cup and Korea Sprint — KRW 3 billion in total prize money (Korea " +
+        "Cup 1.6 billion, Korea Sprint 1.4 billion) — staged with domestic and " +
+        "international coverage. Six days after the press conference, KRA and Arirang TV " +
+        "signed an MOU on joint planning and production of international sports content.",
       lessons:
         "An event becomes a platform when every stakeholder has a reason to show up that " +
         "is theirs, not yours — and when one person owns the story, the guest list and " +
@@ -277,8 +277,7 @@ export const sections: Section[] = [
         title: "2026 Korea Cup staging",
         description:
           "Contributed to the successful staging of the flagship international race across its international broadcast and event execution.",
-        tags: ["Korea Cup", "Event execution", "International G2"],
-        link: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
+        tags: ["Korea Cup", "Event execution", "International"],
       },
       {
         title: "VIP invitation strategy",
@@ -314,15 +313,6 @@ export const sections: Section[] = [
     ],
     press: [
       {
-        title: "27,000 watch the Korea Cup as Korean racing runs with the world",
-        outlet: "Sports Donga",
-        date: "2026.09.10",
-        href: "https://sports.donga.com/sports/article/all/20260910/134642392/1",
-        excerpt: "27,000 fans fill LetsRun Park Seoul for the 2026 Korea Cup and Korea Sprint — the Korea Cup's first year as an International G2 race — with riding experiences, a global food festa and cheering performances.",
-        image: "https://dimg.donga.com/wps/SPORTS/IMAGE/2026/09/10/134642440.1.jpg",
-        lang: "ko",
-      },
-      {
         title: "KRA and Arirang TV sign MOU to take K-Racing global",
         outlet: "Energy Economy",
         date: "2026.09.11",
@@ -336,7 +326,7 @@ export const sections: Section[] = [
         outlet: "Energy Economy",
         date: "2026.09.06",
         href: "https://www.ekn.kr/web/view.php?key=20260906027241038",
-        excerpt: "KRA holds its first-ever press conference for the 9th Korea Cup and Korea Sprint at JW Marriott Seoul, with Korean and overseas trainers ahead of the KRW 1.6 billion international race.",
+        excerpt: "KRA holds the first press conference since the launch of the Korea Cup and Korea Sprint, at JW Marriott Seoul on 4 September, with owners, trainers and jockeys from Korea, Japan and Hong Kong ahead of the KRW 3 billion race meeting.",
         image: "https://www.ekn.kr/mnt/file/202609/news-p.v1.20260906.114eac3826fb4344b3172d21e342e486_R.png",
         lang: "ko",
       },
@@ -593,9 +583,8 @@ export const sections: Section[] = [
     caseStudy: {
       problem:
         "Every new market needs the same chain: script → translation review → terminology " +
-        "QA → subtitles → fact-check → delivery. That chain is manual, runs through a " +
-        "small bilingual team, and caps how many markets and formats can be served per " +
-        "week.",
+        "QA → subtitles → fact-check → delivery. That chain is manual and caps how many " +
+        "markets and formats can be served per week.",
       strategy:
         "Treat localization as a distribution cost line, not an editorial chore. An agent " +
         "that automates the repeatable steps and leaves judgment to a human approval gate " +
@@ -656,7 +645,7 @@ export const timeline = [
     title: "Chief Director, Korea Cup Press Conference · Arirang TV MOU & co-production",
     detail:
       "Chief Director of the first-ever Korea Cup press conference; contributed to staging " +
-      "the 2026 Korea Cup in its first International G2 year; Arirang TV co-production and " +
+      "the 2026 Korea Cup; Arirang TV MOU and co-production and " +
       "broadcast collaborations with YTN and KBS N. Annual export revenue reaches KRW 150 " +
       "billion+.",
   },
@@ -742,13 +731,13 @@ export const capabilities: { group: string; items: Capability[] }[] = [
         name: "Market expansion",
         evidence:
           "Dedicated content lead from the export venture's early days; helped take Korean racing content to 29 countries on five continents.",
-        outcome: "KRW 150B+ annual revenue (2026) · KRW 500B cumulative by 2023",
+        outcome: "29 countries · KRW 150B+ annual revenue (2026)",
       },
       {
         name: "0→1 initiative design",
         evidence:
           "First-ever Korea Cup press conference, VIP invitation strategy and international media program, structured from zero.",
-        outcome: "Korea Cup staged as a media platform in its first G2 year",
+        outcome: "Korea Cup staged as a media platform, not a single race day",
       },
       {
         name: "Business case & product framing",
@@ -799,7 +788,7 @@ export const capabilities: { group: string; items: Capability[] }[] = [
         name: "Event & program direction",
         evidence:
           "Chief Director, 2026 Korea Cup Press Conference; international event hosting and agency direction.",
-        outcome: "27,000 spectators; national and international coverage",
+        outcome: "Domestic and international coverage; KRW 3B race meeting delivered",
       },
     ],
   },
@@ -860,7 +849,7 @@ export const stats = [
   "11 years building Korean sports content into a global business",
   "29 countries · contributed to KRW 150B+ annual export revenue",
   "Contract engagement with overseas broadcasters & distributors since 2024",
-  "Chief Director, 2026 Korea Cup press conference · 27,000 spectators",
+  "Chief Director, first-ever Korea Cup press conference (2026)",
   "Partners: France Galop · World Horse Racing · Racing and Sports · Arirang TV",
   "M.S. AI (Yonsei, 2026) · Build Lab: AI × Sports prototypes",
   "1,000+ live broadcasts · KO / EN / FR",
