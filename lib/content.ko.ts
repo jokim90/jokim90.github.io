@@ -136,7 +136,7 @@ export const sections: Section[] = [
     silkBg: "#E8C31E",
     silkFg: "#131A16",
     kind: "case",
-    title: "2026 코리아컵: 글로벌 이벤트 & 미디어 플랫폼",
+    title: "국제행사 개최",
     tagline: "한국의 플래그십 국제경주를 미디어·팬 플랫폼으로 — 0에서 구조 만들기",
     capabilities: ["0→1 기획", "크로스펑셔널", "브랜드", "해외 미디어"],
     description:
@@ -310,7 +310,7 @@ export const sections: Section[] = [
     silkBg: "#131A16",
     silkFg: "#FFFFFF",
     kind: "case",
-    title: "콘텐츠 실행: 방송 & 제작",
+    title: "콘텐츠 제작",
     tagline: "사업의 토대가 되는 end-to-end 콘텐츠 가치사슬 — 1,000회 이상 라이브 중계",
     capabilities: ["End-to-end 제작", "라이브", "에디토리얼·로컬라이제이션 검수"],
     description:

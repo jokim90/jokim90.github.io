@@ -223,7 +223,7 @@ export const sections: Section[] = [
     silkBg: "#E8C31E",
     silkFg: "#131A16",
     kind: "case",
-    title: "2026 Korea Cup: Global Event & Media Platform",
+    title: "International Event Hosting",
     tagline: "Structuring Korea's flagship international race as a media and fan platform — from zero",
     capabilities: ["0→1 planning", "Cross-functional", "Brand", "International media"],
     description:
@@ -419,7 +419,7 @@ export const sections: Section[] = [
     silkBg: "#131A16",
     silkFg: "#FFFFFF",
     kind: "case",
-    title: "Content Execution: Broadcast & Production",
+    title: "Content Production",
     tagline: "The end-to-end content value chain the business is built on — 1,000+ live broadcasts",
     capabilities: ["End-to-end production", "Live", "Editorial & localization QA"],
     description:
