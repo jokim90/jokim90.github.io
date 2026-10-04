@@ -145,30 +145,29 @@ export const sections: Section[] = [
       "working directly on deal terms.",
     caseStudy: {
       problem:
-        "In 2015 Korean racing was a domestic product and its export business was one " +
-        "year old. The international content, the partner relationships and the " +
-        "distribution footprint still had to be built.",
+        "I joined Korea Racing Authority in 2015 as the dedicated content lead for an export " +
+        "business that was one year old. My brief was to build the international content and " +
+        "the partner-facing work the business would grow on.",
       strategy:
-        "Treat the content as an export product rather than a broadcast. Build a " +
-        "consistent English-language program and race-day feed that overseas partners " +
-        "can schedule, then use that product to open and deepen distribution " +
-        "relationships market by market.",
+        "I treated the content as an export product rather than a broadcast: a consistent " +
+        "English-language program and race-day feed that overseas partners could schedule, " +
+        "then used that product to open and deepen distribution relationships market by market.",
       build:
-        "Designed and ran the recurring international program and race-day coverage end " +
-        "to end; set editorial, terminology and localization standards so the brand read " +
-        "the same in every market; from 2024, moved into direct contract engagement — " +
-        "distribution scope, delivery obligations and deal terms with overseas partners.",
+        "I designed and ran the recurring international program and race-day coverage end to " +
+        "end; set the editorial, terminology and localization standards; and from 2024 took on " +
+        "contract engagement with overseas partners directly — distribution scope, delivery " +
+        "obligations and deal terms.",
       partners:
-        "Overseas broadcasters and distributors across five continents · France Galop · " +
-        "World Horse Racing · Racing and Sports · KRA International Business Division · " +
-        "local production vendors.",
+        "I worked directly with overseas broadcasters and distributors, with France Galop, " +
+        "World Horse Racing and Racing and Sports, and with our local production vendors.",
       outcome:
-        "Contributed to the business growing to 29 countries on five continents and " +
-        "KRW 150 billion+ in annual export revenue (2026).",
+        "Over 11 years I contributed to the business growing to 29 countries on five " +
+        "continents and KRW 150 billion+ in annual revenue. My accountability grew with it: " +
+        "from content lead to the person negotiating partner terms.",
       lessons:
-        "One reliable product that partners can schedule opens more markets than any " +
-        "one-off deal — and the person who understands both the content and the contract " +
-        "is the one who can keep the relationship growing.",
+        "One reliable product that partners can schedule opens more markets than any one-off " +
+        "deal — and the person who understands both the content and the contract is the one " +
+        "who can keep the relationship growing.",
     },
     highlights: [
       {
@@ -228,42 +227,42 @@ export const sections: Section[] = [
     tagline: "Structuring Korea's flagship international race as a media and fan platform — from zero",
     capabilities: ["0→1 planning", "Cross-functional", "Brand", "International media"],
     description:
-      "Korea's only international race meeting, the 9th Korea Cup and Korea Sprint. " +
-      "As Chief Director of its first-ever press conference, and across international " +
-      "promotion, VIP strategy and agency direction, I helped turn a race day into a " +
-      "platform with a story that domestic and overseas stakeholders could all join.",
+      "In 2026 I was accountable for the international media side of Korea's only " +
+      "international race meeting: Chief Director of its first-ever press conference, and " +
+      "owner of the international promotion, VIP invitation strategy and agency direction. " +
+      "I treated the race day as a platform that domestic and overseas stakeholders could " +
+      "all join, and I contributed to the staging of the race itself.",
     caseStudy: {
       problem:
-        "In nine editions the Korea Cup and Korea Sprint had never held a press " +
-        "conference, and the international media program and VIP invitation strategy had " +
-        "to be built from scratch. Trainers, media, embassies and agencies at home and " +
-        "abroad needed to move in the same direction with no existing playbook.",
+        "In 2026 I was accountable for the international media side of the Korea Cup and " +
+        "Korea Sprint: a press conference the event had never held, an international media " +
+        "program and a VIP invitation strategy that did not yet exist. Trainers, media, " +
+        "embassies and agencies at home and abroad had to move in one direction.",
       strategy:
-        "Position the race not as a single event but as a media platform: give the " +
-        "international story a launch moment (the press conference), a channel " +
-        "(international promotion and press roundtables) and a guest strategy " +
-        "(embassy-channel VIP invitations), and brief agencies against those objectives " +
-        "rather than against a run-of-show.",
+        "I positioned the race as a media platform rather than a single event: a launch moment " +
+        "(the press conference), a channel (international promotion and press roundtables) " +
+        "and a guest strategy (embassy-channel VIP invitations), and I briefed agencies " +
+        "against those objectives rather than against a run-of-show.",
       build:
-        "Chief Director of the first-ever Korea Cup & Korea Sprint press conference " +
-        "(JW Marriott Seoul, 4 September 2026, with owners, trainers and jockeys from " +
-        "Korea, Japan and Hong Kong); planned and executed promotion across global " +
-        "racing media; designed the VIP invitation strategy targeting equestrian-linked " +
-        "royalty and global racing figures through UK, France, Japan and Hong Kong " +
-        "embassy channels; ran the virtual international studio and journalist " +
-        "roundtables; briefed and steered creative and event agencies.",
+        "As Chief Director I planned, directed and produced the first-ever Korea Cup & Korea " +
+        "Sprint press conference (JW Marriott Seoul, 4 September 2026); planned and executed " +
+        "promotion across global racing media; designed the VIP invitation strategy through " +
+        "UK, France, Japan and Hong Kong embassy channels; ran the virtual international " +
+        "studio and journalist roundtables; and briefed and steered the creative and event " +
+        "agencies.",
       partners:
-        "KRA International Business Division · overseas trainers and connections · " +
-        "international racing media · embassies · Arirang TV · creative and event agencies.",
+        "I coordinated directly with overseas connections and trainers, international racing " +
+        "media, embassies, Arirang TV, and the creative and event agencies, inside KRA's " +
+        "International Business Division.",
       outcome:
-        "The 9th Korea Cup and Korea Sprint — KRW 3 billion in total prize money (Korea " +
-        "Cup 1.6 billion, Korea Sprint 1.4 billion) — staged with domestic and " +
-        "international coverage. Six days after the press conference, KRA and Arirang TV " +
-        "signed an MOU on joint planning and production of international sports content.",
+        "The press conference and international media program ran as I planned them, with " +
+        "domestic and international coverage, and I contributed to staging the race itself. " +
+        "Six days later KRA and Arirang TV signed an MOU on international sports content — a " +
+        "partnership I now work on through co-production and procurement.",
       lessons:
-        "An event becomes a platform when every stakeholder has a reason to show up that " +
-        "is theirs, not yours — and when one person owns the story, the guest list and " +
-        "the agency brief together.",
+        "An event becomes a platform when every stakeholder has a reason to show up that is " +
+        "theirs, not yours — and when one person owns the story, the guest list and the " +
+        "agency brief together.",
     },
     highlights: [
       {
@@ -349,35 +348,31 @@ export const sections: Section[] = [
       "evaluation — across several productions at once.",
     caseStudy: {
       problem:
-        "International content delivery depends on three parties that rarely speak the " +
-        "same language: overseas partners with their own delivery expectations, local " +
-        "production vendors, and a public-sector approval and procurement system with " +
-        "strict rules. A gap between any two of them shows up as a late feed or a failed " +
-        "delivery.",
+        "I am the person accountable for the chain between an overseas partner's delivery " +
+        "terms, our local production vendors and a public-sector procurement and approval " +
+        "system. A gap anywhere in that chain is mine to close.",
       strategy:
-        "Own the full chain as one system. Define scope with the overseas partner first, " +
-        "translate it into a Scope of Work and vendor contract, and route every step " +
-        "through public-sector procurement and approval so delivery is both fast and " +
-        "defensible.",
+        "I own the whole chain as one system: scope agreed with the overseas partner first, " +
+        "translated into a Scope of Work and vendor contract, and routed through procurement " +
+        "and approval so delivery is both fast and defensible.",
       build:
-        "Negotiated contract terms, distribution scope and delivery obligations with " +
-        "overseas broadcasters and distributors (since 2024); wrote SOWs, evaluated " +
-        "proposals, set budgets and administered contracts for production vendors, " +
-        "including the Arirang TV co-production; managed annual vendor contracts and " +
-        "concurrent productions; evaluated vendor performance into the next selection " +
-        "cycle; built the workflow and documentation standards so the know-how stays " +
-        "with the organization.",
+        "I negotiate contract terms, distribution scope and delivery obligations with overseas " +
+        "broadcasters and distributors (since 2024); write the SOWs, evaluate proposals, set " +
+        "budgets and administer contracts for production vendors, including the Arirang TV " +
+        "co-production; manage annual vendor contracts and concurrent productions; evaluate " +
+        "vendor performance into the next selection cycle; and built the workflow and " +
+        "documentation standards so the know-how stays with the organization.",
       partners:
-        "Overseas broadcasters and distributors · France Galop · World Horse Racing · " +
-        "Racing and Sports · Arirang TV · domestic production companies · KRA procurement " +
-        "and approval lines.",
+        "Overseas broadcasters and distributors, France Galop, World Horse Racing, Racing and " +
+        "Sports, Arirang TV, domestic production companies, and KRA's procurement and " +
+        "approval lines.",
       outcome:
-        "Reliable multi-market delivery across concurrent productions; a repeatable " +
-        "procurement-to-delivery playbook inside a government-affiliated corporation; " +
-        "contract engagement added to the role in 2024 as a standing responsibility.",
+        "Multi-market delivery across concurrent productions that I sign off on; a " +
+        "repeatable procurement-to-delivery playbook I wrote; and contract engagement added " +
+        "to my role in 2024 as a standing responsibility.",
       lessons:
-        "Governance is a feature, not friction. Partners trust a counterpart who can say " +
-        "what is possible, by when and with what approval — and then deliver exactly that.",
+        "Governance is a feature, not friction. Partners trust a counterpart who can say what " +
+        "is possible, by when and with what approval — and then deliver exactly that.",
     },
     highlights: [
       {
@@ -510,32 +505,31 @@ export const sections: Section[] = [
       "experience per market — evaluated as a business case, not only a research result.",
     caseStudy: {
       problem:
-        "Live sports content exported to 29 markets is still one feed, one language, one " +
-        "commentary track. Overseas fans new to Korean racing have no way to ask what a " +
-        "form line means, who a jockey is or why a horse is the favorite — in real time, " +
-        "in their own language. That gap caps engagement, and therefore the value of the " +
-        "content.",
+        "The live content I export to 29 markets is still one feed, one language, one " +
+        "commentary track. Overseas fans new to Korean racing cannot ask what a form line " +
+        "means, who a jockey is or why a horse is the favorite — in real time, in their own " +
+        "language. That gap caps engagement, and therefore the value of the content I sell.",
       strategy:
-        "Instead of more broadcasting, add a product layer on top of the feed: a live " +
-        "companion that turns real-time race data and video into generated commentary, " +
-        "fan Q&A and per-market personalization — measured on engagement, retention and " +
+        "Instead of more broadcasting, I am adding a product layer on top of the feed: a live " +
+        "companion that turns real-time race data and video into generated commentary, fan " +
+        "Q&A and per-market personalization — measured on engagement, retention and " +
         "localization cost per market, not just model quality.",
       build:
-        "Grounded in M.S. research at Yonsei (LLMOps, VLM, applied AI). Current scope: " +
-        "live data ingestion → event detection → commentary generation → multilingual " +
-        "delivery, with a business case covering target markets, unit economics and " +
-        "partner fit. Working prototype and demo video scheduled for 2026 Q4.",
+        "I am building it on my M.S. research at Yonsei (LLMOps, VLM, applied AI). Scope: live " +
+        "data ingestion → event detection → commentary generation → multilingual delivery, " +
+        "with a business case I am writing on target markets, unit economics and partner fit. " +
+        "Working prototype and demo video planned for 2026 Q4.",
       partners:
-        "Yonsei University AI program · domain knowledge from KRA's international feed " +
-        "and overseas partner requirements (independent prototype; not an official KRA " +
+        "Yonsei University AI program; my own domain knowledge from KRA's international feed " +
+        "and overseas partner requirements (independent prototype, not an official KRA " +
         "product).",
       outcome:
-        "Status: prototype in development. Target deliverables — a working prototype, a " +
-        "demo video and an 8–10 page business case.",
+        "Status: prototype in development. What I will deliver — a working prototype, a demo " +
+        "video and an 8–10 page business case.",
       lessons:
         "The hard part of AI in sports is not the model. It is defining the fan problem " +
         "precisely enough that the model is worth building — and eleven years of watching " +
-        "overseas audiences meet Korean content is the dataset.",
+        "overseas audiences meet Korean content is my dataset.",
     },
     highlights: [
       {
@@ -582,29 +576,28 @@ export const sections: Section[] = [
       "content.",
     caseStudy: {
       problem:
-        "Every new market needs the same chain: script → translation review → terminology " +
-        "QA → subtitles → fact-check → delivery. That chain is manual and caps how many " +
-        "markets and formats can be served per week.",
+        "Every new market I serve needs the same chain: script → translation review → " +
+        "terminology QA → subtitles → fact-check → delivery. I run that chain by hand today, " +
+        "and it caps how many markets and formats can be served per week.",
       strategy:
-        "Treat localization as a distribution cost line, not an editorial chore. An agent " +
+        "I treat localization as a distribution cost line, not an editorial chore. An agent " +
         "that automates the repeatable steps and leaves judgment to a human approval gate " +
-        "lowers cost per market and makes 'more markets, faster' a product decision " +
-        "rather than a staffing one.",
+        "lowers cost per market and makes 'more markets, faster' a product decision rather " +
+        "than a staffing one.",
       build:
-        "Starting from the hands-on Korean–English subtitle workflow and the editorial, " +
-        "terminology and fact-checking standards built across 29 markets. Agent scope: " +
-        "terminology-aware translation drafts, subtitle generation, QA checklist and " +
-        "delivery packaging — measured on hours per episode and markets served per week.",
+        "I am starting from the Korean–English subtitle workflow and the editorial, terminology " +
+        "and fact-checking standards I built across 29 markets. Agent scope: terminology-aware " +
+        "translation drafts, subtitle generation, QA checklist and delivery packaging — " +
+        "measured on hours per episode and markets served per week.",
       partners:
-        "Built on KRA editorial standards and production workflows (independent " +
-        "prototype; not an official KRA product).",
+        "Built on the editorial standards and production workflows I run at KRA (independent " +
+        "prototype, not an official KRA product).",
       outcome:
         "Status: prototype in development. Existing evidence — the dual-language subtitle " +
-        "workflow and localization samples below.",
+        "workflow and localization samples below, which I produced.",
       lessons:
-        "Localization automation only matters if it is measured as 'how many more " +
-        "markets, how much faster' — the metric a distribution business actually cares " +
-        "about.",
+        "Localization automation only matters if it is measured as 'how many more markets, " +
+        "how much faster' — the metric a distribution business actually cares about.",
     },
     highlights: [
       {
@@ -788,7 +781,7 @@ export const capabilities: { group: string; items: Capability[] }[] = [
         name: "Event & program direction",
         evidence:
           "Chief Director, 2026 Korea Cup Press Conference; international event hosting and agency direction.",
-        outcome: "Domestic and international coverage; KRW 3B race meeting delivered",
+        outcome: "Press conference and media program delivered with domestic and international coverage",
       },
     ],
   },
