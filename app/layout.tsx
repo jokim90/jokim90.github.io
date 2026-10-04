@@ -12,8 +12,8 @@ import { site } from "@/lib/content";
 import { LanguageProvider } from "@/lib/i18n";
 
 export const metadata: Metadata = {
-  title: `${site.name} — International Media Producer`,
-  description: site.tagline,
+  title: `${site.name} — ${site.role}`,
+  description: `${site.tagline}. ${site.intro}`,
 };
 
 /** 다크모드 FOUC 방지: 렌더 전에 저장된 테마를 적용. 기본값은 다크모드입니다. */

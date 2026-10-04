@@ -16,11 +16,18 @@ npm run dev
 
 **모든 텍스트와 데이터는 `lib/content.ts` 한 파일에서 수정합니다.**
 
-- `site` — 이름, 이메일, GitHub, 소개문
-- `sections` — 6개 포트폴리오 섹션 (Broadcast / Business / PR / Events / Vendor / Editorial)
+- `site` — 이름, 이메일, GitHub, 포지셔닝(role/tagline), 소개문, 히어로 헤드라인
+- `about` — About 페이지 헤드라인과 본문
+- `sections` — 6개 포트폴리오 섹션 = 4개 Business Case + 2개 Build Lab (AI × Sports)
+  - `kind: "case" | "lab"`, `status`(lab 진행 상태), `capabilities`(역량 칩)
+  - `caseStudy` — Problem → Strategy → Build → Partners → Outcome → Lessons
 - `timeline` — 커리어 연혁
-- `skills` — 스킬 차트
+- `capabilities` — 역량 (자기평가 점수 대신 Capability + Evidence + Outcome)
 - `stats` — 상단 티커에 흐르는 스탯
+
+포지셔닝은 2026.10 커리어 전략안을 따릅니다: **Global Sports, Media & AI Business Strategist**
+(New Business · Strategic Partnerships · Content/Product Strategy). 섹션 순서는
+Business → Partnership → Project ownership → Content execution → AI(Build Lab).
 
 `[SAMPLE]` 표시가 있는 항목은 예시이므로 실제 경력으로 교체하세요.
 
@@ -77,8 +84,8 @@ portfolio/
 ├── app/
 │   ├── page.tsx            # 홈 (Hero + 티커 + 포트폴리오 그리드 + 스킬 + 타임라인)
 │   ├── about/page.tsx      # About
-│   └── work/[slug]/        # 6개 섹션 페이지 (broadcast · business · pr · events · vendor · editorial)
-├── components/             # Hero, Navbar, RaceCard, Timeline, Skills 등
+│   └── work/[slug]/        # 6개 섹션 페이지 (business · korea-cup · partners · broadcast · ai-live-companion · localization-agent)
+├── components/             # Hero, Navbar, RaceCard(케이스 그리드 + Build Lab), Timeline, Skills(역량 표) 등
 ├── lib/content.ts          # ★ 모든 내용은 여기서 수정
 └── .github/workflows/      # GitHub Pages 자동 배포
 ```

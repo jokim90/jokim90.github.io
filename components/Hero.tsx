@@ -53,19 +53,21 @@ export default function Hero() {
 
           <motion.h1
             {...anim(0.12)}
-            className="max-w-4xl font-display text-4xl font-black leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
+            className="max-w-4xl font-display text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl"
           >
             {site.heroHeadline[0]}
             <br />
             <span className="text-turf dark:text-amber">{site.heroHeadline[1]}</span>
           </motion.h1>
 
-          <motion.p
-            {...anim(0.2)}
-            className="mt-6 font-mono text-xs tracking-widest text-ink/60 dark:text-chalk/60 sm:text-sm"
-          >
-            {site.role.toUpperCase()}
-          </motion.p>
+          <motion.div {...anim(0.2)} className="mt-6">
+            <p className="font-mono text-xs tracking-widest text-ink/80 dark:text-chalk/80 sm:text-sm">
+              {site.role.toUpperCase()}
+            </p>
+            <p className="mt-2 font-mono text-[11px] tracking-widest text-ink/50 dark:text-chalk/50 sm:text-xs">
+              {site.tagline.toUpperCase()}
+            </p>
+          </motion.div>
 
           <motion.p
             {...anim(0.28)}
