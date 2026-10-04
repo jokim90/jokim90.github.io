@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
@@ -41,7 +40,7 @@ export default function Hero() {
         aria-hidden
       />
 
-      <div className="mx-auto grid max-w-rail gap-12 px-4 sm:px-6 md:grid-cols-[1.2fr_0.8fr] md:items-center md:gap-8">
+      <div className="mx-auto max-w-rail px-4 sm:px-6">
         <div>
           <motion.p
             {...anim(0)}
@@ -126,27 +125,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        <motion.div {...anim(0.2)} className="relative mx-auto w-full max-w-sm md:max-w-none">
-          <div className="relative overflow-hidden rounded-2xl border border-ink/15 shadow-[0_0_0_1px_rgba(0,0,0,0.02)] dark:border-chalk/15">
-            <Image
-              src="/images/on-set.jpg"
-              alt={`${site.name} on set, producing a live international broadcast`}
-              width={900}
-              height={1125}
-              priority
-              className="aspect-[4/5] w-full object-cover"
-            />
-            {/* 방송 모니터 느낌의 오버레이 */}
-            <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10" />
-            <div className="absolute left-3 top-3 flex items-center gap-2 rounded-full bg-night/70 px-3 py-1.5 backdrop-blur-sm">
-              <span className="inline-block h-1.5 w-1.5 rounded-full bg-crimson animate-pulseDot" />
-              <span className="font-mono text-[10px] tracking-widest text-chalk">{u.hero.rec}</span>
-            </div>
-          </div>
-          <p className="mt-3 text-center font-mono text-[11px] tracking-widest text-ink/45 dark:text-chalk/45">
-            {u.hero.onSet}
-          </p>
-        </motion.div>
       </div>
     </section>
   );
