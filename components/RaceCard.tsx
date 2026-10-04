@@ -77,7 +77,7 @@ export default function RaceCard() {
         <h2 className="mt-3 font-display text-3xl font-black tracking-tight sm:text-5xl">
           {u.race.portfolio}
         </h2>
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
+        <p className="mt-4 text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
           {u.race.intro}
         </p>
       </Reveal>
