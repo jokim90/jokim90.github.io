@@ -34,7 +34,7 @@ export const ui = {
     },
     race: {
       cardLabel: (n: number) => `TODAY'S CARD — ${n} RUNNERS`,
-      portfolio: "Business Portfolio",
+      portfolio: "Projects",
       intro:
         "Not a reel of work — evidence of businesses built. Each portfolio piece is told as Problem → Strategy → Build → Partners → Outcome → Lessons.",
       lab: "BUILD LAB — AI × SPORTS",
@@ -106,7 +106,7 @@ export const ui = {
     },
     race: {
       cardLabel: (n: number) => `오늘의 출마표 — ${n}개 부문`,
-      portfolio: "비즈니스 포트폴리오",
+      portfolio: "프로젝트",
       intro:
         "작품 모음이 아니라 사업을 만들어 온 증거입니다. 각 포트폴리오는 문제 → 전략 → 실행 → 파트너 → 결과 → 교훈 순으로 서술합니다.",
       lab: "BUILD LAB — AI × SPORTS",
