@@ -22,7 +22,7 @@ export const ui = {
     lang: { toKo: "Switch to Korean", toEn: "Switch to English" },
     hero: {
       onAir: "SPORTS · MEDIA · AI",
-      viewWork: "VIEW CASES ↓",
+      viewWork: "VIEW PORTFOLIO ↓",
       github: "GITHUB ↗",
       rec: "REC",
       onSet: "ON SET — ONE OF 1,000+ LIVE INTERNATIONAL BROADCASTS",
@@ -34,9 +34,9 @@ export const ui = {
     },
     race: {
       cardLabel: (n: number) => `TODAY'S CARD — ${n} RUNNERS`,
-      portfolio: "Business Cases",
+      portfolio: "Business Portfolio",
       intro:
-        "Not a reel of work — evidence of businesses built. Each case is told as Problem → Strategy → Build → Partners → Outcome → Lessons.",
+        "Not a reel of work — evidence of businesses built. Each portfolio piece is told as Problem → Strategy → Build → Partners → Outcome → Lessons.",
       lab: "BUILD LAB — AI × SPORTS",
       labIntro:
         "Where the M.S. in AI meets eleven years of sports-media operations: working prototypes with a business case attached.",
@@ -64,8 +64,8 @@ export const ui = {
     work: {
       gate: (g: number, total: number) => `GATE ${g} / ${total}`,
       lab: "BUILD LAB",
-      proves: "WHAT THIS CASE SHOWS",
-      caseStudy: "CASE STUDY",
+      proves: "WHAT THIS PORTFOLIO SHOWS",
+      caseStudy: "PORTFOLIO DETAIL",
       problem: "PROBLEM",
       strategy: "STRATEGY",
       build: "BUILD",
@@ -94,7 +94,7 @@ export const ui = {
     lang: { toKo: "한국어로 전환", toEn: "영어로 전환" },
     hero: {
       onAir: "스포츠 · 미디어 · AI",
-      viewWork: "케이스 보기 ↓",
+      viewWork: "포트폴리오 보기 ↓",
       github: "GITHUB ↗",
       rec: "REC",
       onSet: "촬영 현장 — 1,000회 이상의 국제 라이브 중계 중 한 장면",
@@ -106,9 +106,9 @@ export const ui = {
     },
     race: {
       cardLabel: (n: number) => `오늘의 출마표 — ${n}개 부문`,
-      portfolio: "비즈니스 케이스",
+      portfolio: "비즈니스 포트폴리오",
       intro:
-        "작품 모음이 아니라 사업을 만들어 온 증거입니다. 각 케이스는 문제 → 전략 → 실행 → 파트너 → 결과 → 교훈 순으로 서술합니다.",
+        "작품 모음이 아니라 사업을 만들어 온 증거입니다. 각 포트폴리오는 문제 → 전략 → 실행 → 파트너 → 결과 → 교훈 순으로 서술합니다.",
       lab: "BUILD LAB — AI × SPORTS",
       labIntro:
         "AI 석사와 11년의 스포츠 미디어 운영 경험이 만나는 곳: 비즈니스 케이스가 붙은 작동하는 프로토타입.",
@@ -136,8 +136,8 @@ export const ui = {
     work: {
       gate: (g: number, total: number) => `게이트 ${g} / ${total}`,
       lab: "BUILD LAB",
-      proves: "이 케이스가 보여주는 역량",
-      caseStudy: "케이스 스터디",
+      proves: "이 포트폴리오가 보여주는 역량",
+      caseStudy: "포트폴리오 상세",
       problem: "문제",
       strategy: "전략",
       build: "실행",
