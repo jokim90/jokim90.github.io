@@ -58,6 +58,8 @@ export const ui = {
       onSet: "ON SET — LIVE INTERNATIONAL INTERVIEW, SEOUL",
       github: "GITHUB ↗",
       email: "EMAIL",
+      showCapabilities: "CAPABILITIES ↓",
+      hideCapabilities: "HIDE CAPABILITIES ↑",
     },
     work: {
       gate: (g: number, total: number) => `GATE ${g} / ${total}`,
@@ -128,6 +130,8 @@ export const ui = {
       onSet: "촬영 현장 — 서울 국제 라이브 인터뷰",
       github: "GITHUB ↗",
       email: "이메일",
+      showCapabilities: "역량 보기 ↓",
+      hideCapabilities: "역량 접기 ↑",
     },
     work: {
       gate: (g: number, total: number) => `게이트 ${g} / ${total}`,

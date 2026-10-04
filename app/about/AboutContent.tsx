@@ -1,14 +1,22 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useRef, useState } from "react";
 import Reveal from "@/components/Reveal";
 import Timeline from "@/components/Timeline";
 import Education from "@/components/Education";
+import Skills from "@/components/Skills";
 import { useLanguage } from "@/lib/i18n";
 
 export default function AboutContent() {
   const { t, u } = useLanguage();
   const { site, about, sections } = t;
+  const [showCaps, setShowCaps] = useState(false);
+  const capsRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (showCaps) capsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }, [showCaps]);
 
   return (
     <>
@@ -56,17 +64,22 @@ export default function AboutContent() {
           </h2>
           <ul className="mt-4 grid max-w-2xl gap-2 sm:grid-cols-2">
             {sections.map((s) => (
-              <li
-                key={s.slug}
-                className="flex items-center gap-3 rounded-xl border border-ink/10 px-4 py-3 text-sm dark:border-chalk/10"
-              >
-                <span
-                  className="flex h-6 w-6 shrink-0 items-center justify-center rounded border border-ink/15 font-mono text-xs font-bold dark:border-chalk/15"
-                  style={{ backgroundColor: s.silkBg, color: s.silkFg }}
+              <li key={s.slug}>
+                <Link
+                  href={`/work/${s.slug}/`}
+                  className="group flex items-center gap-3 rounded-xl border border-ink/10 px-4 py-3 text-sm transition-all hover:-translate-y-0.5 hover:border-turf hover:shadow-md dark:border-chalk/10 dark:hover:border-amber"
                 >
-                  {s.gate}
-                </span>
-                {s.title}
+                  <span
+                    className="flex h-6 w-6 shrink-0 items-center justify-center rounded border border-ink/15 font-mono text-xs font-bold dark:border-chalk/15"
+                    style={{ backgroundColor: s.silkBg, color: s.silkFg }}
+                  >
+                    {s.gate}
+                  </span>
+                  <span className="flex-1">{s.title}</span>
+                  <span className="font-mono text-xs text-ink/40 transition-transform group-hover:translate-x-1 dark:text-chalk/40">
+                    →
+                  </span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -88,9 +101,23 @@ export default function AboutContent() {
             >
               {u.about.email}
             </a>
+            <button
+              type="button"
+              onClick={() => setShowCaps((v) => !v)}
+              aria-expanded={showCaps}
+              aria-controls="about-capabilities"
+              className="rounded-full border border-turf px-6 py-3 font-mono text-sm text-turf transition-colors hover:bg-turf hover:text-chalk dark:border-amber dark:text-amber dark:hover:bg-amber dark:hover:text-night"
+            >
+              {showCaps ? u.about.hideCapabilities : u.about.showCapabilities}
+            </button>
           </div>
         </Reveal>
       </section>
+
+      {/* 역량 표 — 버튼으로 펼치기 */}
+      <div id="about-capabilities" ref={capsRef} className="scroll-mt-20">
+        {showCaps && <Skills />}
+      </div>
 
       <Timeline />
       <Education />
