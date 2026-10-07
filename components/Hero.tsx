@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { useLanguage } from "@/lib/i18n";
@@ -122,6 +123,20 @@ export default function Hero() {
                 </div>
               )}
             </div>
+            {/* 학부 — 성균관대학교 로고 (클릭 시 링크) */}
+            <a
+              href={u.hero.skkuHref}
+              target="_blank"
+              rel="noreferrer"
+              title={u.hero.skkuTitle}
+              aria-label={u.hero.skkuTitle}
+              className="group flex items-center gap-2 rounded-full border border-ink/25 py-2 pl-2 pr-4 transition-colors hover:border-turf hover:text-turf dark:border-chalk/25 dark:hover:border-amber dark:hover:text-amber"
+            >
+              <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white">
+                <Image src="/images/skku-emblem.png" alt="Sungkyunkwan University" width={32} height={32} className="h-7 w-7 object-contain" />
+              </span>
+              <span className="font-mono text-xs">{u.hero.skkuLabel}</span>
+            </a>
           </motion.div>
         </div>
 

@@ -31,6 +31,9 @@ export const ui = {
         { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
         { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
       ],
+      skkuLabel: "SKKU ↗",
+      skkuTitle: "Sungkyunkwan University — how competitive is admission?",
+      skkuHref: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko",
     },
     race: {
       cardLabel: (n: number) => `TODAY'S CARD — ${n} RUNNERS`,
@@ -104,6 +107,9 @@ export const ui = {
         { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
         { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
       ],
+      skkuLabel: "성균관대 ↗",
+      skkuTitle: "성균관대학교 — 입학 경쟁력은?",
+      skkuHref: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko",
     },
     race: {
       cardLabel: (n: number) => `오늘의 출마표 — ${n}개 부문`,
