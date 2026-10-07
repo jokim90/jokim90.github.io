@@ -53,7 +53,7 @@ export default function Hero() {
 
           <motion.h1
             {...anim(0.12)}
-            className="max-w-4xl font-display text-4xl font-black leading-[1.2] tracking-tight sm:text-5xl lg:text-6xl"
+            className="max-w-4xl font-display text-4xl font-black leading-[1.6] tracking-tight sm:text-5xl lg:text-6xl"
           >
             {site.heroHeadline[0]}
             <br />
