@@ -35,6 +35,7 @@ export const ui = {
       schools: [
         { label: "SKKU · B.A.", title: "Sungkyunkwan University — B.A. French Language & Literature", href: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko", logo: "/images/skku-emblem.png" },
         { label: "YONSEI · M.S.", title: "Yonsei University — M.S. Artificial Intelligence (2026)", href: "https://en.wikipedia.org/wiki/Yonsei_University", logo: "/images/yonsei-emblem.png" },
+        { label: "OES · HIGH SCHOOL", title: "Oregon Episcopal School — Portland, Oregon, USA", href: "https://www.google.com/search?q=oregon+episcopal+school", logo: "/images/oes-emblem.png" },
       ],
     },
     race: {
@@ -113,6 +114,7 @@ export const ui = {
       schools: [
         { label: "성균관대 · 학사", title: "성균관대학교 — 프랑스어문학 학사", href: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko", logo: "/images/skku-emblem.png" },
         { label: "연세대 · 석사", title: "연세대학교 — 인공지능 석사 (2026)", href: "https://en.wikipedia.org/wiki/Yonsei_University", logo: "/images/yonsei-emblem.png" },
+        { label: "OES · 고등학교", title: "Oregon Episcopal School — 미국 오리건주 포틀랜드", href: "https://www.google.com/search?q=oregon+episcopal+school", logo: "/images/oes-emblem.png" },
       ],
     },
     race: {
