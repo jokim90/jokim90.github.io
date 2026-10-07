@@ -55,9 +55,10 @@ export default function WorkDetail({ slug }: { slug: string }) {
               href={section.url}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-block rounded-full bg-turf px-6 py-3 font-mono text-sm text-chalk transition-transform hover:scale-[1.03] dark:bg-amber dark:text-night"
+              className="mt-6 inline-flex items-center gap-2 rounded-full bg-amber px-6 py-3 font-mono text-sm font-bold text-night animate-liveGlow transition-transform hover:scale-[1.06] hover:animate-none"
             >
-              {u.work.open}
+              <span className="inline-block h-2 w-2 rounded-full bg-crimson animate-pulseDot" aria-hidden />
+              <span className="animate-blinkText">{u.work.open}</span>
             </a>
           )}
         </Reveal>

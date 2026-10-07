@@ -50,10 +50,21 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.25" },
         },
+        /* 라이브 버튼: 빛나는 링이 퍼지며 점멸 → 클릭 유도 */
+        liveGlow: {
+          "0%, 100%": { boxShadow: "0 0 0 0 rgba(242,179,61,0.75), 0 0 0 0 rgba(242,179,61,0.3)", transform: "scale(1)" },
+          "50%": { boxShadow: "0 0 0 8px rgba(242,179,61,0), 0 0 24px 4px rgba(242,179,61,0.45)", transform: "scale(1.04)" },
+        },
+        blinkText: {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.45" },
+        },
       },
       animation: {
         ticker: "ticker 28s linear infinite",
         pulseDot: "pulseDot 1.6s ease-in-out infinite",
+        liveGlow: "liveGlow 1.4s ease-in-out infinite",
+        blinkText: "blinkText 1.4s ease-in-out infinite",
       },
     },
   },

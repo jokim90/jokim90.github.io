@@ -48,7 +48,9 @@ body {
     scroll-behavior: auto;
   }
   .animate-ticker,
-  .animate-pulseDot {
+  .animate-pulseDot,
+  .animate-liveGlow,
+  .animate-blinkText {
     animation: none !important;
   }
 }

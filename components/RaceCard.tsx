@@ -46,7 +46,12 @@ function Card({ s, labLabel, openLabel }: { s: Section; labLabel: string; openLa
       {isLab && s.status && (
         <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] tracking-wider text-turf dark:text-amber">
           <span>{s.status}</span>
-          {s.url && <span className="rounded-full bg-turf/10 px-2 py-0.5 dark:bg-amber/10">{openLabel}</span>}
+          {s.url && (
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-amber px-2.5 py-0.5 font-bold text-night animate-liveGlow">
+              <span className="inline-block h-1.5 w-1.5 rounded-full bg-crimson animate-pulseDot" aria-hidden />
+              <span className="animate-blinkText">{openLabel}</span>
+            </span>
+          )}
         </p>
       )}
       {s.capabilities && s.capabilities.length > 0 && (
