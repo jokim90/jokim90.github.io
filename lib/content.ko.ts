@@ -561,8 +561,7 @@ export const education = [
     school: "연세대학교",
     degree: "인공지능 석사",
     detail:
-      "Focus: LLMOps, 비전-언어 모델(VLM), 응용 AI. 연구: AI 기반 실시간 스포츠 해설 생성 — " +
-      "라이브 스포츠와 글로벌 콘텐츠 로컬라이제이션을 위한 응용 상품·사업 유스케이스로 포지셔닝.",
+      "Focus: LLMOps, 비전-언어 모델(VLM), 응용 AI. 연구: AI 기반 실시간 스포츠 해설 생성.",
   },
   {
     period: "2010 — 2015",

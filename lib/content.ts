@@ -702,9 +702,7 @@ export const education = [
     school: "Yonsei University",
     degree: "M.S. in Artificial Intelligence",
     detail:
-      "Focus: LLMOps, vision-language models (VLM), applied AI. Research: AI-generated " +
-      "real-time sports commentary, positioned as an applied product/business use case for " +
-      "live sports and global content localization.",
+      "Focus: LLMOps, vision-language models (VLM), applied AI. Research: AI-generated real-time sports commentary.",
   },
   {
     period: "2010 — 2015",
