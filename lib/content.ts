@@ -852,7 +852,7 @@ export const capabilities: { group: string; items: Capability[] }[] = [
         name: "Korean · English · French",
         evidence:
           "Korean native; English at professional broadcast level (raised in the US); French working (SKKU, Université Grenoble Alpes).",
-        outcome: "KO / EN / FR",
+        outcome: "KO / EN / FR · DELF B2 (French), 2013",
       },
     ],
   },

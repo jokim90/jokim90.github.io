@@ -691,7 +691,7 @@ export const capabilities: { group: string; items: Capability[] }[] = [
       {
         name: "한국어 · 영어 · 프랑스어",
         evidence: "한국어 모국어; 영어 방송 진행 수준(미국 성장); 프랑스어 업무 가능(성균관대, 그르노블 알프스 대학교).",
-        outcome: "KO / EN / FR",
+        outcome: "KO / EN / FR · 프랑스어 자격증 DELF B2 취득 (2013)",
       },
     ],
   },
