@@ -76,7 +76,8 @@ export default function Hero() {
             {site.intro}
           </motion.p>
 
-          <motion.div {...anim(0.38)} className="mt-10 flex flex-wrap gap-3">
+          <motion.div {...anim(0.38)} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+            <div className="flex flex-wrap gap-3">
             <a
               href="#work"
               className="rounded-full bg-turf px-6 py-3 font-mono text-sm text-chalk transition-transform hover:scale-[1.03] dark:bg-amber dark:text-night"
@@ -123,20 +124,32 @@ export default function Hero() {
                 </div>
               )}
             </div>
-            {/* 학부 — 성균관대학교 로고 (클릭 시 링크) */}
-            <a
-              href={u.hero.skkuHref}
-              target="_blank"
-              rel="noreferrer"
-              title={u.hero.skkuTitle}
-              aria-label={u.hero.skkuTitle}
-              className="group flex items-center gap-2 rounded-full border border-ink/25 py-2 pl-2 pr-4 transition-colors hover:border-turf hover:text-turf dark:border-chalk/25 dark:hover:border-amber dark:hover:text-amber"
-            >
-              <span className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-full bg-white">
-                <Image src="/images/skku-emblem.png" alt="Sungkyunkwan University" width={32} height={32} className="h-7 w-7 object-contain" />
+            </div>
+
+            {/* 학력 박스 — 성균관대(학부) · 연세대(석사) */}
+            <div className="relative rounded-2xl border border-ink/20 px-4 pb-3 pt-4 dark:border-chalk/20">
+              <span className="absolute -top-2 left-3 bg-chalk px-1.5 font-mono text-[10px] tracking-widest text-ink/50 dark:bg-night dark:text-chalk/50">
+                {u.hero.academic}
               </span>
-              <span className="font-mono text-xs">{u.hero.skkuLabel}</span>
-            </a>
+              <div className="flex flex-wrap items-center gap-2">
+                {u.hero.schools.map((sc) => (
+                  <a
+                    key={sc.href}
+                    href={sc.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    title={sc.title}
+                    aria-label={sc.title}
+                    className="flex items-center gap-2 rounded-full border border-ink/20 py-1.5 pl-1.5 pr-3 transition-colors hover:border-turf hover:text-turf dark:border-chalk/20 dark:hover:border-amber dark:hover:text-amber"
+                  >
+                    <span className="flex h-7 w-7 items-center justify-center overflow-hidden rounded-full bg-white">
+                      <Image src={sc.logo} alt={sc.title} width={28} height={28} className="h-6 w-6 object-contain" />
+                    </span>
+                    <span className="font-mono text-[11px]">{sc.label}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
 

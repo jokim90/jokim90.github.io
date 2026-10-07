@@ -31,9 +31,11 @@ export const ui = {
         { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
         { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
       ],
-      skkuLabel: "SKKU ↗",
-      skkuTitle: "Sungkyunkwan University — how competitive is admission?",
-      skkuHref: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko",
+      academic: "ACADEMIC CAREER",
+      schools: [
+        { label: "SKKU · B.A.", title: "Sungkyunkwan University — B.A. French Language & Literature", href: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko", logo: "/images/skku-emblem.png" },
+        { label: "YONSEI · M.S.", title: "Yonsei University — M.S. Artificial Intelligence (2026)", href: "https://en.wikipedia.org/wiki/Yonsei_University", logo: "/images/yonsei-emblem.png" },
+      ],
     },
     race: {
       cardLabel: (n: number) => `TODAY'S CARD — ${n} RUNNERS`,
@@ -107,9 +109,11 @@ export const ui = {
         { label: "한국어", href: "/docs/Jungrun_Kim_Resume_KO.pdf" },
         { label: "English", href: "/docs/Jungrun_Kim_Resume_EN.pdf" },
       ],
-      skkuLabel: "성균관대 ↗",
-      skkuTitle: "성균관대학교 — 입학 경쟁력은?",
-      skkuHref: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko",
+      academic: "학력",
+      schools: [
+        { label: "성균관대 · 학사", title: "성균관대학교 — 프랑스어문학 학사", href: "https://www.google.com/search?q=how+competitive+must+you+be+to+go+to+skku+university&hl=ko", logo: "/images/skku-emblem.png" },
+        { label: "연세대 · 석사", title: "연세대학교 — 인공지능 석사 (2026)", href: "https://en.wikipedia.org/wiki/Yonsei_University", logo: "/images/yonsei-emblem.png" },
+      ],
     },
     race: {
       cardLabel: (n: number) => `오늘의 출마표 — ${n}개 부문`,
