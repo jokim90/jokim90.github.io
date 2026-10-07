@@ -588,16 +588,13 @@ export const sections: Section[] = [
         "lowers cost per market and makes 'more markets, faster' a product decision rather " +
         "than a staffing one.",
       build:
-        "Shipped example — Jeju Racing Race Card: I integrated seven KRA open-data APIs " +
-        "(race info, entries, runners, results, horse profiles with pedigree, jockey/trainer " +
-        "stats, sectional pace data), wrote the Python collector and GitHub Actions pipeline " +
-        "(daily full run plus 10-minute live polling on race days), designed the " +
-        "Korean/English UI, a six-factor model with a public backtested record, a race-flow " +
-        "Story tab, and a Jeju 101 primer written from the 2026 Jeju Racing Plan — built with " +
-        "AI-assisted development, every product decision mine. Next: the agent layer on top " +
-        "of my existing subtitle and editorial workflow — terminology-aware drafts, subtitle " +
-        "generation, QA checklist and delivery packaging, measured on hours per episode and " +
-        "markets served per week.",
+        "Shipped example — Jeju Racing Race Card: I designed a live-action data pipeline on KRA " +
+        "open data and built a website that explains Jeju racing, a uniquely Korean product " +
+        "unfamiliar to overseas fans, in English and Korean. Because new races are carded every " +
+        "week and several run on a single day, a pipeline that updates itself in real time was a " +
+        "core design point. Providing overseas racing fans with a data-driven prediction model is " +
+        "another distinctive part of this work. Next step: the agent layer on top of the subtitle " +
+        "and editorial workflow I already run.",
       partners:
         "Built on the editorial standards and production workflows I run at KRA (independent " +
         "prototype, not an official KRA product).",
