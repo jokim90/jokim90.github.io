@@ -84,7 +84,7 @@ portfolio/
 ├── app/
 │   ├── page.tsx            # 홈 (Hero + 티커 + 포트폴리오 그리드 + 스킬 + 타임라인)
 │   ├── about/page.tsx      # About
-│   └── work/[slug]/        # 6개 섹션 페이지 (business · korea-cup · partners · broadcast · jeju-racecard · localization-agent)
+│   └── work/[slug]/        # 6개 섹션 페이지 (business · korea-cup · partners · broadcast · ai-live-companion · localization-agent)
 ├── components/             # Hero, Navbar, RaceCard(케이스 그리드 + Build Lab), Timeline, Skills(역량 표) 등
 ├── lib/content.ts          # ★ 모든 내용은 여기서 수정
 └── .github/workflows/      # GitHub Pages 자동 배포
