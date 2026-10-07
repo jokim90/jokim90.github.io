@@ -25,7 +25,7 @@ export default function AboutContent() {
           <p className="font-mono text-xs tracking-widest text-turf dark:text-amber">
             {u.about.eyebrow}
           </p>
-          <h1 className="mt-3 max-w-5xl font-display text-4xl font-black leading-[1.08] tracking-tight [word-break:keep-all] sm:text-6xl">
+          <h1 className="mt-3 max-w-5xl font-display text-4xl font-black leading-[1.2] tracking-tight [word-break:keep-all] sm:text-6xl">
             {about.headline[0]}
             <br />
             {about.headline[1]}
