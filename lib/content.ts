@@ -565,7 +565,7 @@ export const sections: Section[] = [
     silkBg: "#1C5940",
     silkFg: "#FFFFFF",
     kind: "lab",
-    status: "Example shipped: Jeju Racing Race Card · agent in development",
+    status: "Example shipped: Jeju Racing Race Card · official KRA product planned for 2026 Q4",
     url: "https://jokim90.github.io/jeju-racecard/",
     title: "Global Sports Localization & Distribution Agent",
     tagline: "Automating the Korean–English content pipeline so more markets can be served, faster — a distribution lever, not a translation tool",
@@ -596,8 +596,10 @@ export const sections: Section[] = [
         "another distinctive part of this work. Next step: the agent layer on top of the subtitle " +
         "and editorial workflow I already run.",
       partners:
-        "Built on the editorial standards and production workflows I run at KRA (independent " +
-        "prototype, not an official KRA product).",
+        "An independent prototype built on KRA open data from data.go.kr. I am now planning the " +
+        "selection of an outsourced development vendor; after server development, it is scheduled " +
+        "for release as an official product of KRA's International Business Division, as early as " +
+        "2026 Q4.",
       outcome:
         "One localization product live and self-updating at jokim90.github.io/jeju-racecard, " +
         "in Korean and English. The agent that generalizes it to the broadcast pipeline is in " +
