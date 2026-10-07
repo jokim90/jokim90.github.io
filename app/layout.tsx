@@ -16,17 +16,15 @@ export const metadata: Metadata = {
   description: `${site.tagline}. ${site.intro}`,
 };
 
-/** 다크모드 FOUC 방지: 렌더 전에 저장된 테마를 적용. 기본값은 다크모드입니다. */
+/** 다크모드 FOUC 방지: 렌더 전에 저장된 테마를 적용. 기본값은 라이트모드입니다. */
 const themeInit = `
 (function(){
   try {
     var t = localStorage.getItem("theme");
-    if (t !== "light") {
+    if (t === "dark") {
       document.documentElement.classList.add("dark");
     }
-  } catch (e) {
-    document.documentElement.classList.add("dark");
-  }
+  } catch (e) {}
 })();
 `;
 
