@@ -11,7 +11,7 @@ import { useLanguage } from "@/lib/i18n";
  * 게이트 번호 칩은 실제 새들클로스 표준색을 따릅니다.
  * Business Case(4) 와 Build Lab(2) 을 구분해 보여줍니다.
  */
-function Card({ s, labLabel }: { s: Section; labLabel: string }) {
+function Card({ s, labLabel, openLabel }: { s: Section; labLabel: string; openLabel: string }) {
   const isLab = s.kind === "lab";
   return (
     <Link
@@ -44,7 +44,10 @@ function Card({ s, labLabel }: { s: Section; labLabel: string }) {
       <h3 className="mt-5 font-display text-xl font-bold tracking-tight">{s.title}</h3>
       <p className="mt-2 text-sm leading-relaxed text-ink/60 dark:text-chalk/60">{s.tagline}</p>
       {isLab && s.status && (
-        <p className="mt-3 font-mono text-[11px] tracking-wider text-turf dark:text-amber">{s.status}</p>
+        <p className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 font-mono text-[11px] tracking-wider text-turf dark:text-amber">
+          <span>{s.status}</span>
+          {s.url && <span className="rounded-full bg-turf/10 px-2 py-0.5 dark:bg-amber/10">{openLabel}</span>}
+        </p>
       )}
       {s.capabilities && s.capabilities.length > 0 && (
         <div className="mt-auto flex flex-wrap gap-1.5 pt-5">
@@ -85,7 +88,7 @@ export default function RaceCard() {
       <div className="mt-12 grid gap-4 sm:grid-cols-2">
         {cases.map((s, i) => (
           <Reveal key={s.slug} delay={i * 0.06}>
-            <Card s={s} labLabel={u.work.lab} />
+            <Card s={s} labLabel={u.work.lab} openLabel={u.work.open} />
           </Reveal>
         ))}
       </div>
@@ -101,7 +104,7 @@ export default function RaceCard() {
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             {labs.map((s, i) => (
               <Reveal key={s.slug} delay={i * 0.06}>
-                <Card s={s} labLabel={u.work.lab} />
+                <Card s={s} labLabel={u.work.lab} openLabel={u.work.open} />
               </Reveal>
             ))}
           </div>

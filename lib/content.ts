@@ -113,6 +113,7 @@ export type Section = {
   description: string;
   kind?: "case" | "lab"; // lab = Build Lab (AI × Sports 프로토타입)
   status?: string;       // lab 전용: 진행 상태 표시
+  url?: string;          // 라이브 프로토타입/외부 링크
   capabilities?: string[]; // 이 케이스가 증명하는 역량 (칩)
   caseStudy?: CaseStudy;
   highlights: Highlight[];
@@ -489,72 +490,90 @@ export const sections: Section[] = [
     ],
   },
   {
-    slug: "ai-live-companion",
+    slug: "jeju-racecard",
     gate: 5,
     silkBg: "#0F3FA8",
     silkFg: "#FFFFFF",
     kind: "lab",
-    status: "Prototype in development · 2026 Q4",
-    title: "AI Sports Live Companion",
-    tagline: "An AI product layer that turns a live race feed into a personalized, multilingual fan companion",
-    capabilities: ["AI product thinking", "Prototype", "Business case", "LLMOps"],
+    status: "Live · auto-updating from KRA open data",
+    url: "https://jokim90.github.io/jeju-racecard/",
+    title: "Jeju Racing Race Card",
+    tagline: "A bilingual race card, form guide and race-flow model that makes Korean pony racing legible to overseas punters",
+    capabilities: ["Product design", "Data pipeline", "Prediction model", "Fan experience"],
     description:
-      "Build Lab. My Yonsei M.S. research on AI-generated real-time sports commentary, " +
-      "reframed as a product: a live companion that uses race data, vision-language " +
-      "models and LLMs to generate commentary, answer fan questions and personalize the " +
-      "experience per market — evaluated as a business case, not only a research result.",
+      "Build Lab — shipped. I designed and built a public web app that explains Jeju pony " +
+      "racing to overseas punters who know Thoroughbred form but have never seen a Korean " +
+      "pony race: bilingual race cards, horse/jockey/trainer profiles, a six-factor model " +
+      "with a backtested record, a pace-and-race-flow story for each race, and a Jeju 101 " +
+      "primer — fed automatically from Korea Racing Authority open-data APIs.",
     caseStudy: {
       problem:
-        "The live content I export to 29 markets is still one feed, one language, one " +
-        "commentary track. Overseas fans new to Korean racing cannot ask what a form line " +
-        "means, who a jockey is or why a horse is the favorite — in real time, in their own " +
-        "language. That gap caps engagement, and therefore the value of the content I sell.",
+        "Jeju racing is a product I could export, but an overseas punter opening a Korean " +
+        "race card has nothing to work with: no English form guide, no explanation of pony " +
+        "classes and weights, no way to judge who is likely to win. I set out to build the " +
+        "form guide I would want to hand to a Racing and Sports reader.",
       strategy:
-        "Instead of more broadcasting, I am adding a product layer on top of the feed: a live " +
-        "companion that turns real-time race data and video into generated commentary, fan " +
-        "Q&A and per-market personalization — measured on engagement, retention and " +
-        "localization cost per market, not just model quality.",
+        "Treat the race card as the product, not the broadcast. Get the data straight from " +
+        "KRA's public APIs, present it the way international form guides do, add a simple " +
+        "transparent model and a narrative layer so a newcomer can read a race as a story, " +
+        "and make the whole thing update itself so it stays alive without me.",
       build:
-        "I am building it on my M.S. research at Yonsei (LLMOps, VLM, applied AI). Scope: live " +
-        "data ingestion → event detection → commentary generation → multilingual delivery, " +
-        "with a business case I am writing on target markets, unit economics and partner fit. " +
-        "Working prototype and demo video planned for 2026 Q4.",
+        "I applied for and integrated seven KRA open-data APIs (race info, entries, confirmed " +
+        "runners, results, horse profiles with pedigree, jockey/trainer career stats, " +
+        "sectional pace data with starting prices); wrote the Python collector that bundles " +
+        "them into one JSON; set up GitHub Actions to run a full collection daily and a " +
+        "10-minute live poll on race days, redeploying to GitHub Pages only when data " +
+        "changes; designed the Korean/English UI (saddlecloth-colored gates, profile " +
+        "drawers with charts, a track-shaped pace visualization with playback); defined the " +
+        "six-factor model (distance fit, recent form, horse/jockey/trainer win rates, " +
+        "rating) and its weights; built the Model record page that backtests picks against " +
+        "results and favorites; and wrote the Jeju 101 primer from the 2026 Jeju Racing " +
+        "Plan. Built with AI-assisted development, with every product decision mine.",
       partners:
-        "Yonsei University AI program; my own domain knowledge from KRA's international feed " +
-        "and overseas partner requirements (independent prototype, not an official KRA " +
-        "product).",
+        "Korea Racing Authority open data via data.go.kr; my own domain knowledge of the " +
+        "Jeju program and of what overseas punters expect from a form guide. An independent " +
+        "prototype, not an official KRA product.",
       outcome:
-        "Status: prototype in development. What I will deliver — a working prototype, a demo " +
-        "video and an 8–10 page business case.",
+        "A live, self-updating site at jokim90.github.io/jeju-racecard with race cards, " +
+        "results, a backtested model record and a primer, in Korean and English. The first " +
+        "working product in my Build Lab — and a concrete base for the AI commentary layer " +
+        "from my M.S. research.",
       lessons:
-        "The hard part of AI in sports is not the model. It is defining the fan problem " +
-        "precisely enough that the model is worth building — and eleven years of watching " +
-        "overseas audiences meet Korean content is my dataset.",
+        "The product is the explanation, not the data. Overseas fans do not need more " +
+        "numbers; they need a race told in a form they already know how to read — and a " +
+        "pipeline that keeps it current without anyone on duty.",
     },
     highlights: [
       {
-        title: "From research to product framing",
+        title: "Open the live race card",
         description:
-          "AI-generated real-time sports commentary (M.S. research) positioned as an applied product and business use case for live sports.",
-        tags: ["Research → product", "LLMOps", "VLM"],
+          "Race Card · Results · Model record · Jeju 101, Korean/English, updated automatically from KRA open data.",
+        tags: ["Live", "KO / EN", "GitHub Pages"],
+        link: "https://jokim90.github.io/jeju-racecard/",
       },
       {
-        title: "The fan problem",
+        title: "Data pipeline on KRA open APIs",
         description:
-          "Overseas fans need real-time, in-language answers to 'what am I looking at?' — the companion is built around that question, not around the technology.",
-        tags: ["Fan experience", "Multilingual", "Real-time"],
+          "Seven data.go.kr endpoints collected by a Python script and GitHub Actions: full daily runs plus 10-minute live polling on race days.",
+        tags: ["data.go.kr", "GitHub Actions", "Automation"],
       },
       {
-        title: "Business case",
+        title: "Six-factor model with a public record",
         description:
-          "Target markets, unit economics and partner fit written up as an 8–10 page case alongside the prototype.",
-        tags: ["Unit economics", "Partner fit", "Go-to-market"],
+          "Distance fit, recent form, horse/jockey/trainer win rates and rating, with a Model record page that backtests picks against actual results and betting favorites.",
+        tags: ["Model", "Backtesting", "Transparency"],
       },
       {
-        title: "Pipeline scope",
+        title: "Race as a story",
         description:
-          "Live data ingestion → event detection → commentary generation → multilingual delivery, with evaluation metrics defined up front.",
-        tags: ["Pipeline", "Evaluation", "Prototype"],
+          "A Story tab with 'Who looks best' and a predicted race flow built from sectional positions and closing speed, plus a track-shaped pace visualization.",
+        tags: ["Narrative", "Pace", "Fan experience"],
+      },
+      {
+        title: "Jeju 101 primer",
+        description:
+          "Classes and ratings, weight rules, apprentice allowances, distances, prize splits and entry procedures, each cited to the 2026 Jeju Racing Plan.",
+        tags: ["Primer", "Rules", "Localization"],
       },
     ],
   },
@@ -735,8 +754,8 @@ export const capabilities: { group: string; items: Capability[] }[] = [
       {
         name: "Business case & product framing",
         evidence:
-          "AI Sports Live Companion and Localization Agent, each written up as a business case with unit economics.",
-        outcome: "Build Lab prototypes in development",
+          "Jeju Racing Race Card shipped as a live product; Localization Agent written up as a business case with unit economics.",
+        outcome: "Build Lab: one product live, one in development",
       },
     ],
   },
@@ -821,7 +840,7 @@ export const capabilities: { group: string; items: Capability[] }[] = [
         name: "AI-assisted content workflows",
         evidence:
           "Generative image and video tools in production; LLM workflow design for localization and distribution.",
-        outcome: "Build Lab: AI × Sports prototypes",
+        outcome: "Build Lab: Jeju Racing Race Card live",
       },
     ],
   },

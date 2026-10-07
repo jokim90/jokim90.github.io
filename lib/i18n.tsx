@@ -64,6 +64,7 @@ export const ui = {
     work: {
       gate: (g: number, total: number) => `GATE ${g} / ${total}`,
       lab: "BUILD LAB",
+      open: "OPEN LIVE ↗",
       proves: "WHAT THIS PORTFOLIO SHOWS",
       caseStudy: "PORTFOLIO DETAIL",
       problem: "PROBLEM",
@@ -136,6 +137,7 @@ export const ui = {
     work: {
       gate: (g: number, total: number) => `게이트 ${g} / ${total}`,
       lab: "BUILD LAB",
+      open: "라이브 열기 ↗",
       proves: "이 포트폴리오가 보여주는 역량",
       caseStudy: "포트폴리오 상세",
       problem: "문제",

@@ -50,6 +50,16 @@ export default function WorkDetail({ slug }: { slug: string }) {
               {section.status}
             </p>
           )}
+          {section.url && (
+            <a
+              href={section.url}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-block rounded-full bg-turf px-6 py-3 font-mono text-sm text-chalk transition-transform hover:scale-[1.03] dark:bg-amber dark:text-night"
+            >
+              {u.work.open}
+            </a>
+          )}
         </Reveal>
 
         <Reveal delay={0.1}>
