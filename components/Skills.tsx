@@ -24,7 +24,7 @@ export default function Skills() {
           <h2 className="mt-3 font-display text-3xl font-black tracking-tight sm:text-5xl">
             {u.skills.title}
           </h2>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
+          <p className="mt-4 max-w-4xl text-pretty text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
             {u.skills.intro}
           </p>
         </Reveal>

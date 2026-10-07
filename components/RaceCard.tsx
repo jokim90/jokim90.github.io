@@ -102,7 +102,7 @@ export default function RaceCard() {
         <div id="lab" className="mt-16 scroll-mt-20">
           <Reveal>
             <p className="font-mono text-xs tracking-widest text-turf dark:text-amber">{u.race.lab}</p>
-            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
+            <p className="mt-3 max-w-4xl text-pretty text-sm leading-relaxed text-ink/60 dark:text-chalk/60 sm:text-base">
               {u.race.labIntro}
             </p>
           </Reveal>

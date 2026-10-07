@@ -70,7 +70,7 @@ export default function Hero() {
 
           <motion.p
             {...anim(0.28)}
-            className="mt-6 max-w-xl text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg"
+            className="mt-6 max-w-4xl text-pretty text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg"
           >
             {site.intro}
           </motion.p>

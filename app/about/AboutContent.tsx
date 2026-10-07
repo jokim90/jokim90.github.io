@@ -33,7 +33,7 @@ export default function AboutContent() {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <div className="mt-10 max-w-2xl space-y-6 text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg">
+          <div className="mt-10 max-w-4xl space-y-6 text-pretty text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg">
             <p>{site.intro}</p>
             {about.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>

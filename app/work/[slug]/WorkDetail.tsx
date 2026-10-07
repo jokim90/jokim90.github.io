@@ -64,7 +64,7 @@ export default function WorkDetail({ slug }: { slug: string }) {
         </Reveal>
 
         <Reveal delay={0.1}>
-          <p className="mt-8 max-w-2xl text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg">
+          <p className="mt-8 max-w-4xl text-pretty text-base leading-relaxed text-ink/70 dark:text-chalk/70 sm:text-lg">
             {section.description}
           </p>
         </Reveal>
