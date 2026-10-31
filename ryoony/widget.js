@@ -371,5 +371,16 @@
     scrollDown();
   });
 
+  // Broadcast theme: the glass slab tilts a few degrees toward the pointer (hover devices only).
+  if (root.dataset.theme === "broadcast" && !REDUCE && window.matchMedia("(hover:hover)").matches) {
+    const panel = root.querySelector(".ca-panel");
+    root.addEventListener("pointermove", e => {
+      if (e.target.closest("input, textarea")) return;
+      const r = panel.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      panel.style.transform = `rotateX(${(1.5 - y * 4).toFixed(2)}deg) rotateY(${(-2 + x * 5).toFixed(2)}deg) translateZ(8px)`;
+    });
+    root.addEventListener("pointerleave", () => { panel.style.transform = ""; });
+  }
+
   start();
 })();

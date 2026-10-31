@@ -176,46 +176,56 @@
    Same 3D edges as the pink theme, in the page's palette.
    ========================================================================= */
 #career-agent[data-theme="broadcast"] {
-  --ca-body: rgba(6, 9, 15, .42);
-  --ca-pink-100: rgba(11, 18, 32, .72);
-  --ca-pink-200: rgba(140, 170, 220, .18);
-  --ca-pink-300: rgba(57, 215, 255, .18);
+  --ca-body: rgba(20, 60, 110, .10);
+  --ca-pink-100: rgba(57, 215, 255, .05);
+  --ca-pink-200: rgba(57, 215, 255, .26);
+  --ca-pink-300: rgba(57, 215, 255, .22);
   --ca-pink-500: #39d7ff;
   --ca-pink-600: #1aa8cc;
   --ca-pink-700: #8cf0ff;
   --ca-ink: #e9eef7;
-  --ca-muted: #98a4b8;
-  --ca-line: rgba(140, 170, 220, .16);
-  --ca-bubble: rgba(14, 22, 38, .92);
-  --ca-hi: rgba(255, 255, 255, .06);
-  --ca-drop: rgba(0, 0, 0, .5);
+  --ca-muted: #9fb1c9;
+  --ca-line: rgba(57, 215, 255, .20);
+  --ca-bubble: rgba(10, 32, 64, .55);
+  --ca-hi: rgba(255, 255, 255, .10);
+  --ca-drop: rgba(0, 10, 30, .6);
   --ca-gold: #f2c66d;
   --ca-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
   --ca-display: 'Rajdhani', 'Noto Sans KR', system-ui, sans-serif;
   max-width: none; perspective: 1400px;
 }
+/* a translucent blue glass slab floating over the globe: tinted, blurred, with a second
+   plate behind it and a light edge on top for depth. Hover tilts it a few degrees (widget.js). */
 #career-agent[data-theme="broadcast"] .ca-panel {
-  border-radius: 6px; border: 1px solid var(--ca-line); background: rgba(6, 9, 15, .5);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: none; transform-style: preserve-3d;
-  box-shadow: 0 1px 0 var(--ca-hi) inset, 0 6px 0 -2px rgba(57, 215, 255, .10), 0 12px 0 -6px rgba(57, 215, 255, .06), 0 30px 60px -24px rgba(0, 0, 0, .8);
-  transition: transform .25s ease, border-color .25s;
+  position: relative; border-radius: 8px; border: 1px solid rgba(57, 215, 255, .30);
+  background: linear-gradient(160deg, rgba(57, 215, 255, .12) 0%, rgba(20, 60, 120, .18) 45%, rgba(8, 20, 48, .30) 100%);
+  backdrop-filter: blur(18px) saturate(1.2); -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  transform-style: preserve-3d; transform: rotateX(1.5deg) rotateY(-2deg); transition: transform .35s ease, box-shadow .35s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .18), inset 0 -1px 0 rgba(57, 215, 255, .12),
+              0 0 0 1px rgba(57, 215, 255, .06), 0 24px 60px -20px rgba(0, 20, 50, .9), 0 0 40px -10px rgba(57, 215, 255, .25);
 }
 #career-agent[data-theme="broadcast"] .ca-panel::before {
-  content: ""; position: absolute; inset: 0; border-radius: 6px; padding: 1px; pointer-events: none; opacity: .7;
-  background: linear-gradient(135deg, rgba(57, 215, 255, .5), transparent 40%, transparent 60%, rgba(242, 198, 109, .35));
+  content: ""; position: absolute; inset: 0; border-radius: 8px; padding: 1px; pointer-events: none; opacity: .9;
+  background: linear-gradient(135deg, rgba(140, 240, 255, .7), transparent 35%, transparent 65%, rgba(242, 198, 109, .4));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
 }
-#career-agent[data-theme="broadcast"] .ca-head { background: linear-gradient(180deg, rgba(14, 22, 38, .8), rgba(11, 18, 32, .55)); border-bottom-color: var(--ca-line); padding: 14px 18px; align-items: center; }
+#career-agent[data-theme="broadcast"] .ca-panel::after {   /* back plate */
+  content: ""; position: absolute; inset: 10px -8px -12px 10px; z-index: -1; border-radius: 8px; pointer-events: none;
+  background: linear-gradient(160deg, rgba(57, 215, 255, .10), rgba(10, 30, 70, .35)); border: 1px solid rgba(57, 215, 255, .14);
+  transform: translateZ(-28px); filter: blur(.4px);
+}
+#career-agent[data-theme="broadcast"] .ca-head { background: linear-gradient(180deg, rgba(57, 215, 255, .10), rgba(57, 215, 255, .03)); border-bottom-color: rgba(57, 215, 255, .18); padding: 14px 18px; align-items: center; }
 #career-agent[data-theme="broadcast"] .ca-about { display: none; }   /* the host page carries the intro */
 #career-agent[data-theme="broadcast"] .ca-name { font-family: var(--ca-display); letter-spacing: .14em; text-transform: uppercase; font-size: 15px; display: flex; align-items: center; gap: 10px; }
-#career-agent[data-theme="broadcast"] .ca-name::after { content: "ON AIR"; font-family: var(--ca-mono); font-size: 10px; letter-spacing: .14em; color: #ff5e3a; border: 1px solid rgba(255, 94, 58, .5); padding: 2px 6px; border-radius: 2px; }
-#career-agent[data-theme="broadcast"] .ca-avatar { flex-basis: 36px; height: 36px; font-size: 1em; color: #06090f; background: radial-gradient(circle at 32% 28%, #b7f4ff, #39d7ff 55%, #1aa8cc); box-shadow: 0 3px 0 #1aa8cc, 0 0 18px rgba(57, 215, 255, .35), inset 0 2px 2px rgba(255, 255, 255, .45); }
+#career-agent[data-theme="broadcast"] .ca-name::after { content: "ON AIR"; font-family: var(--ca-mono); font-size: 10px; letter-spacing: .14em; color: #ff5e3a; border: 1px solid rgba(255, 94, 58, .5); padding: 2px 6px; border-radius: 2px; animation: ca-onair 1.6s infinite; }
+@keyframes ca-onair { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+#career-agent[data-theme="broadcast"] .ca-avatar { flex-basis: 36px; height: 36px; font-size: 1em; color: #06090f; background: radial-gradient(circle at 32% 28%, #b7f4ff, #39d7ff 55%, #1aa8cc); box-shadow: 0 3px 0 #1aa8cc, 0 0 18px rgba(57, 215, 255, .45), inset 0 2px 2px rgba(255, 255, 255, .45); }
 #career-agent[data-theme="broadcast"] .ca-reset, #career-agent[data-theme="broadcast"] .ca-chip, #career-agent[data-theme="broadcast"] .ca-choice,
-#career-agent[data-theme="broadcast"] .ca-consent-cancel { border-radius: 2px; background: rgba(6, 9, 15, .55); border-color: var(--ca-line); box-shadow: 0 3px 0 rgba(57, 215, 255, .14), inset 0 1px 0 var(--ca-hi); }
+#career-agent[data-theme="broadcast"] .ca-consent-cancel { border-radius: 2px; background: rgba(57, 215, 255, .06); border-color: rgba(57, 215, 255, .28); box-shadow: 0 3px 0 rgba(57, 215, 255, .16), inset 0 1px 0 var(--ca-hi); }
 #career-agent[data-theme="broadcast"] .ca-reset { font-family: var(--ca-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
 #career-agent[data-theme="broadcast"] .ca-thread { background: none; }
-#career-agent[data-theme="broadcast"] .ca-bot .ca-bubble { background: var(--ca-bubble); border-color: var(--ca-line); border-radius: 6px; border-bottom-left-radius: 2px; box-shadow: inset 0 1px 0 var(--ca-hi), 0 4px 0 rgba(57, 215, 255, .10), 0 14px 24px -14px rgba(0, 0, 0, .7); }
-#career-agent[data-theme="broadcast"] .ca-user .ca-bubble { color: #06090f; font-weight: 600; border-radius: 6px; border-bottom-right-radius: 2px; background: linear-gradient(180deg, #7ae9ff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 4px 0 #1aa8cc, 0 14px 24px -14px rgba(0, 0, 0, .7); }
+#career-agent[data-theme="broadcast"] .ca-bot .ca-bubble { background: linear-gradient(180deg, rgba(20, 50, 95, .55), rgba(10, 32, 64, .55)); border-color: rgba(57, 215, 255, .22); border-radius: 6px; border-bottom-left-radius: 2px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .12), 0 4px 0 rgba(57, 215, 255, .14), 0 14px 24px -14px rgba(0, 10, 30, .8); }
+#career-agent[data-theme="broadcast"] .ca-user .ca-bubble { color: #06090f; font-weight: 600; border-radius: 6px; border-bottom-right-radius: 2px; background: linear-gradient(180deg, #8cefff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 4px 0 #1aa8cc, 0 0 24px -6px rgba(57, 215, 255, .6), 0 14px 24px -14px rgba(0, 10, 30, .8); }
 #career-agent[data-theme="broadcast"] .ca-note .ca-bubble { border-radius: 4px; }
 #career-agent[data-theme="broadcast"] .ca-choice { font-family: var(--ca-mono); letter-spacing: .08em; }
 #career-agent[data-theme="broadcast"] .ca-choice.is-picked { color: #06090f; background: #39d7ff; border-color: #39d7ff; }
@@ -224,20 +234,21 @@
 #career-agent[data-theme="broadcast"] .ca-askme { color: var(--ca-gold); }
 #career-agent[data-theme="broadcast"] .ca-queued { color: var(--ca-gold); border-color: rgba(242, 198, 109, .45); background: rgba(242, 198, 109, .05); border-radius: 4px; }
 #career-agent[data-theme="broadcast"] .ca-evidence-title { font-family: var(--ca-mono); }
-#career-agent[data-theme="broadcast"] .ca-card { border-radius: 3px; background: rgba(11, 18, 32, .6); box-shadow: 0 2px 0 rgba(57, 215, 255, .10); }
+#career-agent[data-theme="broadcast"] .ca-card { border-radius: 3px; background: rgba(57, 215, 255, .06); border-color: rgba(57, 215, 255, .18); box-shadow: 0 2px 0 rgba(57, 215, 255, .12); }
 #career-agent[data-theme="broadcast"] .ca-gate { border-radius: 3px; }
 /* sample questions in one scrollable row, so the panel keeps a fixed height */
 #career-agent[data-theme="broadcast"] .ca-samples { background: none; padding-top: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
 #career-agent[data-theme="broadcast"] .ca-samples::-webkit-scrollbar { display: none; }
 #career-agent[data-theme="broadcast"] .ca-chip { font-size: .8em; white-space: nowrap; flex: 0 0 auto; }
-#career-agent[data-theme="broadcast"] .ca-form { background: rgba(11, 18, 32, .6); border-top-color: var(--ca-line); }
-#career-agent[data-theme="broadcast"] .ca-input { border-radius: 2px; background: rgba(6, 9, 15, .65); border-color: var(--ca-line); box-shadow: inset 0 2px 4px rgba(0, 0, 0, .4); color: var(--ca-ink); }
+#career-agent[data-theme="broadcast"] .ca-form { background: rgba(57, 215, 255, .05); border-top-color: rgba(57, 215, 255, .18); }
+#career-agent[data-theme="broadcast"] .ca-input { border-radius: 2px; background: rgba(6, 12, 28, .55); border-color: rgba(57, 215, 255, .26); box-shadow: inset 0 2px 4px rgba(0, 0, 0, .45); color: var(--ca-ink); }
 #career-agent[data-theme="broadcast"] .ca-input::placeholder { color: var(--ca-muted); }
-#career-agent[data-theme="broadcast"] .ca-btn, #career-agent[data-theme="broadcast"] .ca-consent-agree { color: #06090f; border-radius: 2px; font-family: var(--ca-mono); letter-spacing: .1em; text-transform: uppercase; font-size: 12px; background: linear-gradient(180deg, #7ae9ff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 4px 0 #1aa8cc, 0 10px 16px -8px rgba(0, 0, 0, .6); }
-#career-agent[data-theme="broadcast"] .ca-btn:hover { background: linear-gradient(180deg, #8cf0ff 0%, #4ee0ff 100%); }
-#career-agent[data-theme="broadcast"] .ca-foot { background: rgba(11, 18, 32, .6); font-family: var(--ca-mono); font-size: 10.5px; letter-spacing: .04em; }
-#career-agent[data-theme="broadcast"] .ca-consent { background: rgba(6, 9, 15, .7); }
-#career-agent[data-theme="broadcast"] .ca-consent-card { background: #0b1220; border-radius: 6px; border-color: var(--ca-line); box-shadow: 0 6px 0 rgba(57, 215, 255, .10), 0 24px 40px -16px rgba(0, 0, 0, .8); }
+#career-agent[data-theme="broadcast"] .ca-btn, #career-agent[data-theme="broadcast"] .ca-consent-agree { color: #06090f; border-radius: 2px; font-family: var(--ca-mono); letter-spacing: .1em; text-transform: uppercase; font-size: 12px; background: linear-gradient(180deg, #8cefff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), 0 4px 0 #1aa8cc, 0 0 22px -4px rgba(57, 215, 255, .55); }
+#career-agent[data-theme="broadcast"] .ca-btn:hover { background: linear-gradient(180deg, #a6f3ff 0%, #4ee0ff 100%); }
+#career-agent[data-theme="broadcast"] .ca-foot { background: rgba(57, 215, 255, .04); font-family: var(--ca-mono); font-size: 10.5px; letter-spacing: .04em; }
+#career-agent[data-theme="broadcast"] .ca-consent { background: rgba(6, 9, 15, .7); border-radius: 8px; }
+#career-agent[data-theme="broadcast"] .ca-consent-card { background: rgba(11, 24, 48, .96); border-radius: 6px; border-color: rgba(57, 215, 255, .3); box-shadow: 0 6px 0 rgba(57, 215, 255, .12), 0 24px 40px -16px rgba(0, 0, 0, .8); }
 #career-agent[data-theme="broadcast"] .ca-consent-email { color: #8cf0ff; }
 #career-agent[data-theme="broadcast"] .ca-link { color: #8cf0ff; }
 #career-agent[data-theme="broadcast"] .ca-warn .ca-bubble { border-color: #ff5e3a; color: #ff9f8a; }
+@media (prefers-reduced-motion: reduce) { #career-agent[data-theme="broadcast"] .ca-panel { transform: none; } #career-agent[data-theme="broadcast"] .ca-name::after { animation: none; } }

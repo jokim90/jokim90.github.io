@@ -63,6 +63,12 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
 .btn{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:12px 18px;border:1px solid var(--signal);color:var(--signal);border-radius:2px;background:rgba(57,215,255,.06);transition:transform .2s,background .2s}
 .btn:hover,.btn:focus-visible{background:var(--signal-soft);transform:translateY(-1px)}
 .btn.ghost{border-color:var(--line);color:var(--fg-dim);background:transparent}
+/* "AI 면접 바로시작": transparent red, glowing and blinking like the on-air lamp */
+.btn.live{display:inline-flex;align-items:center;gap:9px;border-color:rgba(255,94,58,.75);color:#ff9a84;background:rgba(255,94,58,.08);animation:live-glow 1.6s ease-in-out infinite}
+.btn.live i{width:7px;height:7px;border-radius:50%;background:var(--live);box-shadow:0 0 10px var(--live);animation:blink 1.6s infinite}
+.btn.live:hover,.btn.live:focus-visible{background:rgba(255,94,58,.18);color:#fff}
+@keyframes live-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,94,58,0)}50%{box-shadow:0 0 22px 3px rgba(255,94,58,.55)}}
+@media (prefers-reduced-motion:reduce){.btn.live,.btn.live i{animation:none}}
 
 /* Ryoony (interview agent) — its own band above Contact */
 .ryoony{padding-block:clamp(64px,10vh,120px) 0;scroll-margin-top:90px}
@@ -234,6 +240,7 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
       <a class="btn" href="#story">이야기 보기</a>
       <a class="btn" href="resume/Jungrun_Kim_Resume.pdf" download="Jungrun_Kim_Resume.pdf" target="_blank" rel="noopener">이력서 다운로드 ↓</a>
       <a class="btn ghost" href="#contact">연락하기</a>
+      <a class="btn live" href="#ryoony"><i aria-hidden="true"></i>AI 면접 바로시작</a>
     </div>
     <div class="stats" role="list" aria-label="핵심 수치">
       <div class="stat" role="listitem"><b data-count="11">0</b><span>Years · Sports / Media / Global</span></div>
@@ -373,7 +380,7 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
     <div class="ry-grid">
       <div class="ry-copy ry-enter d1">
         <h2>가상 면접, 지금 바로<span>AI agent Ryoony · 류니</span></h2>
-        <p class="ry-intro">가상면접을 원하시면 AI 에이전트 <strong>류니</strong>랑 대화해 보세요. 류니는 커리어 면접을 위해 직접 기획하고 설계한 LLM 모델입니다.</p>
+        <p class="ry-intro">가상면접을 원하시면 AI 에이전트 <strong>류니</strong>랑 대화해 보세요. 류니는 커리어 면접을 위해 직접 기획하고 설계한 LLM 에이전트입니다.</p>
         <ul class="ry-how">
           <li>제가 직접 정리한 경력 기록만을 근거로 답합니다</li>
           <li>답마다 출처가 된 기록 카드를 함께 보여줍니다</li>
