@@ -64,6 +64,26 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
 .btn:hover,.btn:focus-visible{background:var(--signal-soft);transform:translateY(-1px)}
 .btn.ghost{border-color:var(--line);color:var(--fg-dim);background:transparent}
 
+/* hero layout with Ryoony (interview agent) on the right */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:40px}
+.hero-copy{min-width:0}
+@media (min-width:1024px){
+  .hero{grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);column-gap:48px;align-items:end}
+  .hero h1{font-size:clamp(40px,5.4vw,74px)}
+  .hero .stats{grid-column:1/-1}
+}
+.hero-chat{min-width:0;scroll-margin-top:90px}
+.ry-kicker{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--signal);margin:0 0 8px;display:flex;align-items:center;gap:10px}
+.ry-kicker::before{content:"";width:22px;height:1px;background:var(--signal)}
+.ry-intro{margin:0 0 14px;font-size:15px;line-height:1.65;color:#d4dbe8;max-width:56ch}
+.ry-intro strong{color:#fff;font-weight:500;background:linear-gradient(transparent 60%,rgba(57,215,255,.22) 60%)}
+.ry-enter{animation:ry-enter .8s cubic-bezier(.2,.7,.2,1) both}
+.ry-enter.d1{animation-delay:.15s}.ry-enter.d2{animation-delay:.3s}.ry-enter.d3{animation-delay:.45s}
+@keyframes ry-enter{from{opacity:0;transform:translateY(14px) perspective(900px) rotateX(6deg)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.ry-enter{animation:none}}
+.hero-chat #career-agent .ca-thread{height:360px;max-height:none}   /* fixed, so the hero never shifts as the chat grows */
+@media (max-width:1023px){.hero-chat #career-agent .ca-thread{height:auto;min-height:200px;max-height:50vh}}
+
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
 .stat{background:rgba(6,9,15,.7);padding:22px 20px;min-width:0}
@@ -181,6 +201,8 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
 @media (prefers-reduced-motion:reduce){.reveal.pre{opacity:1;transform:none}.card{transition:none}}
 </style>
 <style>html{color-scheme:dark}img{max-width:100%}</style>
+<link rel="stylesheet" href="ryoony/widget.css">
+<script src="ryoony/widget.js" defer></script>
 </head>
 <body>
 
@@ -193,6 +215,7 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
   <nav class="nav col" aria-label="페이지 내 이동">
     <div class="brand"><span class="onair"><i></i></span> 김정륜 <span style="color:var(--fg-dim);font-weight:500">/ Jungrun Kim</span></div>
     <ul>
+      <li><a href="#ryoony">Ask Ryoony</a></li>
       <li><a href="#story">Story</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
@@ -202,6 +225,7 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
   </nav>
 
   <header class="hero col">
+    <div class="hero-copy">
     <div class="eyebrow">Global Sports · Media · AI Business <span style="color:var(--fg-dim)">Seoul, KR</span></div>
     <h1>
       <span class="en">New Business ·<br>International Partnerships ·<br>AI-enabled IP.</span>
@@ -212,6 +236,14 @@ h1 .en{display:block;background:linear-gradient(90deg,#fff 0%,var(--signal) 60%,
       <a class="btn" href="resume/Jungrun_Kim_Resume.pdf" download="Jungrun_Kim_Resume.pdf" target="_blank" rel="noopener">이력서 다운로드 ↓</a>
       <a class="btn ghost" href="#contact">연락하기</a>
     </div>
+    </div>
+
+    <div class="hero-chat" id="ryoony" aria-label="AI 인터뷰 에이전트 류니">
+      <p class="ry-kicker ry-enter d1">Virtual interview · AI agent Ryoony</p>
+      <p class="ry-intro ry-enter d2">가상면접을 원하시면 AI 에이전트 <strong>류니</strong>랑 대화해 보세요.<br>류니는 커리어 면접을 위해 직접 기획하고 설계한 LLM 모델입니다.</p>
+      <div class="ry-enter d3"><div id="career-agent" data-theme="broadcast" data-endpoint="https://ryoony-api.onrender.com/ask"></div></div>
+    </div>
+
     <div class="stats" role="list" aria-label="핵심 수치">
       <div class="stat" role="listitem"><b data-count="11">0</b><span>Years · Sports / Media / Global</span></div>
       <div class="stat" role="listitem"><b data-count="29">0</b><span>Markets · 5 Continents</span></div>

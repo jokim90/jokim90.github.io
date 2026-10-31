@@ -1,0 +1,243 @@
+/* Ryoony chat widget — near-white panel with pink accents and a soft 3D finish:
+   raised panel, bevelled bubbles with a bottom "thickness" edge, buttons that
+   press down. Bubbles stack upward above a fixed question box.
+   Self-contained; inherits the host page's font. */
+#career-agent {
+  --ca-body: #fffdfe;        /* thread background — near white */
+  --ca-pink-100: #fff4f7;    /* header and input bar */
+  --ca-pink-200: #f8d3df;    /* borders */
+  --ca-pink-300: #f2b3c8;    /* 3D edge under light surfaces */
+  --ca-pink-500: #e05a86;    /* accent */
+  --ca-pink-600: #c9446f;    /* 3D edge under accent surfaces */
+  --ca-pink-700: #b8335f;    /* accent text */
+  --ca-ink: #2b1d24;
+  --ca-muted: #8a6f7b;
+  --ca-line: #f3c9d7;
+  --ca-bubble: #ffffff;
+  --ca-hi: rgba(255,255,255,.9);   /* top highlight */
+  --ca-drop: rgba(184, 51, 95, .14);
+  --c1: #d7263d; --c2: #1b4fd8; --c3: #f2c200; --c4: #2a9d4b;
+  max-width: 760px; color: var(--ca-ink); perspective: 1400px;
+}
+@media (prefers-color-scheme: dark) {
+  #career-agent {
+    --ca-body: #1f1418; --ca-pink-100: #2c1a21; --ca-pink-200: #4d2a37; --ca-pink-300: #3a1f29;
+    --ca-pink-500: #f07fa5; --ca-pink-600: #c25a7f; --ca-pink-700: #f7a6c1;
+    --ca-ink: #f6e9ee; --ca-muted: #c39aab; --ca-line: #4d2a37; --ca-bubble: #2a1b21;
+    --ca-hi: rgba(255,255,255,.06); --ca-drop: rgba(0,0,0,.45);
+  }
+}
+
+/* panel: raised slab */
+#career-agent .ca-panel {
+  background: var(--ca-body); border: 1px solid var(--ca-pink-200); border-radius: 24px; overflow: hidden;
+  box-shadow: 0 1px 0 var(--ca-hi) inset, 0 8px 0 -2px var(--ca-pink-200), 0 14px 0 -6px var(--ca-pink-300),
+              0 28px 50px -18px var(--ca-drop), 0 10px 24px -12px var(--ca-drop);
+  transform: rotateX(1.2deg); transform-origin: 50% 100%;
+}
+
+/* header: name + about text */
+#career-agent .ca-head { display: flex; align-items: flex-start; gap: 14px; padding: 18px 20px; background: linear-gradient(180deg, #fff 0%, var(--ca-pink-100) 100%); border-bottom: 1px solid var(--ca-pink-200); }
+@media (prefers-color-scheme: dark) { #career-agent .ca-head { background: linear-gradient(180deg, #33202a 0%, var(--ca-pink-100) 100%); } }
+#career-agent .ca-avatar {
+  flex: 0 0 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: 1.1em;
+  background: radial-gradient(circle at 32% 28%, #ff9fbf 0%, var(--ca-pink-500) 55%, var(--ca-pink-600) 100%);
+  box-shadow: 0 3px 0 var(--ca-pink-600), 0 8px 14px -6px var(--ca-drop), inset 0 2px 2px rgba(255,255,255,.45);
+}
+#career-agent .ca-head-text { flex: 1; min-width: 0; }
+#career-agent .ca-name { font-weight: 800; letter-spacing: .02em; font-size: 1.05em; }
+#career-agent .ca-about { margin: 4px 0 0; font-size: .84em; line-height: 1.55; color: var(--ca-muted); }
+#career-agent .ca-about-en { display: block; margin-top: 4px; }
+
+/* 3D buttons: a bottom edge that the button sinks into when pressed */
+#career-agent .ca-reset, #career-agent .ca-chip, #career-agent .ca-choice {
+  font: inherit; color: inherit; cursor: pointer; border-radius: 999px; background: var(--ca-bubble);
+  border: 1.5px solid var(--ca-pink-200); box-shadow: 0 3px 0 var(--ca-pink-300), inset 0 1px 0 var(--ca-hi);
+  transition: transform .08s ease, box-shadow .08s ease, border-color .15s;
+}
+#career-agent .ca-reset { margin-left: auto; font-size: .85em; padding: 6px 14px; white-space: nowrap; }
+#career-agent .ca-reset:hover, #career-agent .ca-chip:hover, #career-agent .ca-choice:hover { border-color: var(--ca-pink-500); color: var(--ca-pink-700); }
+#career-agent .ca-reset:active, #career-agent .ca-chip:active, #career-agent .ca-choice:active { transform: translateY(3px); box-shadow: 0 0 0 var(--ca-pink-300), inset 0 1px 0 var(--ca-hi); }
+
+/* thread */
+#career-agent .ca-thread { display: flex; flex-direction: column; gap: 16px; padding: 22px 20px; min-height: 240px; max-height: min(62vh, 620px); overflow-y: auto; overscroll-behavior: contain;
+  background: radial-gradient(120% 80% at 50% 0%, #fff 0%, var(--ca-body) 70%); }
+@media (prefers-color-scheme: dark) { #career-agent .ca-thread { background: var(--ca-body); } }
+#career-agent .ca-msg { display: flex; animation: ca-pop .22s ease-out both; }
+#career-agent .ca-bot { justify-content: flex-start; }
+#career-agent .ca-user { justify-content: flex-end; }
+@keyframes ca-pop { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+
+#career-agent .ca-bubble { max-width: 86%; padding: 14px 18px; border-radius: 20px; line-height: 1.6; }
+#career-agent .ca-bot .ca-bubble {
+  background: linear-gradient(180deg, #fff 0%, var(--ca-bubble) 100%); border: 1px solid var(--ca-line); border-bottom-left-radius: 6px;
+  box-shadow: inset 0 1px 0 var(--ca-hi), 0 4px 0 var(--ca-pink-200), 0 12px 22px -12px var(--ca-drop);
+}
+@media (prefers-color-scheme: dark) { #career-agent .ca-bot .ca-bubble { background: var(--ca-bubble); } }
+#career-agent .ca-user .ca-bubble {
+  color: #fff; font-weight: 500; white-space: pre-wrap; border-bottom-right-radius: 6px;
+  background: linear-gradient(180deg, #ee7aa0 0%, var(--ca-pink-500) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 0 var(--ca-pink-600), 0 12px 22px -12px var(--ca-drop);
+}
+#career-agent .ca-answer { margin: 0; white-space: pre-wrap; }
+#career-agent .ca-note .ca-bubble { font-size: .85em; color: var(--ca-muted); padding: 8px 14px; box-shadow: inset 0 1px 0 var(--ca-hi), 0 2px 0 var(--ca-pink-200); }
+#career-agent .is-thinking .ca-answer { color: var(--ca-muted); font-style: italic; }
+/* typing: a blinking caret at the end of the text while it is being written */
+#career-agent .ca-answer.is-typing::after { content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -0.15em; background: currentColor; animation: ca-caret .7s steps(1) infinite; }
+@keyframes ca-caret { 50% { opacity: 0; } }
+#career-agent .ca-fade { animation: ca-fadeup .35s ease-out both; }
+#career-agent .ca-cards .ca-card { animation: ca-fadeup .35s ease-out both; }
+@keyframes ca-fadeup { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+#career-agent .is-error .ca-bubble { border-color: var(--c1); }
+
+/* language question */
+#career-agent .ca-choices { display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+#career-agent .ca-choice { padding: 8px 20px; font-weight: 700; }
+#career-agent .ca-choice:disabled { cursor: default; opacity: .45; transform: translateY(3px); box-shadow: none; }
+#career-agent .ca-choice.is-picked { opacity: 1; color: #fff; border-color: var(--ca-pink-500); background: var(--ca-pink-500); }
+
+#career-agent .ca-understood { font-size: .78em; color: var(--ca-muted); font-style: italic; margin-bottom: 6px; }
+#career-agent .ca-meta { display: flex; gap: 6px; margin-bottom: 8px; }
+#career-agent .ca-badge { font-size: .7em; letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--ca-line); color: var(--ca-muted); }
+#career-agent .ca-badge[data-conf="confirmed"] { color: var(--c4); border-color: var(--c4); }
+#career-agent .ca-badge[data-conf="provisional"] { color: #b8860b; border-color: #b8860b; }
+#career-agent .ca-badge[data-route="out_of_scope"], #career-agent .ca-badge[data-route="injection"] { color: var(--ca-pink-700); border-color: var(--ca-pink-500); }
+#career-agent .ca-askme { font-size: .9em; color: var(--ca-pink-700); margin: 10px 0 0; }
+
+/* evidence inside the Ryoony bubble: small raised tiles */
+#career-agent .ca-evidence { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--ca-line); }
+#career-agent .ca-evidence-title { font-size: .72em; letter-spacing: .06em; text-transform: uppercase; color: var(--ca-muted); margin-bottom: 8px; }
+#career-agent .ca-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+#career-agent .ca-card { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border: 1px solid var(--ca-line); border-radius: 12px; background: var(--ca-pink-100); box-shadow: 0 2px 0 var(--ca-pink-200); }
+#career-agent .ca-gate { flex: 0 0 22px; height: 22px; border-radius: 7px; display: grid; place-items: center; font-weight: 700; font-size: .75em; color: #fff; box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 2px 0 rgba(0,0,0,.18); }
+#career-agent .ca-card.c1 .ca-gate { background: var(--c1); }
+#career-agent .ca-card.c2 .ca-gate { background: var(--c2); }
+#career-agent .ca-card.c3 .ca-gate { background: var(--c3); color: #111; }
+#career-agent .ca-card.c4 .ca-gate { background: var(--c4); }
+#career-agent .ca-card-id { font-size: .8em; font-weight: 600; }
+#career-agent .ca-quote { font-size: .85em; margin-top: 2px; line-height: 1.45; color: var(--ca-muted); }
+
+/* sample questions */
+#career-agent .ca-samples { display: flex; flex-wrap: wrap; gap: 10px; padding: 4px 20px 14px; background: var(--ca-body); }
+#career-agent .ca-samples:empty { display: none; }
+#career-agent .ca-chip { font-size: .85em; padding: 7px 14px; }
+
+/* question box: recessed well with a raised button */
+#career-agent .ca-form { display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid var(--ca-pink-200); background: var(--ca-pink-100); }
+#career-agent .ca-input { flex: 1; min-width: 0; padding: 12px 14px; border: 1px solid var(--ca-pink-200); border-radius: 14px; background: var(--ca-bubble); color: inherit; font: inherit;
+  box-shadow: inset 0 2px 4px rgba(184, 51, 95, .10), inset 0 1px 0 rgba(184, 51, 95, .06); }
+#career-agent .ca-input:focus { outline: 2px solid var(--ca-pink-500); outline-offset: 0; }
+#career-agent .ca-btn { padding: 12px 22px; border: 0; border-radius: 14px; color: #fff; font: inherit; font-weight: 700; cursor: pointer; white-space: nowrap;
+  background: linear-gradient(180deg, #ee7aa0 0%, var(--ca-pink-500) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 0 var(--ca-pink-600), 0 10px 16px -8px var(--ca-drop);
+  transition: transform .08s ease, box-shadow .08s ease; }
+#career-agent .ca-btn:active { transform: translateY(4px); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 0 0 var(--ca-pink-600); }
+#career-agent .ca-foot { margin: 0; padding: 4px 20px 14px; font-size: .75em; color: var(--ca-muted); background: var(--ca-pink-100); }
+
+@media (max-width: 520px) {
+  #career-agent .ca-panel { transform: none; }
+  #career-agent .ca-bubble { max-width: 94%; }
+  #career-agent .ca-thread { padding: 16px 14px; }
+  #career-agent .ca-head, #career-agent .ca-form, #career-agent .ca-samples, #career-agent .ca-foot { padding-left: 14px; padding-right: 14px; }
+  #career-agent .ca-head { flex-wrap: wrap; }
+}
+@media (prefers-reduced-motion: reduce) { #career-agent .ca-msg, #career-agent .ca-fade, #career-agent .ca-cards .ca-card { animation: none; } #career-agent .ca-panel { transform: none; } }
+
+/* --- entry gate: email + privacy consent --------------------------------- */
+#career-agent .ca-panel { position: relative; }
+#career-agent .ca-gate-msg .ca-bubble { max-width: 92%; }
+#career-agent .ca-warn .ca-bubble { border-color: var(--c1); color: var(--c1); }
+#career-agent .ca-link { display: block; margin-top: 6px; padding: 0; border: 0; background: none; color: var(--ca-pink-700); font: inherit; font-size: .95em; text-decoration: underline; cursor: pointer; }
+#career-agent .ca-queued { margin: 10px 0 0; padding: 8px 12px; border-radius: 12px; font-size: .85em; line-height: 1.5; background: var(--ca-pink-100); color: var(--ca-pink-700); border: 1px dashed var(--ca-pink-300); }
+
+#career-agent .ca-consent { position: absolute; inset: 0; z-index: 5; display: grid; place-items: center; padding: 18px; background: rgba(43, 29, 36, .35); backdrop-filter: blur(3px); }
+#career-agent .ca-consent[hidden] { display: none; }
+#career-agent .ca-consent-card { width: min(560px, 100%); max-height: 100%; overflow-y: auto; padding: 20px 22px; border-radius: 20px; background: var(--ca-bubble); border: 1px solid var(--ca-pink-200);
+  box-shadow: inset 0 1px 0 var(--ca-hi), 0 6px 0 var(--ca-pink-200), 0 24px 40px -16px var(--ca-drop); animation: ca-pop .2s ease-out both; }
+#career-agent .ca-consent h3 { margin: 0 0 4px; font-size: 1.05em; }
+#career-agent .ca-consent-email { margin: 0 0 12px; font-size: .9em; color: var(--ca-pink-700); font-weight: 600; word-break: break-all; }
+#career-agent .ca-consent-table { width: 100%; border-collapse: collapse; font-size: .85em; line-height: 1.5; margin-bottom: 10px; }
+#career-agent .ca-consent-table th { width: 5.5em; text-align: left; vertical-align: top; padding: 5px 8px 5px 0; color: var(--ca-muted); font-weight: 600; white-space: nowrap; }
+#career-agent .ca-consent-table td { padding: 5px 0; }
+#career-agent .ca-consent-table tr + tr th, #career-agent .ca-consent-table tr + tr td { border-top: 1px solid var(--ca-line); }
+#career-agent .ca-consent-table.en { padding-top: 8px; border-top: 1px dashed var(--ca-pink-300); }
+#career-agent .ca-consent-note { margin: 4px 0 14px; font-size: .78em; color: var(--ca-muted); }
+#career-agent .ca-consent-actions { display: flex; justify-content: flex-end; gap: 10px; flex-wrap: wrap; }
+#career-agent .ca-consent-cancel, #career-agent .ca-consent-agree { font: inherit; padding: 10px 18px; border-radius: 12px; cursor: pointer; transition: transform .08s ease, box-shadow .08s ease; }
+#career-agent .ca-consent-cancel { background: var(--ca-bubble); color: inherit; border: 1.5px solid var(--ca-pink-200); box-shadow: 0 3px 0 var(--ca-pink-300); }
+#career-agent .ca-consent-agree { border: 0; color: #fff; font-weight: 700; background: linear-gradient(180deg, #ee7aa0 0%, var(--ca-pink-500) 100%); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), 0 4px 0 var(--ca-pink-600); }
+#career-agent .ca-consent-cancel:active, #career-agent .ca-consent-agree:active { transform: translateY(3px); box-shadow: none; }
+#career-agent .ca-consent-agree:disabled { opacity: .6; cursor: wait; }
+
+/* =========================================================================
+   Theme "broadcast": <div id="career-agent" data-theme="broadcast">
+   Dark glass, cyan signal, gold for "ask Jo" — made to sit inside
+   jokim90.github.io (deep broadcast black, Rajdhani / JetBrains Mono).
+   Same 3D edges as the pink theme, in the page's palette.
+   ========================================================================= */
+#career-agent[data-theme="broadcast"] {
+  --ca-body: rgba(6, 9, 15, .42);
+  --ca-pink-100: rgba(11, 18, 32, .72);
+  --ca-pink-200: rgba(140, 170, 220, .18);
+  --ca-pink-300: rgba(57, 215, 255, .18);
+  --ca-pink-500: #39d7ff;
+  --ca-pink-600: #1aa8cc;
+  --ca-pink-700: #8cf0ff;
+  --ca-ink: #e9eef7;
+  --ca-muted: #98a4b8;
+  --ca-line: rgba(140, 170, 220, .16);
+  --ca-bubble: rgba(14, 22, 38, .92);
+  --ca-hi: rgba(255, 255, 255, .06);
+  --ca-drop: rgba(0, 0, 0, .5);
+  --ca-gold: #f2c66d;
+  --ca-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ca-display: 'Rajdhani', 'Noto Sans KR', system-ui, sans-serif;
+  max-width: none; perspective: 1400px;
+}
+#career-agent[data-theme="broadcast"] .ca-panel {
+  border-radius: 6px; border: 1px solid var(--ca-line); background: rgba(6, 9, 15, .5);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: none; transform-style: preserve-3d;
+  box-shadow: 0 1px 0 var(--ca-hi) inset, 0 6px 0 -2px rgba(57, 215, 255, .10), 0 12px 0 -6px rgba(57, 215, 255, .06), 0 30px 60px -24px rgba(0, 0, 0, .8);
+  transition: transform .25s ease, border-color .25s;
+}
+#career-agent[data-theme="broadcast"] .ca-panel::before {
+  content: ""; position: absolute; inset: 0; border-radius: 6px; padding: 1px; pointer-events: none; opacity: .7;
+  background: linear-gradient(135deg, rgba(57, 215, 255, .5), transparent 40%, transparent 60%, rgba(242, 198, 109, .35));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+}
+#career-agent[data-theme="broadcast"] .ca-head { background: linear-gradient(180deg, rgba(14, 22, 38, .8), rgba(11, 18, 32, .55)); border-bottom-color: var(--ca-line); padding: 14px 18px; align-items: center; }
+#career-agent[data-theme="broadcast"] .ca-about { display: none; }   /* the host page carries the intro */
+#career-agent[data-theme="broadcast"] .ca-name { font-family: var(--ca-display); letter-spacing: .14em; text-transform: uppercase; font-size: 15px; display: flex; align-items: center; gap: 10px; }
+#career-agent[data-theme="broadcast"] .ca-name::after { content: "ON AIR"; font-family: var(--ca-mono); font-size: 10px; letter-spacing: .14em; color: #ff5e3a; border: 1px solid rgba(255, 94, 58, .5); padding: 2px 6px; border-radius: 2px; }
+#career-agent[data-theme="broadcast"] .ca-avatar { flex-basis: 36px; height: 36px; font-size: 1em; color: #06090f; background: radial-gradient(circle at 32% 28%, #b7f4ff, #39d7ff 55%, #1aa8cc); box-shadow: 0 3px 0 #1aa8cc, 0 0 18px rgba(57, 215, 255, .35), inset 0 2px 2px rgba(255, 255, 255, .45); }
+#career-agent[data-theme="broadcast"] .ca-reset, #career-agent[data-theme="broadcast"] .ca-chip, #career-agent[data-theme="broadcast"] .ca-choice,
+#career-agent[data-theme="broadcast"] .ca-consent-cancel { border-radius: 2px; background: rgba(6, 9, 15, .55); border-color: var(--ca-line); box-shadow: 0 3px 0 rgba(57, 215, 255, .14), inset 0 1px 0 var(--ca-hi); }
+#career-agent[data-theme="broadcast"] .ca-reset { font-family: var(--ca-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; }
+#career-agent[data-theme="broadcast"] .ca-thread { background: none; }
+#career-agent[data-theme="broadcast"] .ca-bot .ca-bubble { background: var(--ca-bubble); border-color: var(--ca-line); border-radius: 6px; border-bottom-left-radius: 2px; box-shadow: inset 0 1px 0 var(--ca-hi), 0 4px 0 rgba(57, 215, 255, .10), 0 14px 24px -14px rgba(0, 0, 0, .7); }
+#career-agent[data-theme="broadcast"] .ca-user .ca-bubble { color: #06090f; font-weight: 600; border-radius: 6px; border-bottom-right-radius: 2px; background: linear-gradient(180deg, #7ae9ff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 4px 0 #1aa8cc, 0 14px 24px -14px rgba(0, 0, 0, .7); }
+#career-agent[data-theme="broadcast"] .ca-note .ca-bubble { border-radius: 4px; }
+#career-agent[data-theme="broadcast"] .ca-choice { font-family: var(--ca-mono); letter-spacing: .08em; }
+#career-agent[data-theme="broadcast"] .ca-choice.is-picked { color: #06090f; background: #39d7ff; border-color: #39d7ff; }
+#career-agent[data-theme="broadcast"] .ca-badge { border-radius: 2px; font-family: var(--ca-mono); }
+#career-agent[data-theme="broadcast"] .ca-badge[data-conf="provisional"] { color: var(--ca-gold); border-color: rgba(242, 198, 109, .5); }
+#career-agent[data-theme="broadcast"] .ca-askme { color: var(--ca-gold); }
+#career-agent[data-theme="broadcast"] .ca-queued { color: var(--ca-gold); border-color: rgba(242, 198, 109, .45); background: rgba(242, 198, 109, .05); border-radius: 4px; }
+#career-agent[data-theme="broadcast"] .ca-evidence-title { font-family: var(--ca-mono); }
+#career-agent[data-theme="broadcast"] .ca-card { border-radius: 3px; background: rgba(11, 18, 32, .6); box-shadow: 0 2px 0 rgba(57, 215, 255, .10); }
+#career-agent[data-theme="broadcast"] .ca-gate { border-radius: 3px; }
+/* sample questions in one scrollable row, so the panel keeps a fixed height */
+#career-agent[data-theme="broadcast"] .ca-samples { background: none; padding-top: 0; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); }
+#career-agent[data-theme="broadcast"] .ca-samples::-webkit-scrollbar { display: none; }
+#career-agent[data-theme="broadcast"] .ca-chip { font-size: .8em; white-space: nowrap; flex: 0 0 auto; }
+#career-agent[data-theme="broadcast"] .ca-form { background: rgba(11, 18, 32, .6); border-top-color: var(--ca-line); }
+#career-agent[data-theme="broadcast"] .ca-input { border-radius: 2px; background: rgba(6, 9, 15, .65); border-color: var(--ca-line); box-shadow: inset 0 2px 4px rgba(0, 0, 0, .4); color: var(--ca-ink); }
+#career-agent[data-theme="broadcast"] .ca-input::placeholder { color: var(--ca-muted); }
+#career-agent[data-theme="broadcast"] .ca-btn, #career-agent[data-theme="broadcast"] .ca-consent-agree { color: #06090f; border-radius: 2px; font-family: var(--ca-mono); letter-spacing: .1em; text-transform: uppercase; font-size: 12px; background: linear-gradient(180deg, #7ae9ff 0%, #39d7ff 100%); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .45), 0 4px 0 #1aa8cc, 0 10px 16px -8px rgba(0, 0, 0, .6); }
+#career-agent[data-theme="broadcast"] .ca-btn:hover { background: linear-gradient(180deg, #8cf0ff 0%, #4ee0ff 100%); }
+#career-agent[data-theme="broadcast"] .ca-foot { background: rgba(11, 18, 32, .6); font-family: var(--ca-mono); font-size: 10.5px; letter-spacing: .04em; }
+#career-agent[data-theme="broadcast"] .ca-consent { background: rgba(6, 9, 15, .7); }
+#career-agent[data-theme="broadcast"] .ca-consent-card { background: #0b1220; border-radius: 6px; border-color: var(--ca-line); box-shadow: 0 6px 0 rgba(57, 215, 255, .10), 0 24px 40px -16px rgba(0, 0, 0, .8); }
+#career-agent[data-theme="broadcast"] .ca-consent-email { color: #8cf0ff; }
+#career-agent[data-theme="broadcast"] .ca-link { color: #8cf0ff; }
+#career-agent[data-theme="broadcast"] .ca-warn .ca-bubble { border-color: #ff5e3a; color: #ff9f8a; }
