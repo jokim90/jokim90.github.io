@@ -114,7 +114,11 @@
       <div class="ca-thread" aria-live="polite"></div>
       <div class="ca-samples"></div>
       <form class="ca-form">
-        <input class="ca-input" type="text" maxlength="500" autocomplete="off" />
+        <label class="ca-inputwrap">
+          <span class="ca-prompt" aria-hidden="true"></span>
+          <input class="ca-input" type="text" maxlength="500" autocomplete="off" />
+          <kbd class="ca-enter" aria-hidden="true">↵</kbd>
+        </label>
         <button class="ca-btn" type="submit"></button>
       </form>
       <p class="ca-foot"></p>
@@ -135,6 +139,8 @@
 
   const form = root.querySelector(".ca-form");
   const input = root.querySelector(".ca-input");
+  const inputWrap = root.querySelector(".ca-inputwrap");
+  input.addEventListener("input", () => inputWrap.classList.toggle("has-value", input.value.length > 0));
   const thread = root.querySelector(".ca-thread");
   const resetBtn = root.querySelector(".ca-reset");
   const samplesEl = root.querySelector(".ca-samples");
@@ -327,13 +333,13 @@
 
     if (!lang) {
       const picked = langFromReply(q);
-      if (picked) { input.value = ""; userSay(q); chooseLang(picked, false); return; }
+      if (picked) { input.value = ""; inputWrap.classList.remove("has-value"); userSay(q); chooseLang(picked, false); return; }
       if (q.length < 3) return;
       // They skipped the question and asked straight away: take the language of what they wrote.
       chooseLang(/[가-힣]/.test(q) ? "ko" : "en", false);
     }
     if (q.length < 3) return;
-    input.value = "";
+    input.value = ""; inputWrap.classList.remove("has-value");
     const T = STR[lang];
     const el = renderTurn(q);
     const answer = el.querySelector(".ca-answer");
@@ -397,4 +403,12 @@
   }
 
   start();
+
+  // Arriving by the page's "start the interview" link: land with the cursor in the box.
+  const focusFromHash = () => {
+    const h = location.hash;
+    if (h === "#ryoony" || h === "#career-agent") setTimeout(() => input.focus({ preventScroll: true }), 700);
+  };
+  window.addEventListener("hashchange", focusFromHash);
+  focusFromHash();
 })();
