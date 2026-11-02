@@ -151,11 +151,17 @@
 
   function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
   function scrollDown() { thread.scrollTo({ top: thread.scrollHeight, behavior: "smooth" }); }
+  // Put a turn's question at the top of the thread, so the answer is read from its first line
+  // and the evidence below is reached by scrolling, not forced into view.
+  function turnTop(el) { return Math.max(0, el.offsetTop - thread.offsetTop - 6); }
+  function scrollToTurn(el, smooth = true) { thread.scrollTo({ top: turnTop(el), behavior: smooth ? "smooth" : "auto" }); }
 
   // Ryoony's text appears as if typed: fast enough that a long answer lands in
   // about three seconds, instant for people who asked for reduced motion.
   const REDUCE = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  function typeText(el, text, done) {
+  // follow: true = keep the newest text in view; an element = keep that turn pinned at the top
+  // while the answer grows (until it is reached), so reading starts at the first line.
+  function typeText(el, text, done, follow = true) {
     text = String(text);
     if (REDUCE || text.length < 2) { el.textContent = text; done && done(); return; }
     el.textContent = ""; el.classList.add("is-typing");
@@ -164,9 +170,10 @@
     const tick = () => {
       i = Math.min(text.length, i + perTick);
       el.textContent = text.slice(0, i);
-      if (i % (perTick * 6) === 0) scrollDown();
+      if (follow === true && i % (perTick * 6) === 0) scrollDown();
+      else if (follow && follow.nodeType && thread.scrollTop < turnTop(follow) - 1) scrollToTurn(follow, false);
       if (i < text.length) setTimeout(tick, 18);
-      else { el.classList.remove("is-typing"); scrollDown(); done && done(); }
+      else { el.classList.remove("is-typing"); if (follow === true) scrollDown(); done && done(); }
     };
     tick();
   }
@@ -287,7 +294,10 @@
 
   // ---- asking -----------------------------------------------------------
   function renderTurn(q) {
-    userSay(q);
+    const me = document.createElement("div");
+    me.className = "ca-msg ca-user";
+    me.innerHTML = `<div class="ca-bubble">${esc(q)}</div>`;
+    thread.appendChild(me);
     const T = STR[lang];
     const bot = document.createElement("div");
     bot.className = "ca-msg ca-bot is-thinking";
@@ -302,7 +312,8 @@
           <ul class="ca-cards"></ul>
         </div>
       </div>`;
-    thread.appendChild(bot); scrollDown();
+    thread.appendChild(bot); bot.dataset.anchor = "1"; bot._question = me;
+    scrollToTurn(me);
     return bot;
   }
 
@@ -344,6 +355,7 @@
       confEl.textContent = T.conf[r.confidence] || r.confidence; confEl.dataset.conf = r.confidence;
       if (r.search_query) { const u = el.querySelector(".ca-understood"); u.textContent = `${T.understood} ${r.search_query}`; u.hidden = false; }
 
+      scrollToTurn(el._question || el);
       typeText(answer, r.answer, () => {
         if (r.ask_me_directly) { const a = el.querySelector(".ca-askme"); a.textContent = `${T.askme} ${r.ask_me_directly}`; a.hidden = false; a.classList.add("ca-fade"); }
         if (r.followup_queued) { const n = document.createElement("p"); n.className = "ca-queued ca-fade"; n.textContent = T.queued; el.querySelector(".ca-bubble").appendChild(n); }
@@ -362,8 +374,10 @@
             cards.appendChild(li);
           });
         }
-        scrollDown();
-      });
+        // Evidence just made the turn taller: pin the question to the top once more,
+        // so the reader starts at the answer and scrolls down to the sources.
+        requestAnimationFrame(() => scrollToTurn(el._question || el));
+      }, el._question || el);
     } catch (err) {
       el.classList.remove("is-thinking"); el.classList.add("is-error");
       answer.textContent = String(err.message || err);
